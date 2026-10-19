@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
         with:
-          python-version: "3.12"
+          python-version: "3.12.14"
       - run: uv sync --project api --frozen
       - run: uv run --project api ruff check api/src tests scripts
       - name: Adapter and safe selector unit checks
