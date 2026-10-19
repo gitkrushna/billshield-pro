@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ENV = ROOT / ".env.local"
 REFERENCE = [
     "source_documents",
+    "source_pages",
     "hsn_codes",
     "rate_entries",
     "rate_scopes",

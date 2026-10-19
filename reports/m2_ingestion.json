@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-10-19T18:08:48.697471+00:00",
+  "status": "passed",
+  "snapshot_id": "m2-browser-1f4bd452b096b16c06ea",
+  "content_sha256": "1f4bd452b096b16c06eac6c790eea237bd3311d2b9ddacaff504b7750f4a12c1",
+  "sources_ingested": [
+    {
+      "source_key": "m2:goa_09_2025:56d104ed800a06424818",
+      "url": "https://statetax.goa.gov.in/PDF/state_notif/Rate/09_(09_2025)_2025(rate).pdf",
+      "sha256": "56d104ed800a064248181119ec513f3111b3bce5e30d59852cb04508d91728c5",
+      "retrieved_at": "2026-10-19T15:03:45.826000+00:00",
+      "pages": 63,
+      "text_complete": true
+    },
+    {
+      "source_key": "m2:goa_10_2025:ada23c9e1219819fff3a",
+      "url": "https://statetax.goa.gov.in/PDF/state_notif/Rate/10_(10_2025)_2025(rate).pdf",
+      "sha256": "ada23c9e1219819fff3a0fcd12ae298daab13249d00c01b03764712fcc2aeb33",
+      "retrieved_at": "2026-10-19T15:05:56.359374+00:00",
+      "pages": 13,
+      "text_complete": true
+    }
+  ],
+  "canonical_pages_verified": 76,
+  "parent_snapshot_id": "m1-research-555b61ebe53000172e23",
+  "parent_content_sha256": "555b61ebe53000172e235e41f036bd7e3639854140f6f3704a49cddcc0c11253",
+  "parent_unchanged": true,
+  "parent_manifest_verified": true,
+  "parent_source_records_verified": {
+    "source_documents": 40,
+    "hsn_codes": 308,
+    "rate_entries": 292,
+    "rate_scopes": 316,
+    "classification_rules": 49,
+    "rulings": 1,
+    "data_coverage": 12
+  },
+  "parent_members_preserved": 1018,
+  "snapshot_members": 1096,
+  "rates_activated": 0,
+  "currentness_certified": false,
+  "coverage_flags_changed": false,
+  "rejected": []
+}

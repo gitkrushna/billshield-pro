@@ -32,7 +32,7 @@ class Postgres:
     @contextmanager
     def tenant(self, identity: Identity, org_id: UUID) -> Iterator[TenantSession]:
         """A fresh transaction owns scope; closing it clears all SET LOCAL values."""
-        with psycopg.connect(self.dsn, row_factory=dict_row) as connection:
+        with psycopg.connect(self.dsn, row_factory=dict_row, connect_timeout=10) as connection:
             with connection.transaction():
                 role = connection.execute(
                     "SELECT current_user AS name, rolsuper, rolbypassrls FROM pg_roles "

@@ -1,4 +1,4 @@
-name: M1 checks
+name: BillShield checks
 on: [push, pull_request]
 permissions:
   contents: read
@@ -31,7 +31,9 @@ jobs:
       - name: Adapter and safe selector unit checks
         run: >-
           uv run --project api pytest tests/test_auth.py tests/test_storage.py
-          tests/test_jobs.py tests/test_seed.py -k "not reconciliation_and_no_certification"
+          tests/test_jobs.py tests/test_seed.py tests/test_engine.py tests/test_pipeline.py
+          tests/test_llm.py tests/test_corpus.py tests/test_ingest_m2.py tests/test_execution.py
+          -k "not reconciliation_and_no_certification"
       - name: Private corpus acceptance boundary
         run: echo "::notice::Private reference research is deliberately excluded from Git. Actual seed-twice reconciliation and restricted-role isolation evidence must be reviewed at the M1 checkpoint; this job does not certify them."
 

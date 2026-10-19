@@ -1,0 +1,32 @@
+{
+  "checked_at": "2026-10-19T18:08:48.697471+00:00",
+  "status": "passed",
+  "runtime_role": {
+    "name": "billshield_app",
+    "rolsuper": false,
+    "rolbypassrls": false
+  },
+  "runtime_owns_tables": false,
+  "snapshot_id": "m2-browser-1f4bd452b096b16c06ea",
+  "sources_loaded": 2,
+  "canonical_pages_loaded": 76,
+  "activated_rates": 0,
+  "activated_rules": 0,
+  "authenticated_national_codes": 0,
+  "complete_coverage_count": 0,
+  "verified_through": null,
+  "required_chapters": [
+    "15",
+    "17",
+    "19",
+    "21",
+    "25",
+    "30",
+    "33",
+    "34"
+  ],
+  "amendment_notice": "amendments after 22 Sep 2025 not verified",
+  "parent_unchanged": true,
+  "read_only_verification": true,
+  "secret_values_recorded": false
+}

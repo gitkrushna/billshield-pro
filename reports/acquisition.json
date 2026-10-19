@@ -381,12 +381,23 @@
   ],
   "coverage_complete": false,
   "current_scope": {
-    "numeric_rates_from": "2025-09-22",
-    "jan_2023_replay": "deferred",
-    "required_source_absent_result": "Need more info",
-    "required_source_absent_reason": "source_missing",
-    "manual_sources": "reference/manual_sources/",
-    "worker_proposal_approval": "pending"
+    "milestone": "M2 implementation checkpoint; acceptance pending",
+    "acquisition": "agent via laptop Chrome; no founder manual download task",
+    "required": [
+      "Indian tariff chapters 15/17/19/21/25/30/33/34 and applicable national notes/GRI",
+      "CGST 9/2025 and 10/2025 CT(Rate)",
+      "matching Goa SGST",
+      "McNROE"
+    ],
+    "deferred": [
+      "January 2023 replay",
+      "74A, interest and penalty evidence",
+      "full amendment register",
+      "other party-specific rulings"
+    ],
+    "exposure": "tax difference only; excludes interest and penalty",
+    "amendment_notice": "amendments after 22 Sep 2025 not verified",
+    "status": "required missing evidence blocks affected evals, not all M2 work"
   },
   "deferred_work": {
     "jan_2023_replay": {
@@ -394,5 +405,46 @@
       "reason": "outside MVP; numeric GST rates from 2025-09-22 only",
       "historical_rate_chain_required_for_mvp": false
     }
+  },
+  "m2_browser_acquisition": {
+    "sources": [
+      {
+        "id": "goa_09_2025",
+        "url": "https://statetax.goa.gov.in/PDF/state_notif/Rate/09_(09_2025)_2025(rate).pdf",
+        "file": "rates/goa_09_2025_rate.pdf",
+        "retrieved_at": "2026-10-19T15:03:45.826Z",
+        "sha256": "56d104ed800a064248181119ec513f3111b3bce5e30d59852cb04508d91728c5",
+        "title": "Goa 09/2025 Rate",
+        "publisher": "Goa Department of State Tax",
+        "document_type": "sgst_notification",
+        "issued_on": "2025-09-17"
+      },
+      {
+        "id": "goa_10_2025",
+        "url": "https://statetax.goa.gov.in/PDF/state_notif/Rate/10_(10_2025)_2025(rate).pdf",
+        "file": "rates/goa_10_2025_rate.pdf",
+        "retrieved_at": "2026-10-19T15:05:56.359374+00:00",
+        "sha256": "ada23c9e1219819fff3a0fcd12ae298daab13249d00c01b03764712fcc2aeb33",
+        "title": "Goa 10/2025 Rate",
+        "publisher": "Goa Department of State Tax",
+        "document_type": "sgst_notification",
+        "issued_on": "2025-09-17"
+      }
+    ],
+    "attempts": [
+      {
+        "id": "cbic_general_notes",
+        "url": "https://www.cbic.gov.in/CONTENTREPO/Customs/Tariff/Tariff(ason30.06.2025)/CUSTOMS_TARIFF_VOL-I/General-Notes.pdf",
+        "at": "2026-10-19T14:52:52.347Z",
+        "failure": "Chrome file download timed out"
+      },
+      {
+        "id": "cbic_ch15",
+        "url": "https://www.cbic.gov.in/CONTENTREPO/Customs/Tariff/Tariff(ason30.06.2024)/CUSTOMS_TARIFF_VOL-I/chap-15.pdf",
+        "at": "2026-10-19T14:52:52.364Z",
+        "failure": "Official June2025 index links June2024 PDF; Not Found shown"
+      }
+    ],
+    "additional_attempt_evidence": "reports/acquisition.md, current M2 section; historical source array preserved"
   }
 }

@@ -1,10 +1,10 @@
 # BillShield Pro
 
-M1 foundation only: standard Postgres schema/RLS, deterministic research import, JWT/JWKS, S3, SMTP, Postgres jobs and one dormant DeepSeek adapter. The Next.js page is a development marker. Classification, customer workflows, reports and deployment are later milestones.
+M2 engine/evaluation checkpoint: evidence-first Python classification validators, separate facts/bill inputs, bounded DeepSeek orchestration, inline Postgres leases and immutable issuance. The current corpus has no activated reviewed rules, codes or rate predicates: required evidence gaps return `Need more info / source_missing`. The Next.js page remains a development marker; product API/UI and deployment are later milestones.
 
-Current status and actual results: [M1 checkpoint](docs/M1_CHECKPOINT.md). Stop for founder review before M2.
+Current results: [M2 checkpoint](docs/M2_CHECKPOINT.md), [legal evaluation](reports/eval.md), [source acquisition](reports/acquisition.md). Stop for founder review before M3. Historical foundation evidence remains in the [M1 checkpoint](docs/M1_CHECKPOINT.md).
 
-**Verification not established.** Research coverage is incomplete; blank verified-through dates remain blank. M1 acceptance depends on actual seed/idempotency and restricted-role isolation evidence. Unit tests and a successful build do not establish legal correctness or replace integration tests.
+**Verification not established.** Research coverage is incomplete; blank verified-through dates remain blank. Safety tests and a successful build do not establish legal correctness. MVP rates start 22 September 2025; results state “amendments after 22 Sep 2025 not verified”. Exposure is tax difference only, labelled “excludes interest and penalty”. January 2023 replay, the amendment register, 74A/interest/penalty evidence and other party-specific rulings are deferred.
 
 ## Requirements and secrets
 
@@ -66,6 +66,6 @@ M1 has no browser uploads. Compose's internal MinIO endpoint supports API-side a
 
 ## Checks and portability
 
-GitHub Actions runs adapter tests, lint, strict web typing, a production build, a fail-closed browser secret scan and gitleaks. The browser scan fails if a build is absent, scans actual JS/assets and checks secret environment values when supplied without printing them. CI's public source cannot include private research, so seed corpus reconciliation remains an explicit local acceptance gate. No live LLM calls or paid services run in M1.
+GitHub Actions runs adapter and recorded engine tests, lint, strict web typing, a production build, a fail-closed browser secret scan and gitleaks. The browser scan fails if a build is absent, scans actual JS/assets and checks secret environment values when supplied without printing them. CI's public source cannot include private research, so corpus/legal evaluation remains an explicit local acceptance gate. No live model call has been made at this checkpoint; completed-check cost is unmeasured.
 
-See `docs/VENDOR_SWITCH.md` for changing Postgres/auth/S3/SMTP hosts and the documented second container target. No second host or production deployment is claimed. Stop at the M1 adapter/isolation review before beginning M2.
+See `docs/VENDOR_SWITCH.md` for changing Postgres/auth/S3/SMTP hosts and the documented second container target. No second host or production deployment is claimed. Stop at the M2 checkpoint before product API/UI work.

@@ -1,0 +1,635 @@
+{
+  "generated_at": "2026-10-19T18:13:13.232445+00:00",
+  "as_of": "2026-10-19",
+  "law_snapshot_id": "m2-browser-1f4bd452b096b16c06ea",
+  "snapshot_sha256": "1f4bd452b096b16c06eac6c790eea237bd3311d2b9ddacaff504b7750f4a12c1",
+  "fixture_sha256": "7e928773678b0acf6e01323989145b71b93e676f3595ca12fab346e5abd26436",
+  "fixture_note": "Research inputs and labels are reviewable synthetic cases, not certified legal truth",
+  "evaluation_mode": "actual_pipeline_verified_originals_no_live_model",
+  "counts": {
+    "blocked": 18,
+    "pass": 0,
+    "fail": 0
+  },
+  "source_gate_safety_counts": {
+    "pass": 18
+  },
+  "activated_reviewed_rules": 0,
+  "activated_reviewed_codes": 0,
+  "activated_reviewed_rates": 0,
+  "sources_acquired": [
+    {
+      "id": "goa_09_2025",
+      "url": "https://statetax.goa.gov.in/PDF/state_notif/Rate/09_(09_2025)_2025(rate).pdf",
+      "sha256": "56d104ed800a064248181119ec513f3111b3bce5e30d59852cb04508d91728c5",
+      "pages": 63
+    },
+    {
+      "id": "goa_10_2025",
+      "url": "https://statetax.goa.gov.in/PDF/state_notif/Rate/10_(10_2025)_2025(rate).pdf",
+      "sha256": "ada23c9e1219819fff3a0fcd12ae298daab13249d00c01b03764712fcc2aeb33",
+      "pages": 13
+    }
+  ],
+  "sources_rejected": [],
+  "sources_blocked": [
+    "cgst_09_2025",
+    "cgst_10_2025",
+    "chapter_62_source_checklist",
+    "mcnroe",
+    "national_gri",
+    "national_section_III",
+    "national_section_IV",
+    "national_section_V",
+    "national_section_VI",
+    "national_tariff_15",
+    "national_tariff_17",
+    "national_tariff_19",
+    "national_tariff_21",
+    "national_tariff_25",
+    "national_tariff_30",
+    "national_tariff_33",
+    "national_tariff_34"
+  ],
+  "model_calls": 0,
+  "cost_per_completed_check_usd": null,
+  "cost_note": "Not measured: no completed legal checks and no live model calls; unknown is not zero cost/check",
+  "deferred": [
+    "January 2023 replay",
+    "74A, interest and penalty evidence",
+    "full amendment register",
+    "other party-specific rulings"
+  ],
+  "exposure_label": "excludes interest and penalty",
+  "amendment_notice": "amendments after 22 Sep 2025 not verified",
+  "results": [
+    {
+      "id": "G1",
+      "group": "original_10",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "conditional_on_facts_and_authority",
+      "expected_code_research_only": "19059030 subject to applicable court relief and facts",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_19",
+        "national_gri",
+        "national_section_IV",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "national_tariff_21",
+        "national_tariff_17"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "G2",
+      "group": "original_10",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "Supported",
+      "expected_code_research_only": "1513; do not invent an eighth digit without refining details",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_15",
+        "national_gri",
+        "national_section_III",
+        "cgst_09_2025",
+        "cgst_10_2025"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "G3",
+      "group": "original_10",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "Rate right, HSN wrong",
+      "expected_code_research_only": "30049014 for the retail formulation discussed; confirm current national item",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_30",
+        "national_gri",
+        "national_section_VI",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "national_tariff_33",
+        "mcnroe"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "G4",
+      "group": "original_10",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "Need more info",
+      "expected_code_research_only": "Unresolved: 3004 medicament versus 3304 cosmetic",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_30",
+        "national_gri",
+        "national_section_VI",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "national_tariff_33",
+        "mcnroe"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "G5",
+      "group": "original_10",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "Rate right, HSN wrong",
+      "expected_code_research_only": "1704 at heading level; national item unverified",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_17",
+        "national_gri",
+        "national_section_IV",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "national_tariff_21",
+        "national_tariff_19"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "C1",
+      "group": "original_10",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "Wrong",
+      "expected_code_research_only": "33071010",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_33",
+        "national_gri",
+        "national_section_VI",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "mcnroe",
+        "national_tariff_30"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "C2",
+      "group": "original_10",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "Wrong",
+      "expected_code_research_only": "33071090",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_33",
+        "national_gri",
+        "national_section_VI",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "mcnroe",
+        "national_tariff_30"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "C3",
+      "group": "original_10",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "Supported",
+      "expected_code_research_only": "2501; common-salt item 25010010 in the tariff sample",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_25",
+        "national_gri",
+        "national_section_V",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "national_tariff_34",
+        "national_section_VI"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "C4",
+      "group": "original_10",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "Wrong",
+      "expected_code_research_only": "34011942",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_34",
+        "national_gri",
+        "national_section_VI",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "national_tariff_25",
+        "national_section_V"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "C5",
+      "group": "original_10",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "Supported",
+      "expected_code_research_only": "340130 at subheading level; do not force an eighth digit",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_34",
+        "national_gri",
+        "national_section_VI",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "national_tariff_25",
+        "national_section_V"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "Finish",
+      "group": "finish",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "Need more info",
+      "expected_code_research_only": "No national item inferred; legacy-code assertion needs authenticated edition",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_25",
+        "national_gri",
+        "national_section_V",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "national_tariff_34",
+        "national_section_VI"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "CF_cream_to_foam",
+      "group": "counterfactual",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "requires_revalidated_facts_and_legal_sources",
+      "expected_code_research_only": "33071090",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_33",
+        "national_gri",
+        "national_section_VI",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "mcnroe",
+        "national_tariff_30"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "CF_foam_to_cream",
+      "group": "counterfactual",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "requires_revalidated_facts_and_legal_sources",
+      "expected_code_research_only": "33071010",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_33",
+        "national_gri",
+        "national_section_VI",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "mcnroe",
+        "national_tariff_30"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "CF_plain_to_caramel",
+      "group": "counterfactual",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "requires_revalidated_facts_and_legal_sources",
+      "expected_code_research_only": "1704 at heading level; national item unverified",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_17",
+        "national_gri",
+        "national_section_IV",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "national_tariff_21",
+        "national_tariff_19"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "CF_caramel_to_plain",
+      "group": "counterfactual",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "requires_revalidated_facts_and_legal_sources",
+      "expected_code_research_only": "Requires national heading/entry review for the plain variant",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_17",
+        "national_gri",
+        "national_section_IV",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "national_tariff_21",
+        "national_tariff_19"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "CF_pure_to_chemical",
+      "group": "counterfactual",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "requires_revalidated_facts_and_legal_sources",
+      "expected_code_research_only": "Unknown chemical preparation; no code inferred",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_25",
+        "national_gri",
+        "national_section_V",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "national_tariff_34",
+        "national_section_VI"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "CF_chemical_to_pure",
+      "group": "counterfactual",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "requires_revalidated_facts_and_legal_sources",
+      "expected_code_research_only": "2501; common-salt item 25010010 in the tariff sample",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "national_tariff_25",
+        "national_gri",
+        "national_section_V",
+        "cgst_09_2025",
+        "cgst_10_2025",
+        "national_tariff_34",
+        "national_section_VI"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    },
+    {
+      "id": "corpus_gap",
+      "group": "corpus_gap",
+      "status": "blocked",
+      "status_reason": "missing evidence",
+      "expected_category": "Need more info",
+      "expected_code_research_only": "No code inferred",
+      "actual_category": "Need more info",
+      "actual_reason": "source_missing",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [
+        "chapter_62_source_checklist"
+      ],
+      "missing_facts": [],
+      "source_gate_safety": "pass",
+      "model_calls": 0,
+      "cost_usd": null,
+      "cost_status": "not_measured_no_model_calls",
+      "scores": {
+        "code": "blocked",
+        "rate_entry": "blocked",
+        "category": "blocked",
+        "quote_validity": "blocked"
+      }
+    }
+  ]
+}

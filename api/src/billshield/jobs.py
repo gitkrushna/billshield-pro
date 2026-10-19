@@ -21,24 +21,39 @@ class PostgresJobs:
             "INSERT INTO billshield.jobs (id,org_id,kind,payload,status,run_after,idempotency_key) "
             "VALUES (%s,%s,%s,%s,'queued',now(),%s) "
             "ON CONFLICT (org_id,idempotency_key) DO UPDATE "
-            "SET idempotency_key=EXCLUDED.idempotency_key RETURNING id",
+            "SET idempotency_key=EXCLUDED.idempotency_key "
+            "WHERE billshield.jobs.kind=EXCLUDED.kind AND billshield.jobs.payload=EXCLUDED.payload "
+            "RETURNING id",
             (uuid4(), scope.org_id, kind, Jsonb(payload), idempotency_key),
         ).fetchone()
+        if not row:
+            raise ValueError("Idempotency key already has a different request")
         return row["id"]
 
-    def claim(self, scope: TenantSession, lease_seconds: int = 60):
+    def claim(self, scope: TenantSession, lease_seconds: int = 60, *, job_id: UUID | None = None):
         if not 1 <= lease_seconds <= 240:
             raise ValueError("Invalid lease duration")
         lease_token = uuid4()
+        target = "AND id=%s " if job_id is not None else ""
+        # An authenticated retry explicitly targets its own failed job. Ordinary
+        # queue consumers do not silently restart terminal failures.
+        ready_status = "status IN ('queued','failed')" if job_id is not None else "status='queued'"
+        parameters = [scope.org_id]
+        if job_id is not None:
+            parameters.append(job_id)
+        parameters.extend([lease_token, lease_seconds, scope.org_id])
         return scope.connection.execute(
             "WITH next_job AS (SELECT id FROM billshield.jobs WHERE org_id=%s "
-            "AND ((status='queued' AND run_after<=now()) "
-            "OR (status='running' AND leased_until<=now())) "
+            + target
+            + "AND (("
+            + ready_status
+            + " AND run_after<=now()) "
+            "OR (status='running' AND leased_until<=clock_timestamp())) "
             "ORDER BY run_after,id FOR UPDATE SKIP LOCKED LIMIT 1) "
             "UPDATE billshield.jobs j SET status='running',lease_token=%s,"
-            "leased_until=now()+(%s * interval '1 second'),attempts=j.attempts+1 "
+            "leased_until=clock_timestamp()+(%s * interval '1 second'),attempts=j.attempts+1 "
             "FROM next_job n WHERE j.id=n.id AND j.org_id=%s RETURNING j.*",
-            (scope.org_id, lease_token, lease_seconds, scope.org_id),
+            parameters,
         ).fetchone()
 
     def complete(self, scope: TenantSession, job_id: UUID, lease_token: UUID) -> bool:
@@ -46,7 +61,7 @@ class PostgresJobs:
             scope.connection.execute(
                 "UPDATE billshield.jobs SET status='completed',lease_token=NULL,leased_until=NULL "
                 "WHERE id=%s AND org_id=%s AND lease_token=%s AND status='running' "
-                "AND leased_until>now() RETURNING id",
+                "AND leased_until>clock_timestamp() RETURNING id",
                 (job_id, scope.org_id, lease_token),
             ).fetchone()
         )
@@ -59,7 +74,7 @@ class PostgresJobs:
             scope.connection.execute(
                 "UPDATE billshield.jobs SET status='failed',last_error=%s,lease_token=NULL,"
                 "leased_until=NULL WHERE id=%s AND org_id=%s AND lease_token=%s "
-                "AND status='running' AND leased_until>now() RETURNING id",
+                "AND status='running' AND leased_until>clock_timestamp() RETURNING id",
                 (code, job_id, scope.org_id, lease_token),
             ).fetchone()
         )
