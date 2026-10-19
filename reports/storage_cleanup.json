@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-19T13:39:04.303867+00:00",
+  "bucket": "billshield-uploads",
+  "authorized_objects": 3,
+  "deleted": 3,
+  "verified_absent": 3,
+  "identification": "Exact M1 fixture hashes, expected key structure and matching fixture org; each object rechecked before deletion",
+  "other_objects_modified": 0,
+  "deleted_fixture_sha256": [
+    "e50601e034507b02da29a01058bb6b276425a916865d9c4120e821cf31a3d37e",
+    "c79851f3d6e90a909cd007df1baa173bacab09be78090b16c0c560bbbfee4ac3",
+    "70565264ea0ab102a7b74c098161c041aa85ff284861695914433c40a2a32906"
+  ]
+}

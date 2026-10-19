@@ -275,7 +275,8 @@
       "review_status": "unreviewed_not_seeded",
       "coverage_changed": false,
       "status": "blocked_download_failed",
-      "error_type": "RemoteDisconnected"
+      "error_type": "RemoteDisconnected",
+      "scope_status": "deferred_out_of_mvp"
     },
     {
       "id": "cbic_ct12_2022",
@@ -376,8 +377,22 @@
   ],
   "remaining_gaps": [
     "No standalone section notes in WCO 2022 index for Sections III and V; Indian applicability still needs verification",
-    "Complete authenticated Indian tariff chapter PDFs",
-    "Complete 2017-2023 amendment chain and historical Goa SGST pairing; candidate documents are not replay certification"
+    "Complete authenticated Indian tariff chapter PDFs"
   ],
-  "coverage_complete": false
+  "coverage_complete": false,
+  "current_scope": {
+    "numeric_rates_from": "2025-09-22",
+    "jan_2023_replay": "deferred",
+    "required_source_absent_result": "Need more info",
+    "required_source_absent_reason": "source_missing",
+    "manual_sources": "reference/manual_sources/",
+    "worker_proposal_approval": "pending"
+  },
+  "deferred_work": {
+    "jan_2023_replay": {
+      "status": "deferred",
+      "reason": "outside MVP; numeric GST rates from 2025-09-22 only",
+      "historical_rate_chain_required_for_mvp": false
+    }
+  }
 }
