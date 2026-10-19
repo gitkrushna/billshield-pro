@@ -26,7 +26,7 @@ Observed acceptance evidence:
 | Browser secret scan | Passed across 18 generated assets, including comparison with locally configured secret values without displaying them. |
 | Gitleaks 8.30.1 | Passed on the staged implementation/evidence: approximately 465 KB scanned, no findings. Private configuration, reference material and tool downloads are excluded from Git. |
 | Compose | `docker compose config --quiet` passed. Docker client exists; Linux daemon is not running. Container startup, local GoTrue email/JWKS and image execution are **unverified**, not passed. |
-| CI on GitHub | Workflow provided; no GitHub run is claimed in this checkpoint. |
+| CI on GitHub | [Run 2](https://github.com/gitkrushna/billshield-pro/actions/runs/39259279057) passed all three jobs (web, adapters, secrets) for code commit `7ab6676`. The initial Linux import-path failure was corrected with root pytest configuration. CI explicitly reports that hosted/private-corpus integration is separate; the actual local 28-test run supplies that evidence. |
 
 Seed totals: 40 source records; 308 HSN hierarchy rows; 292 rate entries (146 CGST + 146 Goa SGST); 316 scopes; 49 rules; one structured ruling; 12 coverage rows, all `complete=false` and `verified_through=NULL`. No customer/test fixtures or machine condition predicates were seeded.
 

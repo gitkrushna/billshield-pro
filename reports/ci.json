@@ -1,0 +1,10 @@
+{
+  "code_commit": "7ab66760a3446489fc069decd954610825efc0b0",
+  "workflow_run": "https://github.com/gitkrushna/billshield-pro/actions/runs/39259279057",
+  "status": "passed",
+  "jobs": {"web": "passed", "adapters": "passed", "secrets": "passed"},
+  "local_full_suite": {"passed": 28, "skipped": 0, "restricted_runtime_database": true},
+  "ci_private_corpus_and_hosted_db": "not supplied to CI; blocked there, independently verified locally",
+  "docker_runtime": "blocked: Docker daemon unavailable",
+  "legal_evaluation": "not run; M2 not started"
+}
