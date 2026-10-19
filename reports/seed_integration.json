@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-10-19T13:12:59.339712+00:00",
+  "snapshot_id": "m1-research-555b61ebe53000172e23",
+  "content_sha256": "555b61ebe53000172e235e41f036bd7e3639854140f6f3704a49cddcc0c11253",
+  "status": "passed",
+  "counts": {
+    "source_documents": 40,
+    "hsn_codes": 308,
+    "rate_entries": 292,
+    "rate_scopes": 316,
+    "classification_rules": 49,
+    "rulings": 1,
+    "data_coverage": 12
+  },
+  "snapshot_members_verified": 1018,
+  "conditions_seeded": 0,
+  "coverage_certified": false,
+  "verified_through": null
+}

@@ -1,0 +1,49 @@
+{
+  "snapshot_id": "m1-research-555b61ebe53000172e23",
+  "content_sha256": "555b61ebe53000172e235e41f036bd7e3639854140f6f3704a49cddcc0c11253",
+  "manifest": {
+    "importer_version": "m1-research-import-v1",
+    "inputs": {
+      "source_documents.csv": "9d017b1bb0746216eea43b48ee039d64fd78c56689f489c453f82a14248d9661",
+      "hsn_codes.csv": "a1d4dc236b01b9a39e295bfcdff8fed8dc57cab210556d986dfed27356bc6ebc",
+      "rate_entries.csv": "2bd3538f487207d15fdfed377e3e3f7db4d3fab29c672eb0bd344be5f9d241a1",
+      "turn2_rate_evidence.csv": "5443cfcbda3a71065ce6c8b44f04151ad78ecf7cdfdb6a820157cdb9e637d401",
+      "rate_scopes.csv": "cbd8e6f77e4627b766958faf1f8906e8033a813785bac6c7f1d4f36e4e0f6925",
+      "classification_rules.csv": "36a664223d5266d48f3a5c39628d3f7187f7f4b91ba42e9a1be28cd2e0f58079",
+      "gri_rules.csv": "ffffdcf71ca487a8bb5ed64b0899e5dda13da32b05b34d065497e7c1139cd511",
+      "rulings.csv": "df71867bafdc196c9a105133eb99b56ced3e18bc935fc6b2eedaa9731cdcab00",
+      "data_coverage.csv": "5cd9f5392152ae37e81bdcc44e86877b652ab8d395d747fa14f24565df4c2246"
+    },
+    "counts": {
+      "source_documents": 40,
+      "hsn_codes": 308,
+      "rate_entries": 292,
+      "rate_scopes": 316,
+      "classification_rules": 49,
+      "rulings": 1,
+      "data_coverage": 12
+    },
+    "table_sha256": {
+      "source_documents": "a28b257ee2b1b0a2cbc27112159682d4c9bef5be381821d4337bc459006c1fd2",
+      "hsn_codes": "3358722d6b30ff8b199881046c5ddce7f4545f272dbd6d6120e38df06b6caab7",
+      "rate_entries": "681775e7d4ea18c4c287f69e70a3a20b347b0a8a9f52641fbe217141aec52da4",
+      "rate_scopes": "64085702751d0320ceab1f3e1bb6d4ef62485ce753290166de3f56273588db82",
+      "classification_rules": "a1522706f2d11bbeb7afc9e1ae52caec2666674596635dd821d7d7c05413d7ea",
+      "rulings": "e18b473ef51b931bc4aed5635fdc484bf8241527280ae35f8f068f2c54e1abfc",
+      "data_coverage": "c99b6dd150ac9f1303485f0a384c538a724d7865616573b367f8e4b8ddf5bc49"
+    },
+    "section_mapping": {
+      "15": "III",
+      "17": "IV",
+      "19": "IV",
+      "21": "IV",
+      "25": "V",
+      "30": "VI",
+      "33": "VI",
+      "34": "VI"
+    },
+    "coverage_status": "incomplete_unverified_currentness",
+    "fixtures_seeded": false,
+    "rate_conditions_seeded": 0
+  }
+}

@@ -1,0 +1,8 @@
+:root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #142c30; background: #f4f6f5; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 680px; margin: 12vh auto; padding: 32px; }
+h1 { font-size: clamp(2rem, 6vw, 3rem); letter-spacing: -.04em; margin: 16px 0; }
+p { line-height: 1.65; }
+.eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; }
+aside { padding: 20px; margin: 32px 0; background: #fff2d6; border-left: 4px solid #91640a; line-height: 1.65; }

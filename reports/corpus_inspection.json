@@ -1,0 +1,2125 @@
+{
+  "snapshot_id": "m1-research-555b61ebe53000172e23",
+  "content_sha256": "555b61ebe53000172e235e41f036bd7e3639854140f6f3704a49cddcc0c11253",
+  "hash_checks": [
+    {
+      "path": "README.md",
+      "expected_sha256": "e482464eebfe0be87fd00b741b2565749caa350d47f3d5a1ed9eb6d372fa14d1",
+      "actual_sha256": "e482464eebfe0be87fd00b741b2565749caa350d47f3d5a1ed9eb6d372fa14d1",
+      "match": true
+    },
+    {
+      "path": "Turn1_Data_Research.md",
+      "expected_sha256": "a3928e481a0da864069c9e4156c4356e95680145ddf2d3c62fe7d58afd380331",
+      "actual_sha256": "a3928e481a0da864069c9e4156c4356e95680145ddf2d3c62fe7d58afd380331",
+      "match": true
+    },
+    {
+      "path": "Turn2_Test_Pairs_and_Penalty_Cases.md",
+      "expected_sha256": "24f2f5af3dc79f6b4617b04970f073f2d8a8337e469a829e14afac64776f7bf9",
+      "actual_sha256": "24f2f5af3dc79f6b4617b04970f073f2d8a8337e469a829e14afac64776f7bf9",
+      "match": true
+    },
+    {
+      "path": "data/audit_20_rows.csv",
+      "expected_sha256": "bbbbee4375f53cfc002e8910ded321777f255ff0ae78330d04f58f9c43a05d63",
+      "actual_sha256": "bbbbee4375f53cfc002e8910ded321777f255ff0ae78330d04f58f9c43a05d63",
+      "match": true
+    },
+    {
+      "path": "data/classification_rules.csv",
+      "expected_sha256": "36a664223d5266d48f3a5c39628d3f7187f7f4b91ba42e9a1be28cd2e0f58079",
+      "actual_sha256": "36a664223d5266d48f3a5c39628d3f7187f7f4b91ba42e9a1be28cd2e0f58079",
+      "match": true
+    },
+    {
+      "path": "data/data_coverage.csv",
+      "expected_sha256": "5cd9f5392152ae37e81bdcc44e86877b652ab8d395d747fa14f24565df4c2246",
+      "actual_sha256": "5cd9f5392152ae37e81bdcc44e86877b652ab8d395d747fa14f24565df4c2246",
+      "match": true
+    },
+    {
+      "path": "data/extraction_summary.json",
+      "expected_sha256": "2ceb9fc2b7cadfe64cc6c02db9468569076842aa5dfbb5a9074e0e6fd1808967",
+      "actual_sha256": "2ceb9fc2b7cadfe64cc6c02db9468569076842aa5dfbb5a9074e0e6fd1808967",
+      "match": true
+    },
+    {
+      "path": "data/gri_rules.csv",
+      "expected_sha256": "ffffdcf71ca487a8bb5ed64b0899e5dda13da32b05b34d065497e7c1139cd511",
+      "actual_sha256": "ffffdcf71ca487a8bb5ed64b0899e5dda13da32b05b34d065497e7c1139cd511",
+      "match": true
+    },
+    {
+      "path": "data/hsn_codes.csv",
+      "expected_sha256": "a1d4dc236b01b9a39e295bfcdff8fed8dc57cab210556d986dfed27356bc6ebc",
+      "actual_sha256": "a1d4dc236b01b9a39e295bfcdff8fed8dc57cab210556d986dfed27356bc6ebc",
+      "match": true
+    },
+    {
+      "path": "data/law_snapshots.csv",
+      "expected_sha256": "b9f3ff451368fecd392fe6ffdfa26e550ea880ea0e2a11eb3f209a2e0a262931",
+      "actual_sha256": "b9f3ff451368fecd392fe6ffdfa26e550ea880ea0e2a11eb3f209a2e0a262931",
+      "match": true
+    },
+    {
+      "path": "data/policy_verification.json",
+      "expected_sha256": "d6a77cfb9c840c2f23ccb69dde303efa832d8600641648a7fb81d6c53854fdb9",
+      "actual_sha256": "d6a77cfb9c840c2f23ccb69dde303efa832d8600641648a7fb81d6c53854fdb9",
+      "match": true
+    },
+    {
+      "path": "data/rate_entries.csv",
+      "expected_sha256": "2bd3538f487207d15fdfed377e3e3f7db4d3fab29c672eb0bd344be5f9d241a1",
+      "actual_sha256": "2bd3538f487207d15fdfed377e3e3f7db4d3fab29c672eb0bd344be5f9d241a1",
+      "match": true
+    },
+    {
+      "path": "data/rate_entries_ch25.csv",
+      "expected_sha256": "d287b5709905fc982945e8cc0e1011ff039bc4a74333e9100f78a33fa4a99844",
+      "actual_sha256": "d287b5709905fc982945e8cc0e1011ff039bc4a74333e9100f78a33fa4a99844",
+      "match": true
+    },
+    {
+      "path": "data/rate_entries_ch34.csv",
+      "expected_sha256": "83e84ba926d7991a4df591554d9b57cb48904e2a275bb4ff5a612e10091cfeac",
+      "actual_sha256": "83e84ba926d7991a4df591554d9b57cb48904e2a275bb4ff5a612e10091cfeac",
+      "match": true
+    },
+    {
+      "path": "data/rate_scopes.csv",
+      "expected_sha256": "cbd8e6f77e4627b766958faf1f8906e8033a813785bac6c7f1d4f36e4e0f6925",
+      "actual_sha256": "cbd8e6f77e4627b766958faf1f8906e8033a813785bac6c7f1d4f36e4e0f6925",
+      "match": true
+    },
+    {
+      "path": "data/rulings.csv",
+      "expected_sha256": "df71867bafdc196c9a105133eb99b56ced3e18bc935fc6b2eedaa9731cdcab00",
+      "actual_sha256": "df71867bafdc196c9a105133eb99b56ced3e18bc935fc6b2eedaa9731cdcab00",
+      "match": true
+    },
+    {
+      "path": "data/source_documents.csv",
+      "expected_sha256": "9d017b1bb0746216eea43b48ee039d64fd78c56689f489c453f82a14248d9661",
+      "actual_sha256": "9d017b1bb0746216eea43b48ee039d64fd78c56689f489c453f82a14248d9661",
+      "match": true
+    },
+    {
+      "path": "data/source_inventory.csv",
+      "expected_sha256": "dfc2a541aa65de18d7d88f350bfcf3ecc39df51aec4a94c6e17b078c341ce702",
+      "actual_sha256": "dfc2a541aa65de18d7d88f350bfcf3ecc39df51aec4a94c6e17b078c341ce702",
+      "match": true
+    },
+    {
+      "path": "data/sql_syntax_verification.json",
+      "expected_sha256": "343d7a1d84e7d37c60dd2f54b3c597781ff4474de7fbf51c7ad0dff5e1d7fbaf",
+      "actual_sha256": "343d7a1d84e7d37c60dd2f54b3c597781ff4474de7fbf51c7ad0dff5e1d7fbaf",
+      "match": true
+    },
+    {
+      "path": "data/test_pairs.json",
+      "expected_sha256": "7e928773678b0acf6e01323989145b71b93e676f3595ca12fab346e5abd26436",
+      "actual_sha256": "7e928773678b0acf6e01323989145b71b93e676f3595ca12fab346e5abd26436",
+      "match": true
+    },
+    {
+      "path": "data/turn2_rate_evidence.csv",
+      "expected_sha256": "5443cfcbda3a71065ce6c8b44f04151ad78ecf7cdfdb6a820157cdb9e637d401",
+      "actual_sha256": "5443cfcbda3a71065ce6c8b44f04151ad78ecf7cdfdb6a820157cdb9e637d401",
+      "match": true
+    },
+    {
+      "path": "data/verification.json",
+      "expected_sha256": "e2da0728102d85d64da871a21e9708974aaf4d7f42ec2f2be817a8a7da8c4ce7",
+      "actual_sha256": "e2da0728102d85d64da871a21e9708974aaf4d7f42ec2f2be817a8a7da8c4ce7",
+      "match": true
+    },
+    {
+      "path": "requirements.txt",
+      "expected_sha256": "b43d43475c07b6a64d30eca9b8594b3ac87367a5aef59f23659bf17d06b84694",
+      "actual_sha256": "b43d43475c07b6a64d30eca9b8594b3ac87367a5aef59f23659bf17d06b84694",
+      "match": true
+    },
+    {
+      "path": "schema.sql",
+      "expected_sha256": "c6530c833205c20e9d67417b498ce4455b9d170b8f3c37c725fe1659c011610c",
+      "actual_sha256": "c6530c833205c20e9d67417b498ce4455b9d170b8f3c37c725fe1659c011610c",
+      "match": true
+    },
+    {
+      "path": "scripts/build_catalog.py",
+      "expected_sha256": "f3dbfac30b68f073d90a6f76df2fa70716f6c6a30d75ff514b0dad092c69f582",
+      "actual_sha256": "f3dbfac30b68f073d90a6f76df2fa70716f6c6a30d75ff514b0dad092c69f582",
+      "match": true
+    },
+    {
+      "path": "scripts/build_coverage.py",
+      "expected_sha256": "dffbda4c6e020e7ad6f5d62cb48dbb39893341ad378ab110a4cfc9dd6a7e3c30",
+      "actual_sha256": "dffbda4c6e020e7ad6f5d62cb48dbb39893341ad378ab110a4cfc9dd6a7e3c30",
+      "match": true
+    },
+    {
+      "path": "scripts/build_report.py",
+      "expected_sha256": "715f3f64578c01b201b4706028b2282ccb457917e1ca67abef459dd74af61f71",
+      "actual_sha256": "715f3f64578c01b201b4706028b2282ccb457917e1ca67abef459dd74af61f71",
+      "match": true
+    },
+    {
+      "path": "scripts/build_ruling_seed.py",
+      "expected_sha256": "010b1c19602c3619ebc5ed0e405fc22f37ab0cc749d005ad52412693bd79d902",
+      "actual_sha256": "010b1c19602c3619ebc5ed0e405fc22f37ab0cc749d005ad52412693bd79d902",
+      "match": true
+    },
+    {
+      "path": "scripts/build_turn2_report.py",
+      "expected_sha256": "5ead1ef84e95c809620a81029b4d935a0047dc9da0effff8df04a68f2a04f58c",
+      "actual_sha256": "5ead1ef84e95c809620a81029b4d935a0047dc9da0effff8df04a68f2a04f58c",
+      "match": true
+    },
+    {
+      "path": "scripts/confidence.py",
+      "expected_sha256": "5feced0ed35fab43d0218c58c44c16a16126e74855012c719eef484c19942cc5",
+      "actual_sha256": "5feced0ed35fab43d0218c58c44c16a16126e74855012c719eef484c19942cc5",
+      "match": true
+    },
+    {
+      "path": "scripts/discover_metadata.py",
+      "expected_sha256": "c2692060cd29a1aad1e57432063e36afb32e2ed5cf16b93df0fd115c1ed45b9b",
+      "actual_sha256": "c2692060cd29a1aad1e57432063e36afb32e2ed5cf16b93df0fd115c1ed45b9b",
+      "match": true
+    },
+    {
+      "path": "scripts/extract.py",
+      "expected_sha256": "8f035d581aab9b30d69937ac6509c7211943a8018256bfbcbf5394d069e55d42",
+      "actual_sha256": "8f035d581aab9b30d69937ac6509c7211943a8018256bfbcbf5394d069e55d42",
+      "match": true
+    },
+    {
+      "path": "scripts/extract_turn2_rates.py",
+      "expected_sha256": "b3185d2810299e2e4736f828b07aa8342954618736028fadf1ceff8f1f3f32af",
+      "actual_sha256": "b3185d2810299e2e4736f828b07aa8342954618736028fadf1ceff8f1f3f32af",
+      "match": true
+    },
+    {
+      "path": "scripts/fetch_sources.py",
+      "expected_sha256": "23bb8d4e37db079c1c5692d8adcfd3610adcbb7012be3d0773ba86c8fc32f0ca",
+      "actual_sha256": "23bb8d4e37db079c1c5692d8adcfd3610adcbb7012be3d0773ba86c8fc32f0ca",
+      "match": true
+    },
+    {
+      "path": "scripts/fetch_turn2.py",
+      "expected_sha256": "ba54cd1026da305e141252daa23cf5344818b6bcf9a5a32ab1ab932aa7781ad5",
+      "actual_sha256": "ba54cd1026da305e141252daa23cf5344818b6bcf9a5a32ab1ab932aa7781ad5",
+      "match": true
+    },
+    {
+      "path": "scripts/ocr_sample.py",
+      "expected_sha256": "6fe3647d7f02c27586925d4220d1e6d75b2a07d7f9d22323ad4891384ce60fdd",
+      "actual_sha256": "6fe3647d7f02c27586925d4220d1e6d75b2a07d7f9d22323ad4891384ce60fdd",
+      "match": true
+    },
+    {
+      "path": "scripts/verify.py",
+      "expected_sha256": "d621dcb2a6c0e1873eb506e8cd23cf8c4bdbdcd7b46dba98990e0682886f1f10",
+      "actual_sha256": "d621dcb2a6c0e1873eb506e8cd23cf8c4bdbdcd7b46dba98990e0682886f1f10",
+      "match": true
+    },
+    {
+      "path": "scripts/verify_policy.py",
+      "expected_sha256": "b847988758de7ba023deac8cfe7df868c4ae5d44fc68f7f05f2c6a6bd65cd20c",
+      "actual_sha256": "b847988758de7ba023deac8cfe7df868c4ae5d44fc68f7f05f2c6a6bd65cd20c",
+      "match": true
+    },
+    {
+      "path": "source_catalog.json",
+      "expected_sha256": "68e7e29cbe9365ef6d451a96a0d43e66af773b1eb05204a4396b405ff5570ed9",
+      "actual_sha256": "68e7e29cbe9365ef6d451a96a0d43e66af773b1eb05204a4396b405ff5570ed9",
+      "match": true
+    },
+    {
+      "path": "sources/aar_chehar_2026.ocr.txt",
+      "expected_sha256": "140802cb5747481237edbd4851dae152f966bc85cd2dd82759d08e8a455b5dac",
+      "actual_sha256": "140802cb5747481237edbd4851dae152f966bc85cd2dd82759d08e8a455b5dac",
+      "match": true
+    },
+    {
+      "path": "sources/aar_chehar_2026.pdf",
+      "expected_sha256": "859c9189b3071fc744e6fe4c052f914f407c0420d712dd86030570fdc54456ca",
+      "actual_sha256": "859c9189b3071fc744e6fe4c052f914f407c0420d712dd86030570fdc54456ca",
+      "match": true
+    },
+    {
+      "path": "sources/central10_gazette_mirror.pdf",
+      "expected_sha256": "e2b0514786aafd3c4012d7218c736fb763d4b719a6bb88ba16ff1784a4e3bf97",
+      "actual_sha256": "e2b0514786aafd3c4012d7218c736fb763d4b719a6bb88ba16ff1784a4e3bf97",
+      "match": true
+    },
+    {
+      "path": "sources/central19_2025_mirror.pdf",
+      "expected_sha256": "448a07eac86bb97ec4d6c002dd5289b1db43a38bb7e1046cb171997e1d34533c",
+      "actual_sha256": "448a07eac86bb97ec4d6c002dd5289b1db43a38bb7e1046cb171997e1d34533c",
+      "match": true
+    },
+    {
+      "path": "sources/central1_2026_corrigendum_mirror.pdf",
+      "expected_sha256": "f72e4f2da6a0f69e71a988cf1c33e1f4c1e2d51657e2cfa84f42f5beab05b8e5",
+      "actual_sha256": "f72e4f2da6a0f69e71a988cf1c33e1f4c1e2d51657e2cfa84f42f5beab05b8e5",
+      "match": true
+    },
+    {
+      "path": "sources/central9_updated_may2026_mirror.pdf",
+      "expected_sha256": "23f07569aa25c4b4cf5b99691d1719147105ccd3eb03f236efe2906d096d3d62",
+      "actual_sha256": "23f07569aa25c4b4cf5b99691d1719147105ccd3eb03f236efe2906d096d3d62",
+      "match": true
+    },
+    {
+      "path": "sources/cgst_act.pdf",
+      "expected_sha256": "f7317f3ae40c2f41ab777acbd49fca309f10d8686640dea1bf215cf4c48754e7",
+      "actual_sha256": "f7317f3ae40c2f41ab777acbd49fca309f10d8686640dea1bf215cf4c48754e7",
+      "match": true
+    },
+    {
+      "path": "sources/circular_247_2025.pdf",
+      "expected_sha256": "afa6642cc372c037d206af3fd23ee486861ca05ab613d8d7a4da508376d859ff",
+      "actual_sha256": "afa6642cc372c037d206af3fd23ee486861ca05ab613d8d7a4da508376d859ff",
+      "match": true
+    },
+    {
+      "path": "sources/council_57_release.pdf",
+      "expected_sha256": "683d39bf7e0bb712450adcc864d5b08b9a503a7a35d98afcbdd5d73ef940759c",
+      "actual_sha256": "683d39bf7e0bb712450adcc864d5b08b9a503a7a35d98afcbdd5d73ef940759c",
+      "match": true
+    },
+    {
+      "path": "sources/goa_10_retry.pdf",
+      "expected_sha256": "ada23c9e1219819fff3a0fcd12ae298daab13249d00c01b03764712fcc2aeb33",
+      "actual_sha256": "ada23c9e1219819fff3a0fcd12ae298daab13249d00c01b03764712fcc2aeb33",
+      "match": true
+    },
+    {
+      "path": "sources/goa_9_2025.pdf",
+      "expected_sha256": "56d104ed800a064248181119ec513f3111b3bce5e30d59852cb04508d91728c5",
+      "actual_sha256": "56d104ed800a064248181119ec513f3111b3bce5e30d59852cb04508d91728c5",
+      "match": true
+    },
+    {
+      "path": "sources/goa_rates_index.html",
+      "expected_sha256": "a6dc3810ee26a6ddcaa9fad7d0bc1bace939d3f6ac006ea956120a3b1eb73200",
+      "actual_sha256": "a6dc3810ee26a6ddcaa9fad7d0bc1bace939d3f6ac006ea956120a3b1eb73200",
+      "match": true
+    },
+    {
+      "path": "sources/gst_aaar_index.html",
+      "expected_sha256": "8bb257279701e6dc15630373a790a0e3edb82a67972c0ef2f748e734f3d84c8f",
+      "actual_sha256": "8bb257279701e6dc15630373a790a0e3edb82a67972c0ef2f748e734f3d84c8f",
+      "match": true
+    },
+    {
+      "path": "sources/gst_aar_index.html",
+      "expected_sha256": "1e93220023759fc13352ead2e1e322dc26c90f6b64ecf6608a1b0eed4575f734",
+      "actual_sha256": "1e93220023759fc13352ead2e1e322dc26c90f6b64ecf6608a1b0eed4575f734",
+      "match": true
+    },
+    {
+      "path": "sources/gst_aar_page1.html",
+      "expected_sha256": "f36d19588126ec3c4ccd54e1128102a40215ed3bf201e44bea962abed9f2cb0a",
+      "actual_sha256": "f36d19588126ec3c4ccd54e1128102a40215ed3bf201e44bea962abed9f2cb0a",
+      "match": true
+    },
+    {
+      "path": "sources/hsn_gst_advisory.pdf",
+      "expected_sha256": "eef18fac463e60ec79d162bb5ecebb2a886e3fe4a154faa2abc968f7a2397c42",
+      "actual_sha256": "eef18fac463e60ec79d162bb5ecebb2a886e3fe4a154faa2abc968f7a2397c42",
+      "match": true
+    },
+    {
+      "path": "sources/icai_rates_index.html",
+      "expected_sha256": "55c05d077414088057158cfb833aa6046bedfdf720788a4140b16721fe7aefd0",
+      "actual_sha256": "55c05d077414088057158cfb833aa6046bedfdf720788a4140b16721fe7aefd0",
+      "match": true
+    },
+    {
+      "path": "sources/ka_01_2026.pdf",
+      "expected_sha256": "d03b5b1e0d03bdac014280e00bd3f7e95678fa5f80350efb066c0df6ff552724",
+      "actual_sha256": "d03b5b1e0d03bdac014280e00bd3f7e95678fa5f80350efb066c0df6ff552724",
+      "match": true
+    },
+    {
+      "path": "sources/karnataka_rates_index.html",
+      "expected_sha256": "260c545f74492c45d1c7096aa20f1ddd23359fec19ddee53512b534227913377",
+      "actual_sha256": "260c545f74492c45d1c7096aa20f1ddd23359fec19ddee53512b534227913377",
+      "match": true
+    },
+    {
+      "path": "sources/open_dataset_LICENSE.txt",
+      "expected_sha256": "faec9cb1600d435d6a3ac7f1624ff5b9179e6cef13aaf2e033a89463ff2d8775",
+      "actual_sha256": "faec9cb1600d435d6a3ac7f1624ff5b9179e6cef13aaf2e033a89463ff2d8775",
+      "match": true
+    },
+    {
+      "path": "sources/open_dataset_sample.csv",
+      "expected_sha256": "26a2e358b88bceafe2899a3954453137c18e8660a7c73ca2e911d386c753e17b",
+      "actual_sha256": "26a2e358b88bceafe2899a3954453137c18e8660a7c73ca2e911d386c753e17b",
+      "match": true
+    },
+    {
+      "path": "sources/tariff_ch25_mirror.pdf",
+      "expected_sha256": "a02cab975d4bad25a5f38b2daed2c3089951e83258db67ed23e61cf9a996c9d1",
+      "actual_sha256": "a02cab975d4bad25a5f38b2daed2c3089951e83258db67ed23e61cf9a996c9d1",
+      "match": true
+    },
+    {
+      "path": "sources/tariff_ch34_mirror.pdf",
+      "expected_sha256": "c3b0ddba68a481b310b42a78b672a390605877f1e9cb9fc60c6c6bdf82f600a9",
+      "actual_sha256": "c3b0ddba68a481b310b42a78b672a390605877f1e9cb9fc60c6c6bdf82f600a9",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/ashwani_sc2023.pdf",
+      "expected_sha256": "fe5928906d89af0d9bd6d1d327a3d92b65fdb123588705bce508e27e8a8eeaeb",
+      "actual_sha256": "fe5928906d89af0d9bd6d1d327a3d92b65fdb123588705bce508e27e8a8eeaeb",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/ashwani_sc2023.pdf.txt",
+      "expected_sha256": "bf9fa0196598da3b8b82b01078c0a4013966e92364f5fcfa814405e2eb125d65",
+      "actual_sha256": "bf9fa0196598da3b8b82b01078c0a4013966e92364f5fcfa814405e2eb125d65",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/bajaj_20250523.pdf",
+      "expected_sha256": "6a0c06b621d47dd3e3fabd87da223b32a142e86f930b3fe165ed6246f613526b",
+      "actual_sha256": "6a0c06b621d47dd3e3fabd87da223b32a142e86f930b3fe165ed6246f613526b",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/bajaj_20250523.pdf.txt",
+      "expected_sha256": "8b443b58e03fa54b52a03350a2db3a3b2c51510e67a6e49d6d1233cecc26d41b",
+      "actual_sha256": "8b443b58e03fa54b52a03350a2db3a3b2c51510e67a6e49d6d1233cecc26d41b",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/britannia_20260303.pdf",
+      "expected_sha256": "b9e5538b1ef9576bda832202d7f82e387704cda45204589700768c2983b1baa2",
+      "actual_sha256": "b9e5538b1ef9576bda832202d7f82e387704cda45204589700768c2983b1baa2",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/britannia_20260303.pdf.txt",
+      "expected_sha256": "dca037faa5c0f11934d2f816356964cbdec989b703d0110ef4b8a11c05933edd",
+      "actual_sha256": "dca037faa5c0f11934d2f816356964cbdec989b703d0110ef4b8a11c05933edd",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/cello_20251218.pdf",
+      "expected_sha256": "c8ba253fd266b3d29212190ed86985e7288138291f5d472fd2ca1a2040659ab1",
+      "actual_sha256": "c8ba253fd266b3d29212190ed86985e7288138291f5d472fd2ca1a2040659ab1",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/cello_20251218.pdf.txt",
+      "expected_sha256": "d250ddf89615a157a71582a4a323c9d58d1ef629b88ef379b4d4656494d82f25",
+      "actual_sha256": "d250ddf89615a157a71582a4a323c9d58d1ef629b88ef379b4d4656494d82f25",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/circular189_2023.pdf",
+      "expected_sha256": "fc7e299c19c3dc767868980bb74ab9ca94a14c4f95bb1dca0ed179a0ff78be93",
+      "actual_sha256": "fc7e299c19c3dc767868980bb74ab9ca94a14c4f95bb1dca0ed179a0ff78be93",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/circular189_2023.pdf.txt",
+      "expected_sha256": "ee93011546735737c49da7a89a97098bd79fe058610da0b46b0c60d564d4e9e5",
+      "actual_sha256": "ee93011546735737c49da7a89a97098bd79fe058610da0b46b0c60d564d4e9e5",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/circular200_2023.pdf",
+      "expected_sha256": "25f9ab8dc6e6afbab9e9583719b99e16b03cfeb4ad94f701794d7f71ba27c106",
+      "actual_sha256": "25f9ab8dc6e6afbab9e9583719b99e16b03cfeb4ad94f701794d7f71ba27c106",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/circular200_2023.pdf.txt",
+      "expected_sha256": "5998dcc003d2e06be6bf7cb33dfb5ed0eebf01c82741eb53e483a2be7e58b17f",
+      "actual_sha256": "5998dcc003d2e06be6bf7cb33dfb5ed0eebf01c82741eb53e483a2be7e58b17f",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/gopal_20250408.pdf",
+      "expected_sha256": "931c3ad78ca5c714afddd04fee59d1d50ffa4879cc2797210229f2fd4afdebde",
+      "actual_sha256": "931c3ad78ca5c714afddd04fee59d1d50ffa4879cc2797210229f2fd4afdebde",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/gopal_20250408.pdf.txt",
+      "expected_sha256": "1685cf5fb6bca03276ca4c23257a5d4e7c463997a022a911b3ac617277ae074c",
+      "actual_sha256": "1685cf5fb6bca03276ca4c23257a5d4e7c463997a022a911b3ac617277ae074c",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/gopal_20251213.pdf",
+      "expected_sha256": "8e9696ce9cbdf3f0ddbc5d0a452d92a88babff59ccaee122bb6f6f207561fc2d",
+      "actual_sha256": "8e9696ce9cbdf3f0ddbc5d0a452d92a88babff59ccaee122bb6f6f207561fc2d",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/gopal_20251213.pdf.txt",
+      "expected_sha256": "0d68f8c928cede39e4da830ee9e620b259e85d59133376a8d5011a9d6c909d65",
+      "actual_sha256": "0d68f8c928cede39e4da830ee9e620b259e85d59133376a8d5011a9d6c909d65",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/gopal_20260212.pdf",
+      "expected_sha256": "f42244db1d0a58b1923da163a0cbd36c81408710c4cc1cfa0386b6fdb8829edc",
+      "actual_sha256": "f42244db1d0a58b1923da163a0cbd36c81408710c4cc1cfa0386b6fdb8829edc",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/gopal_20260212.pdf.txt",
+      "expected_sha256": "9ae862906438be358563c7e8c3c7cf2a64e73652d038e04ebcfad1621ea605ce",
+      "actual_sha256": "9ae862906438be358563c7e8c3c7cf2a64e73652d038e04ebcfad1621ea605ce",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/gopal_20260605.pdf",
+      "expected_sha256": "c9129cc2875aa3d4ae98ab1a73a21e2a2a48e0eec8a75066c552b710d09ad97f",
+      "actual_sha256": "c9129cc2875aa3d4ae98ab1a73a21e2a2a48e0eec8a75066c552b710d09ad97f",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/gopal_20260605.pdf.txt",
+      "expected_sha256": "5ba1aafb1041988edccc2ddd92634f7ef27c86f420b96313c3e00568e71222e1",
+      "actual_sha256": "5ba1aafb1041988edccc2ddd92634f7ef27c86f420b96313c3e00568e71222e1",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/hamdard_sc2026.pdf",
+      "expected_sha256": "f7963ebc7e37bfc2abda3d11d2959d373e04c1e21b6a3202c9ee848005df6dce",
+      "actual_sha256": "f7963ebc7e37bfc2abda3d11d2959d373e04c1e21b6a3202c9ee848005df6dce",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/hamdard_sc2026.pdf.txt",
+      "expected_sha256": "bac8d246e83ebc7c08599baeb8a0155b6c4d43d331786202155d3163b8659286",
+      "actual_sha256": "bac8d246e83ebc7c08599baeb8a0155b6c4d43d331786202155d3163b8659286",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/incnut_tsaar2022.pdf",
+      "expected_sha256": "cebc38b7851fd34b53d5aa73cfb2ea0e3944f8acb22e08984678175962fbe20e",
+      "actual_sha256": "cebc38b7851fd34b53d5aa73cfb2ea0e3944f8acb22e08984678175962fbe20e",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/incnut_tsaar2022.pdf.txt",
+      "expected_sha256": "276fef48ae3d83abb6f9c31e536a9a85de21171042d72beba0f1f7c446324804",
+      "actual_sha256": "276fef48ae3d83abb6f9c31e536a9a85de21171042d72beba0f1f7c446324804",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/madhan_sc2024.pdf",
+      "expected_sha256": "9c4f2fcbd9ff31a5b91f085c0f3f49ddeda2569a59754bb376796908e234ea9e",
+      "actual_sha256": "9c4f2fcbd9ff31a5b91f085c0f3f49ddeda2569a59754bb376796908e234ea9e",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/madhan_sc2024.pdf.txt",
+      "expected_sha256": "4723fd292c2599bb87b05687549f1b47c730f1b7a67414c4a50fb772c881c32d",
+      "actual_sha256": "4723fd292c2599bb87b05687549f1b47c730f1b7a67414c4a50fb772c881c32d",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/manifest.json",
+      "expected_sha256": "6f4d28e7e4730b88fb7f395ce0fdffa32533ecb246dc980580aa98ae07e91c33",
+      "actual_sha256": "6f4d28e7e4730b88fb7f395ce0fdffa32533ecb246dc980580aa98ae07e91c33",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/mother_drhp2025.pdf",
+      "expected_sha256": "13f52faf715e70f54de0703cfcdc327081a154f10ac03b4348964e64ec98545a",
+      "actual_sha256": "13f52faf715e70f54de0703cfcdc327081a154f10ac03b4348964e64ec98545a",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/mother_drhp2025.pdf.txt",
+      "expected_sha256": "ff68943e76fe7b6450e625c26861ef40cb6bd2f3b4ec2a0e0fb00aebbbded255",
+      "actual_sha256": "ff68943e76fe7b6450e625c26861ef40cb6bd2f3b4ec2a0e0fb00aebbbded255",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/unominda_20260311.pdf",
+      "expected_sha256": "bed5dbeb4ab2b8ff62d2af432d2fc6d46c4622bace1ad8903fea6e819374fcd3",
+      "actual_sha256": "bed5dbeb4ab2b8ff62d2af432d2fc6d46c4622bace1ad8903fea6e819374fcd3",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/unominda_20260311.pdf.txt",
+      "expected_sha256": "8a7eb6bd24e7f8a5e83e0069cc4047f3813760a01d767d2021cb45e066380e79",
+      "actual_sha256": "8a7eb6bd24e7f8a5e83e0069cc4047f3813760a01d767d2021cb45e066380e79",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/unominda_corr_20260311.pdf",
+      "expected_sha256": "c872ec46a16f854e92ff099f586326ef6b468b3f003dc5c3c62984f74a294e0e",
+      "actual_sha256": "c872ec46a16f854e92ff099f586326ef6b468b3f003dc5c3c62984f74a294e0e",
+      "match": true
+    },
+    {
+      "path": "sources/turn2/unominda_corr_20260311.pdf.txt",
+      "expected_sha256": "3551e89f1d8b891341b8a4e1fb2b59e84b3a482e67bab940babe867cc2ad5f43",
+      "actual_sha256": "3551e89f1d8b891341b8a4e1fb2b59e84b3a482e67bab940babe867cc2ad5f43",
+      "match": true
+    },
+    {
+      "path": "sources/wco_gir_web_capture.txt",
+      "expected_sha256": "b293a28593aed91523ae0372915cca81a4f82ea0e3b1545dbeef404377142ed7",
+      "actual_sha256": "b293a28593aed91523ae0372915cca81a4f82ea0e3b1545dbeef404377142ed7",
+      "match": true
+    }
+  ],
+  "all_manifest_hashes_match": true,
+  "inventory": [
+    {
+      "path": "data/audit_20_rows.csv",
+      "bytes": 9517,
+      "sha256": "bbbbee4375f53cfc002e8910ded321777f255ff0ae78330d04f58f9c43a05d63"
+    },
+    {
+      "path": "data/classification_rules.csv",
+      "bytes": 16880,
+      "sha256": "36a664223d5266d48f3a5c39628d3f7187f7f4b91ba42e9a1be28cd2e0f58079"
+    },
+    {
+      "path": "data/data_coverage.csv",
+      "bytes": 1598,
+      "sha256": "5cd9f5392152ae37e81bdcc44e86877b652ab8d395d747fa14f24565df4c2246"
+    },
+    {
+      "path": "data/extraction_summary.json",
+      "bytes": 360,
+      "sha256": "2ceb9fc2b7cadfe64cc6c02db9468569076842aa5dfbb5a9074e0e6fd1808967"
+    },
+    {
+      "path": "data/gri_rules.csv",
+      "bytes": 5067,
+      "sha256": "ffffdcf71ca487a8bb5ed64b0899e5dda13da32b05b34d065497e7c1139cd511"
+    },
+    {
+      "path": "data/hsn_codes.csv",
+      "bytes": 60367,
+      "sha256": "a1d4dc236b01b9a39e295bfcdff8fed8dc57cab210556d986dfed27356bc6ebc"
+    },
+    {
+      "path": "data/law_snapshots.csv",
+      "bytes": 492,
+      "sha256": "b9f3ff451368fecd392fe6ffdfa26e550ea880ea0e2a11eb3f209a2e0a262931"
+    },
+    {
+      "path": "data/policy_verification.json",
+      "bytes": 1082,
+      "sha256": "d6a77cfb9c840c2f23ccb69dde303efa832d8600641648a7fb81d6c53854fdb9"
+    },
+    {
+      "path": "data/rate_entries.csv",
+      "bytes": 37288,
+      "sha256": "2bd3538f487207d15fdfed377e3e3f7db4d3fab29c672eb0bd344be5f9d241a1"
+    },
+    {
+      "path": "data/rate_entries_ch25.csv",
+      "bytes": 17801,
+      "sha256": "d287b5709905fc982945e8cc0e1011ff039bc4a74333e9100f78a33fa4a99844"
+    },
+    {
+      "path": "data/rate_entries_ch34.csv",
+      "bytes": 6865,
+      "sha256": "83e84ba926d7991a4df591554d9b57cb48904e2a275bb4ff5a612e10091cfeac"
+    },
+    {
+      "path": "data/rate_scopes.csv",
+      "bytes": 10237,
+      "sha256": "cbd8e6f77e4627b766958faf1f8906e8033a813785bac6c7f1d4f36e4e0f6925"
+    },
+    {
+      "path": "data/rulings.csv",
+      "bytes": 2452,
+      "sha256": "df71867bafdc196c9a105133eb99b56ced3e18bc935fc6b2eedaa9731cdcab00"
+    },
+    {
+      "path": "data/source_documents.csv",
+      "bytes": 17405,
+      "sha256": "9d017b1bb0746216eea43b48ee039d64fd78c56689f489c453f82a14248d9661"
+    },
+    {
+      "path": "data/source_inventory.csv",
+      "bytes": 23123,
+      "sha256": "dfc2a541aa65de18d7d88f350bfcf3ecc39df51aec4a94c6e17b078c341ce702"
+    },
+    {
+      "path": "data/sql_syntax_verification.json",
+      "bytes": 115,
+      "sha256": "343d7a1d84e7d37c60dd2f54b3c597781ff4474de7fbf51c7ad0dff5e1d7fbaf"
+    },
+    {
+      "path": "data/test_pairs.json",
+      "bytes": 12969,
+      "sha256": "7e928773678b0acf6e01323989145b71b93e676f3595ca12fab346e5abd26436"
+    },
+    {
+      "path": "data/turn2_rate_evidence.csv",
+      "bytes": 89454,
+      "sha256": "5443cfcbda3a71065ce6c8b44f04151ad78ecf7cdfdb6a820157cdb9e637d401"
+    },
+    {
+      "path": "data/verification.json",
+      "bytes": 543,
+      "sha256": "e2da0728102d85d64da871a21e9708974aaf4d7f42ec2f2be817a8a7da8c4ce7"
+    },
+    {
+      "path": "README.md",
+      "bytes": 5099,
+      "sha256": "e482464eebfe0be87fd00b741b2565749caa350d47f3d5a1ed9eb6d372fa14d1"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 46,
+      "sha256": "b43d43475c07b6a64d30eca9b8594b3ac87367a5aef59f23659bf17d06b84694"
+    },
+    {
+      "path": "schema.sql",
+      "bytes": 12753,
+      "sha256": "c6530c833205c20e9d67417b498ce4455b9d170b8f3c37c725fe1659c011610c"
+    },
+    {
+      "path": "scripts/build_catalog.py",
+      "bytes": 19622,
+      "sha256": "f3dbfac30b68f073d90a6f76df2fa70716f6c6a30d75ff514b0dad092c69f582"
+    },
+    {
+      "path": "scripts/build_coverage.py",
+      "bytes": 1733,
+      "sha256": "dffbda4c6e020e7ad6f5d62cb48dbb39893341ad378ab110a4cfc9dd6a7e3c30"
+    },
+    {
+      "path": "scripts/build_report.py",
+      "bytes": 28944,
+      "sha256": "715f3f64578c01b201b4706028b2282ccb457917e1ca67abef459dd74af61f71"
+    },
+    {
+      "path": "scripts/build_ruling_seed.py",
+      "bytes": 1976,
+      "sha256": "010b1c19602c3619ebc5ed0e405fc22f37ab0cc749d005ad52412693bd79d902"
+    },
+    {
+      "path": "scripts/build_turn2_report.py",
+      "bytes": 29264,
+      "sha256": "5ead1ef84e95c809620a81029b4d935a0047dc9da0effff8df04a68f2a04f58c"
+    },
+    {
+      "path": "scripts/confidence.py",
+      "bytes": 1718,
+      "sha256": "5feced0ed35fab43d0218c58c44c16a16126e74855012c719eef484c19942cc5"
+    },
+    {
+      "path": "scripts/discover_metadata.py",
+      "bytes": 1528,
+      "sha256": "c2692060cd29a1aad1e57432063e36afb32e2ed5cf16b93df0fd115c1ed45b9b"
+    },
+    {
+      "path": "scripts/extract.py",
+      "bytes": 11885,
+      "sha256": "8f035d581aab9b30d69937ac6509c7211943a8018256bfbcbf5394d069e55d42"
+    },
+    {
+      "path": "scripts/extract_turn2_rates.py",
+      "bytes": 972,
+      "sha256": "b3185d2810299e2e4736f828b07aa8342954618736028fadf1ceff8f1f3f32af"
+    },
+    {
+      "path": "scripts/fetch_sources.py",
+      "bytes": 1860,
+      "sha256": "23bb8d4e37db079c1c5692d8adcfd3610adcbb7012be3d0773ba86c8fc32f0ca"
+    },
+    {
+      "path": "scripts/fetch_turn2.py",
+      "bytes": 3445,
+      "sha256": "ba54cd1026da305e141252daa23cf5344818b6bcf9a5a32ab1ab932aa7781ad5"
+    },
+    {
+      "path": "scripts/ocr_sample.py",
+      "bytes": 805,
+      "sha256": "6fe3647d7f02c27586925d4220d1e6d75b2a07d7f9d22323ad4891384ce60fdd"
+    },
+    {
+      "path": "scripts/verify.py",
+      "bytes": 3204,
+      "sha256": "d621dcb2a6c0e1873eb506e8cd23cf8c4bdbdcd7b46dba98990e0682886f1f10"
+    },
+    {
+      "path": "scripts/verify_policy.py",
+      "bytes": 1117,
+      "sha256": "b847988758de7ba023deac8cfe7df868c4ae5d44fc68f7f05f2c6a6bd65cd20c"
+    },
+    {
+      "path": "SHA256SUMS.json",
+      "bytes": 9873,
+      "sha256": "cd549723a40d8bb28975ee7f7fb6eb985c39de2704d31bfd97ef8ac5b436bb2c"
+    },
+    {
+      "path": "source_catalog.json",
+      "bytes": 39212,
+      "sha256": "68e7e29cbe9365ef6d451a96a0d43e66af773b1eb05204a4396b405ff5570ed9"
+    },
+    {
+      "path": "sources/.central19_2025_mirror.pdf.HmV9lB",
+      "bytes": 786432,
+      "sha256": "96d63b2df2486488a56088ce549c97ab748de5f80374da2a5a4aa7cc5efb760e"
+    },
+    {
+      "path": "sources/aar_chehar_2026.ocr.txt",
+      "bytes": 37157,
+      "sha256": "140802cb5747481237edbd4851dae152f966bc85cd2dd82759d08e8a455b5dac"
+    },
+    {
+      "path": "sources/aar_chehar_2026.pdf",
+      "bytes": 1494273,
+      "sha256": "859c9189b3071fc744e6fe4c052f914f407c0420d712dd86030570fdc54456ca"
+    },
+    {
+      "path": "sources/aar_chehar_2026.pdf.headers",
+      "bytes": 557,
+      "sha256": "6fd1be0a3e08d7a6a1abdb002456e0c5ae9e66229a3e5725290641d7d0ef42df"
+    },
+    {
+      "path": "sources/aar_chehar_2026.txt",
+      "bytes": 295,
+      "sha256": "5e7cc429217bba2e8660f9505d962ef888d0f7373126278fd930ddff052dc9e1"
+    },
+    {
+      "path": "sources/aar_chehar_page-01.ocr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "sources/aar_chehar_page-02.ocr.txt",
+      "bytes": 2163,
+      "sha256": "5d6e5b9de11fe62d553cdfbb40f18232082defd2c2b6c72c7aade6cf6bad82c5"
+    },
+    {
+      "path": "sources/aar_chehar_page-03.ocr.txt",
+      "bytes": 1473,
+      "sha256": "0354f6e78974ae1c734b9becb5faf900cbefd0a234acaef16c22d54c5ba5465f"
+    },
+    {
+      "path": "sources/aar_chehar_page-04.ocr.txt",
+      "bytes": 963,
+      "sha256": "005941ef95885dcd9b0e723ace301663e31c4dd83845057ba457489ad58de15f"
+    },
+    {
+      "path": "sources/aar_chehar_page-05.ocr.txt",
+      "bytes": 419,
+      "sha256": "b6c8e2b28f7791e147320d8368e33f2e650e13d1d50966ab84fef6adc007f07a"
+    },
+    {
+      "path": "sources/cbic_10_2025.pdf",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909"
+    },
+    {
+      "path": "sources/cbic_10_2025.pdf.headers",
+      "bytes": 282,
+      "sha256": "061a45786f12167c0cdab9f625e4813452a85dddd3ca8238ddce571b64433a47"
+    },
+    {
+      "path": "sources/cbic_9_2025.pdf",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909"
+    },
+    {
+      "path": "sources/cbic_9_2025.pdf.headers",
+      "bytes": 282,
+      "sha256": "061a45786f12167c0cdab9f625e4813452a85dddd3ca8238ddce571b64433a47"
+    },
+    {
+      "path": "sources/cbic_gazette9_mirror.pdf",
+      "bytes": 1079241,
+      "sha256": "dce99466ea2abc852f2366666b56c235cd4830e675f860de31ae27f80b1e1f28"
+    },
+    {
+      "path": "sources/cbic_gazette9_mirror.pdf.headers",
+      "bytes": 612,
+      "sha256": "52b1e146acd1f547cad05f455075c11e9b9f096d1e3c37e5a78fb793618189d7"
+    },
+    {
+      "path": "sources/cbic_gazette9_mirror.txt",
+      "bytes": 193019,
+      "sha256": "d3310228abd198f23a37d5153b4763fcc7eac567129e666de8b6d41278666673"
+    },
+    {
+      "path": "sources/cbic_index_no_www.html",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909"
+    },
+    {
+      "path": "sources/cbic_index_no_www.html.headers",
+      "bytes": 282,
+      "sha256": "f746bdd9e06417dd45262e2134cfbca81b990832b19ae36e60af8429e92e0e05"
+    },
+    {
+      "path": "sources/cbic_partii_2024.html",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909"
+    },
+    {
+      "path": "sources/cbic_partii_2024.html.headers",
+      "bytes": 282,
+      "sha256": "cc9865bbd43a553c55baa66a2529b199a9914f4799dabb41dda8304ebd3b51a0"
+    },
+    {
+      "path": "sources/cbic_tariff_index.html",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909"
+    },
+    {
+      "path": "sources/cbic_tariff_index.html.headers",
+      "bytes": 282,
+      "sha256": "3d6d9e530603831f02e6efe54adbab1d0bfcf0b9b14bdf759c76487afbd52c9b"
+    },
+    {
+      "path": "sources/central10_gazette_mirror.pdf",
+      "bytes": 284729,
+      "sha256": "e2b0514786aafd3c4012d7218c736fb763d4b719a6bb88ba16ff1784a4e3bf97"
+    },
+    {
+      "path": "sources/central10_gazette_mirror.pdf.headers",
+      "bytes": 609,
+      "sha256": "b129c2aae6619697f1fca6675d85b79fdc38bfdca8db10fb8399641aa019469c"
+    },
+    {
+      "path": "sources/central10_gazette_mirror.txt",
+      "bytes": 23903,
+      "sha256": "a92c48cf14a58400e988508e44130dcf1df8cbd8f18d84227e335c800bcd2963"
+    },
+    {
+      "path": "sources/central19_2025_mirror.pdf",
+      "bytes": 1051222,
+      "sha256": "448a07eac86bb97ec4d6c002dd5289b1db43a38bb7e1046cb171997e1d34533c"
+    },
+    {
+      "path": "sources/central19_2025_mirror.pdf.headers",
+      "bytes": 604,
+      "sha256": "8f09efe8dcb325ca96182d10746c695beb8e6a342c2b022397075c0d7879891d"
+    },
+    {
+      "path": "sources/central19_2025_mirror.txt",
+      "bytes": 2481,
+      "sha256": "047df3a72188b2ee6b0ba2a10fedcd48b762ca686dce8a1c75014fcbdd129e11"
+    },
+    {
+      "path": "sources/central1_2026_corrigendum_mirror.pdf",
+      "bytes": 1030160,
+      "sha256": "f72e4f2da6a0f69e71a988cf1c33e1f4c1e2d51657e2cfa84f42f5beab05b8e5"
+    },
+    {
+      "path": "sources/central1_2026_corrigendum_mirror.pdf.headers",
+      "bytes": 604,
+      "sha256": "60bacaa47d29c6e9aeeef5257c0c5f63039b7f517cee162c4ea1a294746ea1a8"
+    },
+    {
+      "path": "sources/central1_2026_corrigendum_mirror.txt",
+      "bytes": 1952,
+      "sha256": "273341cb9b73d55c39ffd175711f07b9fe66d37c7019a0da776efaefd407efe2"
+    },
+    {
+      "path": "sources/central9_gazette_mirror.pdf",
+      "bytes": 552779,
+      "sha256": "0362838d241f2e6752deb1ef93e0418e55418da3a67a4cf1f4294e7b7cf8b4f5"
+    },
+    {
+      "path": "sources/central9_gazette_mirror.pdf.headers",
+      "bytes": 603,
+      "sha256": "0c23cadc689fb7487889ebf12589d1bf6ba1c52f9ddf9872ec57a1c2c8c1bdda"
+    },
+    {
+      "path": "sources/central9_gazette_mirror.txt",
+      "bytes": 186178,
+      "sha256": "a06f66b1462e7ec22a1783d5b945c00c12147bf339839bc4e8e3feb2ef1b11e5"
+    },
+    {
+      "path": "sources/central9_updated_may2026_mirror.pdf",
+      "bytes": 990389,
+      "sha256": "23f07569aa25c4b4cf5b99691d1719147105ccd3eb03f236efe2906d096d3d62"
+    },
+    {
+      "path": "sources/central9_updated_may2026_mirror.pdf.headers",
+      "bytes": 609,
+      "sha256": "7549fbe4ba942d7d823d460b2bb5bef26503ca16f9007822126bb12954b2ed50"
+    },
+    {
+      "path": "sources/central9_updated_may2026_mirror.txt",
+      "bytes": 192271,
+      "sha256": "49cc8b9dca1de8d946de8ef0ff949dcad23ce71485bba48c38c796939915ad11"
+    },
+    {
+      "path": "sources/cgst_act.pdf",
+      "bytes": 1888392,
+      "sha256": "f7317f3ae40c2f41ab777acbd49fca309f10d8686640dea1bf215cf4c48754e7"
+    },
+    {
+      "path": "sources/cgst_act.pdf.headers",
+      "bytes": 1304,
+      "sha256": "dd590f61cfe33e3e418f9b27fd23103f6c4d4a1cd4f5162f0b0f687c52bf39c5"
+    },
+    {
+      "path": "sources/circular_247_2025.pdf",
+      "bytes": 1067938,
+      "sha256": "afa6642cc372c037d206af3fd23ee486861ca05ab613d8d7a4da508376d859ff"
+    },
+    {
+      "path": "sources/circular_247_2025.pdf.headers",
+      "bytes": 56,
+      "sha256": "6b2047929f26df4637510435f6a88b9de8ac98f230c253f71e360f1e367efd1b"
+    },
+    {
+      "path": "sources/circular_page.html",
+      "bytes": 33232,
+      "sha256": "45ff2aa973cb2dcc96c982634d8e03fbbfe067f2f9c69a6e2b2fb22c36bfb084"
+    },
+    {
+      "path": "sources/council_57_faq.pdf",
+      "bytes": 563840,
+      "sha256": "86b1f2f492760d9f1cd21cf046e5d010af498a8f22abbb2f47abbf9787f4ea4e"
+    },
+    {
+      "path": "sources/council_57_faq.pdf.headers",
+      "bytes": 556,
+      "sha256": "7e2119c5dcf37cd509bc612b402a2bf0db60795915d7f673e3ff09690924030d"
+    },
+    {
+      "path": "sources/council_57_faq.txt",
+      "bytes": 81427,
+      "sha256": "454e65faba6986465501439ffbac57b582903420a3c6eda1dd75b3180c695276"
+    },
+    {
+      "path": "sources/council_57_release.pdf",
+      "bytes": 549452,
+      "sha256": "683d39bf7e0bb712450adcc864d5b08b9a503a7a35d98afcbdd5d73ef940759c"
+    },
+    {
+      "path": "sources/council_57_release.pdf.headers",
+      "bytes": 555,
+      "sha256": "98527ae6ea580d2317cbeb203ed61508bc5db99d0cb48f8e23f6abbe2e26d3ad"
+    },
+    {
+      "path": "sources/council_57_release.txt",
+      "bytes": 37461,
+      "sha256": "d244c82804f9b2e8877d174601e9d9256d4523363d174644bbac5d72e5731453"
+    },
+    {
+      "path": "sources/council_april2026.pdf",
+      "bytes": 2176853,
+      "sha256": "747cf96026bb543ead81ba97e7ae5b2cbf45008b22b86870f8bc393e3b616d25"
+    },
+    {
+      "path": "sources/council_april2026.pdf.headers",
+      "bytes": 56,
+      "sha256": "683e0daf8c18d51b459e0368e85600d3fa3adb000dc06ec6ffd7129e600b79f8"
+    },
+    {
+      "path": "sources/council_april2026.txt",
+      "bytes": 19829,
+      "sha256": "55e25ed9d309723d76c67cfc87bbfd8ff5de47376eaab0e82dcd4c4897c9dfad"
+    },
+    {
+      "path": "sources/customs_tariff_act_index.html.headers",
+      "bytes": 56,
+      "sha256": "bee6f98bb924de0fe686e10d55ddcf1d9acd1fa41e6626c3f9e3e7b674a955da"
+    },
+    {
+      "path": "sources/customs_tariff_act_indiacode.pdf.headers",
+      "bytes": 56,
+      "sha256": "bee6f98bb924de0fe686e10d55ddcf1d9acd1fa41e6626c3f9e3e7b674a955da"
+    },
+    {
+      "path": "sources/downloads.json",
+      "bytes": 4180,
+      "sha256": "f3e7c1ed15ed25920c8602698354ac246f7f2e313699a1a73f7ac7eefd869032"
+    },
+    {
+      "path": "sources/downloads_extra.json",
+      "bytes": 2978,
+      "sha256": "41f68620a8ba4b4d8205bfd4cab9d091bbe75a12cdec551459216fde96a7f4e7"
+    },
+    {
+      "path": "sources/downloads_extra2.json",
+      "bytes": 2614,
+      "sha256": "8d53f68dd70fbe0ec8c8fd10d5fdedaa1501ac2905d6f8df6553c5df9ec80114"
+    },
+    {
+      "path": "sources/downloads_extra3.json",
+      "bytes": 2293,
+      "sha256": "ea43ccbf3cddd8e8e687f5bdead051424a4c5acb0aeffc4a31904a1d57733f64"
+    },
+    {
+      "path": "sources/downloads_extra4.json",
+      "bytes": 1522,
+      "sha256": "e12ef9a0a1c481d88a1bea9df0683dbdb1cca18dc3709c4cf8a7737299f67498"
+    },
+    {
+      "path": "sources/downloads_extra5.json",
+      "bytes": 1540,
+      "sha256": "6770a8f5fe45ceaed9c8a485390964310ad4edfdd9ecfbf073d353ad7720070b"
+    },
+    {
+      "path": "sources/downloads_extra6.json",
+      "bytes": 1995,
+      "sha256": "2b51c9204be573410af17dc9a8cce755f6b70af546e2deab4919e3802d00a591"
+    },
+    {
+      "path": "sources/downloads_extra7.json",
+      "bytes": 1912,
+      "sha256": "074f3ea2b6d89ee122894042dd8ffde7c9951e99967c24871c7a77ae92cc0e36"
+    },
+    {
+      "path": "sources/egazette_10_2025.pdf",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909"
+    },
+    {
+      "path": "sources/egazette_10_2025.pdf.headers",
+      "bytes": 282,
+      "sha256": "cf90b5d4d4a80a30cb5f60efbefd3deb287b5bd7ac5aa5fa17e99520be0d3051"
+    },
+    {
+      "path": "sources/exim_method.html",
+      "bytes": 75257,
+      "sha256": "f489db7bfcd08235de792f0122252c1b0403106fd373a57d98fcf701aa13560c"
+    },
+    {
+      "path": "sources/exim_method.html.headers",
+      "bytes": 855,
+      "sha256": "70a04bf9255614a7a88f78cdc5b91b3280e53ca00d06fd194540784569f2d0d2"
+    },
+    {
+      "path": "sources/github_classifier.json",
+      "bytes": 6805,
+      "sha256": "6c83dede166fdab6b94529ace9f1147c86b3d5b2ec634503af5ba869edaaa0a8"
+    },
+    {
+      "path": "sources/github_karthi.json",
+      "bytes": 6184,
+      "sha256": "0a576c9375e1611bd3bd03e2e9abf7a3395d9e4201f05b8cbfd8a318876494d4"
+    },
+    {
+      "path": "sources/github_mhdstk.json",
+      "bytes": 5947,
+      "sha256": "b2ba7cf433ea9742a786320dd13e0c7dd892e14f0e1f27ecbf1db72780a3f113"
+    },
+    {
+      "path": "sources/github_rgupta.json",
+      "bytes": 6166,
+      "sha256": "6b1bb6a6344e3131d065c3af8903c39822ef23e54aea8c6ed750f3a2b60fef05"
+    },
+    {
+      "path": "sources/github_rgupta_contents.json",
+      "bytes": 3731,
+      "sha256": "17ecd73a408452da3a995855192a7d62542d033f511476ef5aa1c8c11ef7378d"
+    },
+    {
+      "path": "sources/goa_10_2025.pdf",
+      "bytes": 241664,
+      "sha256": "f09ab1b3ca27ec9105b4220cda3b98e1c1d303f3dbf7e3c55a8a5b158097d2d7"
+    },
+    {
+      "path": "sources/goa_10_2025.pdf.headers",
+      "bytes": 884,
+      "sha256": "5f86e042f1f6c515c4bb77c67e8e3a0816d76acde35a887140643107bb111118"
+    },
+    {
+      "path": "sources/goa_10_retry.pdf",
+      "bytes": 889277,
+      "sha256": "ada23c9e1219819fff3a0fcd12ae298daab13249d00c01b03764712fcc2aeb33"
+    },
+    {
+      "path": "sources/goa_10_retry.pdf.headers",
+      "bytes": 883,
+      "sha256": "6d4798369c55c496d5af23480c228048ad7ccb2b7f440e442b98a86cf84d22a2"
+    },
+    {
+      "path": "sources/goa_10_retry.txt",
+      "bytes": 24834,
+      "sha256": "24806dd19bf92926d2a6bd5aaef470d7f65be6616b7611a62f8e4371158685d7"
+    },
+    {
+      "path": "sources/goa_9_2025.pdf",
+      "bytes": 3445977,
+      "sha256": "56d104ed800a064248181119ec513f3111b3bce5e30d59852cb04508d91728c5"
+    },
+    {
+      "path": "sources/goa_9_2025.pdf.headers",
+      "bytes": 884,
+      "sha256": "c5154fa2c096cd29a814a42ea6bd29911b3f78be6351f1986228617973307303"
+    },
+    {
+      "path": "sources/goa_9_2025.txt",
+      "bytes": 188975,
+      "sha256": "c93b1492e684438c3c41cf1efcf31461d49741640e0e161d7e597098034c0142"
+    },
+    {
+      "path": "sources/goa_rates_index.html",
+      "bytes": 535172,
+      "sha256": "a6dc3810ee26a6ddcaa9fad7d0bc1bace939d3f6ac006ea956120a3b1eb73200"
+    },
+    {
+      "path": "sources/goa_rates_index.html.headers",
+      "bytes": 878,
+      "sha256": "2a24c9593ef07fb9bc20a1982ec9d4498509db3ad95ef832aedf17c68be3a8ae"
+    },
+    {
+      "path": "sources/gst_aaar_index.html",
+      "bytes": 60161,
+      "sha256": "8bb257279701e6dc15630373a790a0e3edb82a67972c0ef2f748e734f3d84c8f"
+    },
+    {
+      "path": "sources/gst_aaar_index.html.headers",
+      "bytes": 788,
+      "sha256": "a2a6d3fd5a125884bab50a789bbae557a6e795c7afe161c72c1019ac71d23d6c"
+    },
+    {
+      "path": "sources/gst_aar_index.html",
+      "bytes": 65307,
+      "sha256": "1e93220023759fc13352ead2e1e322dc26c90f6b64ecf6608a1b0eed4575f734"
+    },
+    {
+      "path": "sources/gst_aar_index.html.headers",
+      "bytes": 788,
+      "sha256": "39ae5638ca3520d1fccd4c10a4b37a469c9ac67836ec5a9d9bb48da365e61fc9"
+    },
+    {
+      "path": "sources/gst_aar_page1.html",
+      "bytes": 61467,
+      "sha256": "f36d19588126ec3c4ccd54e1128102a40215ed3bf201e44bea962abed9f2cb0a"
+    },
+    {
+      "path": "sources/gst_aar_page1.html.headers",
+      "bytes": 788,
+      "sha256": "777c86af825b16ef947bb4572039b76ba77893a8ed36959d984243fafab25ff5"
+    },
+    {
+      "path": "sources/gst_rates_html.html",
+      "bytes": 54195,
+      "sha256": "193c6b0a0dd915e0e84c4fb3b50ccdcfbb49961cbf165f5868706839f6f98d1a"
+    },
+    {
+      "path": "sources/gst_rates_html.html.headers",
+      "bytes": 1333,
+      "sha256": "7910af11833977e866f1a900368ecbcde3d054bf4bbda86de97d4fe918d00a22"
+    },
+    {
+      "path": "sources/hsn_dataset_repo.html",
+      "bytes": 270544,
+      "sha256": "1c8186aa9ec4f65f75dc43608ac47e01a4135ccb04b8995d90e31b2a19b6d9c0"
+    },
+    {
+      "path": "sources/hsn_dataset_repo.html.headers",
+      "bytes": 5179,
+      "sha256": "efbd066e9b9dd9054e5bccb4dd21a77f319875c8515c7346e52ed94e3afb149e"
+    },
+    {
+      "path": "sources/hsn_gst_advisory.pdf",
+      "bytes": 633844,
+      "sha256": "eef18fac463e60ec79d162bb5ecebb2a886e3fe4a154faa2abc968f7a2397c42"
+    },
+    {
+      "path": "sources/hsn_gst_advisory.pdf.headers",
+      "bytes": 1410,
+      "sha256": "c479060b74529c308c076bc580875357d48f4e98897eb07dbabc573ddede316f"
+    },
+    {
+      "path": "sources/icai_rates_index.html",
+      "bytes": 1243643,
+      "sha256": "55c05d077414088057158cfb833aa6046bedfdf720788a4140b16721fe7aefd0"
+    },
+    {
+      "path": "sources/icai_rates_index.html.headers",
+      "bytes": 430,
+      "sha256": "b3e4c61c09ce2857e73f330ebd8d42f94e05e2674d0643e9e7f5137ea921eede"
+    },
+    {
+      "path": "sources/indiacode_act_alt.pdf.headers",
+      "bytes": 645,
+      "sha256": "1bdd8b71f49f1250b1321f2e3c7c44fce3b35b6c67d844a4a7fc3f233ecad5d4"
+    },
+    {
+      "path": "sources/indiacode_search.html.headers",
+      "bytes": 56,
+      "sha256": "605aa045f4c89c8d75d473f293a46dfa6e6f672486ddcaebd49e2d2e2aabdafe"
+    },
+    {
+      "path": "sources/ka_01_2026.pdf",
+      "bytes": 336193,
+      "sha256": "d03b5b1e0d03bdac014280e00bd3f7e95678fa5f80350efb066c0df6ff552724"
+    },
+    {
+      "path": "sources/ka_01_2026.pdf.headers",
+      "bytes": 633,
+      "sha256": "958e167e446e2193b4c937076066fa8d786d1871fa00db24fb27e12cb60d7ac3"
+    },
+    {
+      "path": "sources/ka_01_2026.txt",
+      "bytes": 1960,
+      "sha256": "f85b0db27ae3df51a244224ed681be4afd08f3c6e9d179cb0b48651bd6991689"
+    },
+    {
+      "path": "sources/karnataka_rates_index.html",
+      "bytes": 13172,
+      "sha256": "260c545f74492c45d1c7096aa20f1ddd23359fec19ddee53512b534227913377"
+    },
+    {
+      "path": "sources/karnataka_rates_index.html.headers",
+      "bytes": 652,
+      "sha256": "42b655f054eca25a0cf5d82db114861cbe4c054f8a067d6e4b229fe408a4b617"
+    },
+    {
+      "path": "sources/open_dataset_LICENSE.txt",
+      "bytes": 676,
+      "sha256": "faec9cb1600d435d6a3ac7f1624ff5b9179e6cef13aaf2e033a89463ff2d8775"
+    },
+    {
+      "path": "sources/open_dataset_LICENSE.txt.headers",
+      "bytes": 1004,
+      "sha256": "abb29f4cfaa2ee3fe9aa97200c9ef5e9a1e3ca7eb812c76bad39a5760e4190e3"
+    },
+    {
+      "path": "sources/open_dataset_sample.csv",
+      "bytes": 2190222,
+      "sha256": "26a2e358b88bceafe2899a3954453137c18e8660a7c73ca2e911d386c753e17b"
+    },
+    {
+      "path": "sources/open_dataset_sample.csv.headers",
+      "bytes": 1008,
+      "sha256": "809b72e6e90bac74c32be57dea84744bc1074624797bbd2c72fe606899ac98f8"
+    },
+    {
+      "path": "sources/pypi_india_stack.json",
+      "bytes": 45898,
+      "sha256": "817ebe4675841168f151cc19c768cab5fdbf67df9b8170a1a7d73ed9b5f45490"
+    },
+    {
+      "path": "sources/tariff_ch25_mirror.pdf",
+      "bytes": 426307,
+      "sha256": "a02cab975d4bad25a5f38b2daed2c3089951e83258db67ed23e61cf9a996c9d1"
+    },
+    {
+      "path": "sources/tariff_ch25_mirror.pdf.headers",
+      "bytes": 395,
+      "sha256": "0413bf97221ce581143bf75d6f4015157c77dae4793613cf4c949e63c358dd04"
+    },
+    {
+      "path": "sources/tariff_ch25_mirror.txt",
+      "bytes": 21569,
+      "sha256": "1f9cfe92b369b581b41933ab0995abdc50f6ab343512a8d38066efe24bfb73d1"
+    },
+    {
+      "path": "sources/tariff_ch34_mirror.pdf",
+      "bytes": 394702,
+      "sha256": "c3b0ddba68a481b310b42a78b672a390605877f1e9cb9fc60c6c6bdf82f600a9"
+    },
+    {
+      "path": "sources/tariff_ch34_mirror.pdf.headers",
+      "bytes": 395,
+      "sha256": "030f9c02cf29fcf8f898d893be4e68ae1df6917d9b18bbef0d8b8fee75b9d8b8"
+    },
+    {
+      "path": "sources/tariff_ch34_mirror.txt",
+      "bytes": 11477,
+      "sha256": "2c4cf4f5057ae42f9e57251e62f73e6f015c5cc860211832f796ac44bd99f0af"
+    },
+    {
+      "path": "sources/tariffcheck_chapters.html",
+      "bytes": 310692,
+      "sha256": "431ec554de069636b5b6708f2f4e3897de77fc23755fa58423f9d2f8d9d293d3"
+    },
+    {
+      "path": "sources/tariffcheck_chapters.html.headers",
+      "bytes": 1191,
+      "sha256": "ff7e9b45e514d1245670ec9ffcaa365d876f3e5f4fc2a9b0306b45c97d5807da"
+    },
+    {
+      "path": "sources/tg_rates_index.html",
+      "bytes": 328948,
+      "sha256": "5335fd59034afebe8db8b5f10e7dc03d84c62b05b4afdbd55412771282bf902b"
+    },
+    {
+      "path": "sources/tg_rates_index.html.headers",
+      "bytes": 877,
+      "sha256": "8a8f657d86e710dbf71b921a1a92e002490e5c4f528359347a6d9da236d83df8"
+    },
+    {
+      "path": "sources/turn2/ashwani_sc2023.pdf",
+      "bytes": 469740,
+      "sha256": "fe5928906d89af0d9bd6d1d327a3d92b65fdb123588705bce508e27e8a8eeaeb"
+    },
+    {
+      "path": "sources/turn2/ashwani_sc2023.pdf.txt",
+      "bytes": 151574,
+      "sha256": "bf9fa0196598da3b8b82b01078c0a4013966e92364f5fcfa814405e2eb125d65"
+    },
+    {
+      "path": "sources/turn2/bajaj_20250523.pdf",
+      "bytes": 2476234,
+      "sha256": "6a0c06b621d47dd3e3fabd87da223b32a142e86f930b3fe165ed6246f613526b"
+    },
+    {
+      "path": "sources/turn2/bajaj_20250523.pdf.txt",
+      "bytes": 2754,
+      "sha256": "8b443b58e03fa54b52a03350a2db3a3b2c51510e67a6e49d6d1233cecc26d41b"
+    },
+    {
+      "path": "sources/turn2/britannia_20260303.pdf",
+      "bytes": 240651,
+      "sha256": "b9e5538b1ef9576bda832202d7f82e387704cda45204589700768c2983b1baa2"
+    },
+    {
+      "path": "sources/turn2/britannia_20260303.pdf.txt",
+      "bytes": 2974,
+      "sha256": "dca037faa5c0f11934d2f816356964cbdec989b703d0110ef4b8a11c05933edd"
+    },
+    {
+      "path": "sources/turn2/cello_20251218.pdf",
+      "bytes": 612553,
+      "sha256": "c8ba253fd266b3d29212190ed86985e7288138291f5d472fd2ca1a2040659ab1"
+    },
+    {
+      "path": "sources/turn2/cello_20251218.pdf.txt",
+      "bytes": 4567,
+      "sha256": "d250ddf89615a157a71582a4a323c9d58d1ef629b88ef379b4d4656494d82f25"
+    },
+    {
+      "path": "sources/turn2/circular189_2023.pdf",
+      "bytes": 195299,
+      "sha256": "fc7e299c19c3dc767868980bb74ab9ca94a14c4f95bb1dca0ed179a0ff78be93"
+    },
+    {
+      "path": "sources/turn2/circular189_2023.pdf.txt",
+      "bytes": 8260,
+      "sha256": "ee93011546735737c49da7a89a97098bd79fe058610da0b46b0c60d564d4e9e5"
+    },
+    {
+      "path": "sources/turn2/circular200_2023.pdf",
+      "bytes": 447940,
+      "sha256": "25f9ab8dc6e6afbab9e9583719b99e16b03cfeb4ad94f701794d7f71ba27c106"
+    },
+    {
+      "path": "sources/turn2/circular200_2023.pdf.txt",
+      "bytes": 7938,
+      "sha256": "5998dcc003d2e06be6bf7cb33dfb5ed0eebf01c82741eb53e483a2be7e58b17f"
+    },
+    {
+      "path": "sources/turn2/gopal_20250408.pdf",
+      "bytes": 2374936,
+      "sha256": "931c3ad78ca5c714afddd04fee59d1d50ffa4879cc2797210229f2fd4afdebde"
+    },
+    {
+      "path": "sources/turn2/gopal_20250408.pdf.txt",
+      "bytes": 2914,
+      "sha256": "1685cf5fb6bca03276ca4c23257a5d4e7c463997a022a911b3ac617277ae074c"
+    },
+    {
+      "path": "sources/turn2/gopal_20251213.pdf",
+      "bytes": 3316126,
+      "sha256": "8e9696ce9cbdf3f0ddbc5d0a452d92a88babff59ccaee122bb6f6f207561fc2d"
+    },
+    {
+      "path": "sources/turn2/gopal_20251213.pdf.txt",
+      "bytes": 2752,
+      "sha256": "0d68f8c928cede39e4da830ee9e620b259e85d59133376a8d5011a9d6c909d65"
+    },
+    {
+      "path": "sources/turn2/gopal_20260212.pdf",
+      "bytes": 3483780,
+      "sha256": "f42244db1d0a58b1923da163a0cbd36c81408710c4cc1cfa0386b6fdb8829edc"
+    },
+    {
+      "path": "sources/turn2/gopal_20260212.pdf.txt",
+      "bytes": 2754,
+      "sha256": "9ae862906438be358563c7e8c3c7cf2a64e73652d038e04ebcfad1621ea605ce"
+    },
+    {
+      "path": "sources/turn2/gopal_20260605.pdf",
+      "bytes": 3205722,
+      "sha256": "c9129cc2875aa3d4ae98ab1a73a21e2a2a48e0eec8a75066c552b710d09ad97f"
+    },
+    {
+      "path": "sources/turn2/gopal_20260605.pdf.txt",
+      "bytes": 2947,
+      "sha256": "5ba1aafb1041988edccc2ddd92634f7ef27c86f420b96313c3e00568e71222e1"
+    },
+    {
+      "path": "sources/turn2/hamdard_sc2026.pdf",
+      "bytes": 664663,
+      "sha256": "f7963ebc7e37bfc2abda3d11d2959d373e04c1e21b6a3202c9ee848005df6dce"
+    },
+    {
+      "path": "sources/turn2/hamdard_sc2026.pdf.txt",
+      "bytes": 53291,
+      "sha256": "bac8d246e83ebc7c08599baeb8a0155b6c4d43d331786202155d3163b8659286"
+    },
+    {
+      "path": "sources/turn2/incnut_tsaar2022.pdf",
+      "bytes": 635967,
+      "sha256": "cebc38b7851fd34b53d5aa73cfb2ea0e3944f8acb22e08984678175962fbe20e"
+    },
+    {
+      "path": "sources/turn2/incnut_tsaar2022.pdf.txt",
+      "bytes": 32715,
+      "sha256": "276fef48ae3d83abb6f9c31e536a9a85de21171042d72beba0f1f7c446324804"
+    },
+    {
+      "path": "sources/turn2/madhan_sc2024.pdf",
+      "bytes": 254786,
+      "sha256": "9c4f2fcbd9ff31a5b91f085c0f3f49ddeda2569a59754bb376796908e234ea9e"
+    },
+    {
+      "path": "sources/turn2/madhan_sc2024.pdf.txt",
+      "bytes": 54723,
+      "sha256": "4723fd292c2599bb87b05687549f1b47c730f1b7a67414c4a50fb772c881c32d"
+    },
+    {
+      "path": "sources/turn2/manifest.json",
+      "bytes": 4763,
+      "sha256": "6f4d28e7e4730b88fb7f395ce0fdffa32533ecb246dc980580aa98ae07e91c33"
+    },
+    {
+      "path": "sources/turn2/mother_drhp2025.pdf",
+      "bytes": 5606994,
+      "sha256": "13f52faf715e70f54de0703cfcdc327081a154f10ac03b4348964e64ec98545a"
+    },
+    {
+      "path": "sources/turn2/mother_drhp2025.pdf.txt",
+      "bytes": 1071988,
+      "sha256": "ff68943e76fe7b6450e625c26861ef40cb6bd2f3b4ec2a0e0fb00aebbbded255"
+    },
+    {
+      "path": "sources/turn2/unominda_20260311.pdf",
+      "bytes": 826633,
+      "sha256": "bed5dbeb4ab2b8ff62d2af432d2fc6d46c4622bace1ad8903fea6e819374fcd3"
+    },
+    {
+      "path": "sources/turn2/unominda_20260311.pdf.txt",
+      "bytes": 3222,
+      "sha256": "8a7eb6bd24e7f8a5e83e0069cc4047f3813760a01d767d2021cb45e066380e79"
+    },
+    {
+      "path": "sources/turn2/unominda_corr_20260311.pdf",
+      "bytes": 691252,
+      "sha256": "c872ec46a16f854e92ff099f586326ef6b468b3f003dc5c3c62984f74a294e0e"
+    },
+    {
+      "path": "sources/turn2/unominda_corr_20260311.pdf.txt",
+      "bytes": 2972,
+      "sha256": "3551e89f1d8b891341b8a4e1fb2b59e84b3a482e67bab940babe867cc2ad5f43"
+    },
+    {
+      "path": "sources/turn2/windlas_aaar2022_mirror.pdf",
+      "bytes": 153937,
+      "sha256": "322fdd108f63ed469b1fa84044d3db2bb4a32d7297eb927a7d7c4c6af7e569d3"
+    },
+    {
+      "path": "sources/turn2/windlas_aaar2022_mirror.pdf.txt",
+      "bytes": 14408,
+      "sha256": "44c9037df661ad9aca7ea46d21c89d0d445d6ed386618380a45af1a723e04d74"
+    },
+    {
+      "path": "sources/wb_rates_20260331.pdf",
+      "bytes": 91,
+      "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6"
+    },
+    {
+      "path": "sources/wb_rates_20260331.pdf.headers",
+      "bytes": 282,
+      "sha256": "dca57c4afb25853f7217198919d41864f8e735034c8adc29903681fca53e1e70"
+    },
+    {
+      "path": "sources/wb_rates_http.pdf.headers",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "sources/wb_retry.pdf",
+      "bytes": 91,
+      "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6"
+    },
+    {
+      "path": "sources/wb_retry.pdf.headers",
+      "bytes": 282,
+      "sha256": "fe9da5da882d1c47bdb636710eb337676d0db8d0cc7d826451838e394804324e"
+    },
+    {
+      "path": "sources/wco_ch25_2022.pdf",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909"
+    },
+    {
+      "path": "sources/wco_ch25_2022.pdf.headers",
+      "bytes": 282,
+      "sha256": "c13142251e6a94266febd73198f870ecf26a6e99c3dd095db07449a7d9eb7394"
+    },
+    {
+      "path": "sources/wco_ch34_2022.pdf",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909"
+    },
+    {
+      "path": "sources/wco_ch34_2022.pdf.headers",
+      "bytes": 282,
+      "sha256": "dd7cca07dd508c5816aa6ae0da79a65c92d4115bda28fc2ccc9447f1825eda64"
+    },
+    {
+      "path": "sources/wco_gir_2022.pdf",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909"
+    },
+    {
+      "path": "sources/wco_gir_2022.pdf.headers",
+      "bytes": 282,
+      "sha256": "c2e52be3799c77033c8bc015147870aa844165b4aac1ac15b2c51597a36368be"
+    },
+    {
+      "path": "sources/wco_gir_web_capture.txt",
+      "bytes": 4999,
+      "sha256": "b293a28593aed91523ae0372915cca81a4f82ea0e3b1545dbeef404377142ed7"
+    },
+    {
+      "path": "sources/wco_index.html",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909"
+    },
+    {
+      "path": "sources/wco_index.html.headers",
+      "bytes": 282,
+      "sha256": "c2e52be3799c77033c8bc015147870aa844165b4aac1ac15b2c51597a36368be"
+    },
+    {
+      "path": "sources/wco_section_vi_2022.pdf",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909"
+    },
+    {
+      "path": "sources/wco_section_vi_2022.pdf.headers",
+      "bytes": 282,
+      "sha256": "dd7cca07dd508c5816aa6ae0da79a65c92d4115bda28fc2ccc9447f1825eda64"
+    },
+    {
+      "path": "Turn1_Data_Research.md",
+      "bytes": 55685,
+      "sha256": "a3928e481a0da864069c9e4156c4356e95680145ddf2d3c62fe7d58afd380331"
+    },
+    {
+      "path": "Turn2_Test_Pairs_and_Penalty_Cases.md",
+      "bytes": 34504,
+      "sha256": "24f2f5af3dc79f6b4617b04970f073f2d8a8337e469a829e14afac64776f7bf9"
+    }
+  ],
+  "pdfs": [
+    {
+      "path": "sources/aar_chehar_2026.pdf",
+      "bytes": 1494273,
+      "sha256": "859c9189b3071fc744e6fe4c052f914f407c0420d712dd86030570fdc54456ca",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 17
+    },
+    {
+      "path": "sources/cbic_10_2025.pdf",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909",
+      "magic_hex": "757073747265616d",
+      "status": "quarantined_not_pdf",
+      "pages": null
+    },
+    {
+      "path": "sources/cbic_9_2025.pdf",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909",
+      "magic_hex": "757073747265616d",
+      "status": "quarantined_not_pdf",
+      "pages": null
+    },
+    {
+      "path": "sources/cbic_gazette9_mirror.pdf",
+      "bytes": 1079241,
+      "sha256": "dce99466ea2abc852f2366666b56c235cd4830e675f860de31ae27f80b1e1f28",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 83
+    },
+    {
+      "path": "sources/central10_gazette_mirror.pdf",
+      "bytes": 284729,
+      "sha256": "e2b0514786aafd3c4012d7218c736fb763d4b719a6bb88ba16ff1784a4e3bf97",
+      "magic_hex": "255044462d312e36",
+      "status": "validated_pdf",
+      "pages": 15
+    },
+    {
+      "path": "sources/central19_2025_mirror.pdf",
+      "bytes": 1051222,
+      "sha256": "448a07eac86bb97ec4d6c002dd5289b1db43a38bb7e1046cb171997e1d34533c",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 2
+    },
+    {
+      "path": "sources/central1_2026_corrigendum_mirror.pdf",
+      "bytes": 1030160,
+      "sha256": "f72e4f2da6a0f69e71a988cf1c33e1f4c1e2d51657e2cfa84f42f5beab05b8e5",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 1
+    },
+    {
+      "path": "sources/central9_gazette_mirror.pdf",
+      "bytes": 552779,
+      "sha256": "0362838d241f2e6752deb1ef93e0418e55418da3a67a4cf1f4294e7b7cf8b4f5",
+      "magic_hex": "255044462d312e36",
+      "status": "validated_pdf",
+      "pages": 56
+    },
+    {
+      "path": "sources/central9_updated_may2026_mirror.pdf",
+      "bytes": 990389,
+      "sha256": "23f07569aa25c4b4cf5b99691d1719147105ccd3eb03f236efe2906d096d3d62",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 58
+    },
+    {
+      "path": "sources/cgst_act.pdf",
+      "bytes": 1888392,
+      "sha256": "f7317f3ae40c2f41ab777acbd49fca309f10d8686640dea1bf215cf4c48754e7",
+      "magic_hex": "255044462d312e35",
+      "status": "validated_pdf",
+      "pages": 236
+    },
+    {
+      "path": "sources/circular_247_2025.pdf",
+      "bytes": 1067938,
+      "sha256": "afa6642cc372c037d206af3fd23ee486861ca05ab613d8d7a4da508376d859ff",
+      "magic_hex": "255044462d312e34",
+      "status": "validated_pdf",
+      "pages": 4
+    },
+    {
+      "path": "sources/council_57_faq.pdf",
+      "bytes": 563840,
+      "sha256": "86b1f2f492760d9f1cd21cf046e5d010af498a8f22abbb2f47abbf9787f4ea4e",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 47
+    },
+    {
+      "path": "sources/council_57_release.pdf",
+      "bytes": 549452,
+      "sha256": "683d39bf7e0bb712450adcc864d5b08b9a503a7a35d98afcbdd5d73ef940759c",
+      "magic_hex": "255044462d312e34",
+      "status": "validated_pdf",
+      "pages": 15
+    },
+    {
+      "path": "sources/council_april2026.pdf",
+      "bytes": 2176853,
+      "sha256": "747cf96026bb543ead81ba97e7ae5b2cbf45008b22b86870f8bc393e3b616d25",
+      "magic_hex": "255044462d312e34",
+      "status": "validated_pdf",
+      "pages": 5
+    },
+    {
+      "path": "sources/egazette_10_2025.pdf",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909",
+      "magic_hex": "757073747265616d",
+      "status": "quarantined_not_pdf",
+      "pages": null
+    },
+    {
+      "path": "sources/goa_10_2025.pdf",
+      "bytes": 241664,
+      "sha256": "f09ab1b3ca27ec9105b4220cda3b98e1c1d303f3dbf7e3c55a8a5b158097d2d7",
+      "magic_hex": "255044462d312e37",
+      "status": "quarantined_invalid_pdf",
+      "pages": null,
+      "error_type": "PdfReadError"
+    },
+    {
+      "path": "sources/goa_10_retry.pdf",
+      "bytes": 889277,
+      "sha256": "ada23c9e1219819fff3a0fcd12ae298daab13249d00c01b03764712fcc2aeb33",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 13
+    },
+    {
+      "path": "sources/goa_9_2025.pdf",
+      "bytes": 3445977,
+      "sha256": "56d104ed800a064248181119ec513f3111b3bce5e30d59852cb04508d91728c5",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 63
+    },
+    {
+      "path": "sources/hsn_gst_advisory.pdf",
+      "bytes": 633844,
+      "sha256": "eef18fac463e60ec79d162bb5ecebb2a886e3fe4a154faa2abc968f7a2397c42",
+      "magic_hex": "255044462d312e35",
+      "status": "validated_pdf",
+      "pages": 2
+    },
+    {
+      "path": "sources/ka_01_2026.pdf",
+      "bytes": 336193,
+      "sha256": "d03b5b1e0d03bdac014280e00bd3f7e95678fa5f80350efb066c0df6ff552724",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 1
+    },
+    {
+      "path": "sources/tariff_ch25_mirror.pdf",
+      "bytes": 426307,
+      "sha256": "a02cab975d4bad25a5f38b2daed2c3089951e83258db67ed23e61cf9a996c9d1",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 12
+    },
+    {
+      "path": "sources/tariff_ch34_mirror.pdf",
+      "bytes": 394702,
+      "sha256": "c3b0ddba68a481b310b42a78b672a390605877f1e9cb9fc60c6c6bdf82f600a9",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 7
+    },
+    {
+      "path": "sources/turn2/ashwani_sc2023.pdf",
+      "bytes": 469740,
+      "sha256": "fe5928906d89af0d9bd6d1d327a3d92b65fdb123588705bce508e27e8a8eeaeb",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 77
+    },
+    {
+      "path": "sources/turn2/bajaj_20250523.pdf",
+      "bytes": 2476234,
+      "sha256": "6a0c06b621d47dd3e3fabd87da223b32a142e86f930b3fe165ed6246f613526b",
+      "magic_hex": "255044462d312e36",
+      "status": "validated_pdf",
+      "pages": 1
+    },
+    {
+      "path": "sources/turn2/britannia_20260303.pdf",
+      "bytes": 240651,
+      "sha256": "b9e5538b1ef9576bda832202d7f82e387704cda45204589700768c2983b1baa2",
+      "magic_hex": "255044462d312e36",
+      "status": "validated_pdf",
+      "pages": 1
+    },
+    {
+      "path": "sources/turn2/cello_20251218.pdf",
+      "bytes": 612553,
+      "sha256": "c8ba253fd266b3d29212190ed86985e7288138291f5d472fd2ca1a2040659ab1",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 2
+    },
+    {
+      "path": "sources/turn2/circular189_2023.pdf",
+      "bytes": 195299,
+      "sha256": "fc7e299c19c3dc767868980bb74ab9ca94a14c4f95bb1dca0ed179a0ff78be93",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 4
+    },
+    {
+      "path": "sources/turn2/circular200_2023.pdf",
+      "bytes": 447940,
+      "sha256": "25f9ab8dc6e6afbab9e9583719b99e16b03cfeb4ad94f701794d7f71ba27c106",
+      "magic_hex": "255044462d312e35",
+      "status": "validated_pdf",
+      "pages": 4
+    },
+    {
+      "path": "sources/turn2/gopal_20250408.pdf",
+      "bytes": 2374936,
+      "sha256": "931c3ad78ca5c714afddd04fee59d1d50ffa4879cc2797210229f2fd4afdebde",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 2
+    },
+    {
+      "path": "sources/turn2/gopal_20251213.pdf",
+      "bytes": 3316126,
+      "sha256": "8e9696ce9cbdf3f0ddbc5d0a452d92a88babff59ccaee122bb6f6f207561fc2d",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 2
+    },
+    {
+      "path": "sources/turn2/gopal_20260212.pdf",
+      "bytes": 3483780,
+      "sha256": "f42244db1d0a58b1923da163a0cbd36c81408710c4cc1cfa0386b6fdb8829edc",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 2
+    },
+    {
+      "path": "sources/turn2/gopal_20260605.pdf",
+      "bytes": 3205722,
+      "sha256": "c9129cc2875aa3d4ae98ab1a73a21e2a2a48e0eec8a75066c552b710d09ad97f",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 2
+    },
+    {
+      "path": "sources/turn2/hamdard_sc2026.pdf",
+      "bytes": 664663,
+      "sha256": "f7963ebc7e37bfc2abda3d11d2959d373e04c1e21b6a3202c9ee848005df6dce",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 33
+    },
+    {
+      "path": "sources/turn2/incnut_tsaar2022.pdf",
+      "bytes": 635967,
+      "sha256": "cebc38b7851fd34b53d5aa73cfb2ea0e3944f8acb22e08984678175962fbe20e",
+      "magic_hex": "255044462d312e35",
+      "status": "validated_pdf",
+      "pages": 17
+    },
+    {
+      "path": "sources/turn2/madhan_sc2024.pdf",
+      "bytes": 254786,
+      "sha256": "9c4f2fcbd9ff31a5b91f085c0f3f49ddeda2569a59754bb376796908e234ea9e",
+      "magic_hex": "255044462d312e34",
+      "status": "validated_pdf",
+      "pages": 38
+    },
+    {
+      "path": "sources/turn2/mother_drhp2025.pdf",
+      "bytes": 5606994,
+      "sha256": "13f52faf715e70f54de0703cfcdc327081a154f10ac03b4348964e64ec98545a",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 299
+    },
+    {
+      "path": "sources/turn2/unominda_20260311.pdf",
+      "bytes": 826633,
+      "sha256": "bed5dbeb4ab2b8ff62d2af432d2fc6d46c4622bace1ad8903fea6e819374fcd3",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 2
+    },
+    {
+      "path": "sources/turn2/unominda_corr_20260311.pdf",
+      "bytes": 691252,
+      "sha256": "c872ec46a16f854e92ff099f586326ef6b468b3f003dc5c3c62984f74a294e0e",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 2
+    },
+    {
+      "path": "sources/turn2/windlas_aaar2022_mirror.pdf",
+      "bytes": 153937,
+      "sha256": "322fdd108f63ed469b1fa84044d3db2bb4a32d7297eb927a7d7c4c6af7e569d3",
+      "magic_hex": "255044462d312e34",
+      "status": "validated_pdf",
+      "pages": 4
+    },
+    {
+      "path": "sources/wb_rates_20260331.pdf",
+      "bytes": 91,
+      "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+      "magic_hex": "757073747265616d",
+      "status": "quarantined_not_pdf",
+      "pages": null
+    },
+    {
+      "path": "sources/wb_retry.pdf",
+      "bytes": 91,
+      "sha256": "2f85832e31ca57711e6107af6b142363351ae516adb71c69afc643fac26be7f6",
+      "magic_hex": "757073747265616d",
+      "status": "quarantined_not_pdf",
+      "pages": null
+    },
+    {
+      "path": "sources/wco_ch25_2022.pdf",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909",
+      "magic_hex": "757073747265616d",
+      "status": "quarantined_not_pdf",
+      "pages": null
+    },
+    {
+      "path": "sources/wco_ch34_2022.pdf",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909",
+      "magic_hex": "757073747265616d",
+      "status": "quarantined_not_pdf",
+      "pages": null
+    },
+    {
+      "path": "sources/wco_gir_2022.pdf",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909",
+      "magic_hex": "757073747265616d",
+      "status": "quarantined_not_pdf",
+      "pages": null
+    },
+    {
+      "path": "sources/wco_section_vi_2022.pdf",
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909",
+      "magic_hex": "757073747265616d",
+      "status": "quarantined_not_pdf",
+      "pages": null
+    }
+  ],
+  "pdf_status_counts": {
+    "validated_pdf": 35,
+    "quarantined_not_pdf": 9,
+    "quarantined_invalid_pdf": 1
+  },
+  "source_hash_checks": [
+    {
+      "source_key": "aaar_index",
+      "path": "gst_aaar_index.html",
+      "matches_recorded_hash": true,
+      "actual_sha256": "8bb257279701e6dc15630373a790a0e3edb82a67972c0ef2f748e734f3d84c8f"
+    },
+    {
+      "source_key": "aar_chehar_2026",
+      "path": "aar_chehar_2026.pdf",
+      "matches_recorded_hash": true,
+      "actual_sha256": "859c9189b3071fc744e6fe4c052f914f407c0420d712dd86030570fdc54456ca"
+    },
+    {
+      "source_key": "aar_index",
+      "path": "gst_aar_index.html",
+      "matches_recorded_hash": true,
+      "actual_sha256": "1e93220023759fc13352ead2e1e322dc26c90f6b64ecf6608a1b0eed4575f734"
+    },
+    {
+      "source_key": "cgst_act",
+      "path": "cgst_act.pdf",
+      "matches_recorded_hash": true,
+      "actual_sha256": "f7317f3ae40c2f41ab777acbd49fca309f10d8686640dea1bf215cf4c48754e7"
+    },
+    {
+      "source_key": "circular247",
+      "path": "circular_247_2025.pdf",
+      "matches_recorded_hash": true,
+      "actual_sha256": "afa6642cc372c037d206af3fd23ee486861ca05ab613d8d7a4da508376d859ff"
+    },
+    {
+      "source_key": "community_rgupta",
+      "path": "open_dataset_sample.csv",
+      "matches_recorded_hash": true,
+      "actual_sha256": "26a2e358b88bceafe2899a3954453137c18e8660a7c73ca2e911d386c753e17b"
+    },
+    {
+      "source_key": "council57",
+      "path": "council_57_release.pdf",
+      "matches_recorded_hash": true,
+      "actual_sha256": "683d39bf7e0bb712450adcc864d5b08b9a503a7a35d98afcbdd5d73ef940759c"
+    },
+    {
+      "source_key": "ct10_2025_mirror",
+      "path": "central10_gazette_mirror.pdf",
+      "matches_recorded_hash": true,
+      "actual_sha256": "e2b0514786aafd3c4012d7218c736fb763d4b719a6bb88ba16ff1784a4e3bf97"
+    },
+    {
+      "source_key": "ct19_2025",
+      "path": "central19_2025_mirror.pdf",
+      "matches_recorded_hash": true,
+      "actual_sha256": "448a07eac86bb97ec4d6c002dd5289b1db43a38bb7e1046cb171997e1d34533c"
+    },
+    {
+      "source_key": "ct1_corr_2026",
+      "path": "central1_2026_corrigendum_mirror.pdf",
+      "matches_recorded_hash": true,
+      "actual_sha256": "f72e4f2da6a0f69e71a988cf1c33e1f4c1e2d51657e2cfa84f42f5beab05b8e5"
+    },
+    {
+      "source_key": "goa_st10_2025",
+      "path": "goa_10_retry.pdf",
+      "matches_recorded_hash": true,
+      "actual_sha256": "ada23c9e1219819fff3a0fcd12ae298daab13249d00c01b03764712fcc2aeb33"
+    },
+    {
+      "source_key": "goa_st9_2025",
+      "path": "goa_9_2025.pdf",
+      "matches_recorded_hash": true,
+      "actual_sha256": "56d104ed800a064248181119ec513f3111b3bce5e30d59852cb04508d91728c5"
+    },
+    {
+      "source_key": "gstn_hsn_download",
+      "path": "hsn_gst_advisory.pdf",
+      "matches_recorded_hash": true,
+      "actual_sha256": "eef18fac463e60ec79d162bb5ecebb2a886e3fe4a154faa2abc968f7a2397c42"
+    },
+    {
+      "source_key": "icai_ct9_updated_202605",
+      "path": "central9_updated_may2026_mirror.pdf",
+      "matches_recorded_hash": true,
+      "actual_sha256": "23f07569aa25c4b4cf5b99691d1719147105ccd3eb03f236efe2906d096d3d62"
+    },
+    {
+      "source_key": "ka_ct1_2026",
+      "path": "ka_01_2026.pdf",
+      "matches_recorded_hash": true,
+      "actual_sha256": "d03b5b1e0d03bdac014280e00bd3f7e95678fa5f80350efb066c0df6ff552724"
+    },
+    {
+      "source_key": "tariff_ch25_mirror",
+      "path": "tariff_ch25_mirror.pdf",
+      "matches_recorded_hash": true,
+      "actual_sha256": "a02cab975d4bad25a5f38b2daed2c3089951e83258db67ed23e61cf9a996c9d1"
+    },
+    {
+      "source_key": "tariff_ch34_mirror",
+      "path": "tariff_ch34_mirror.pdf",
+      "matches_recorded_hash": true,
+      "actual_sha256": "c3b0ddba68a481b310b42a78b672a390605877f1e9cb9fc60c6c6bdf82f600a9"
+    },
+    {
+      "source_key": "wco_gir_2022",
+      "path": "wco_gir_web_capture.txt",
+      "matches_recorded_hash": true,
+      "actual_sha256": "b293a28593aed91523ae0372915cca81a4f82ea0e3b1545dbeef404377142ed7"
+    }
+  ],
+  "all_source_hashes_match": true,
+  "counts": {
+    "source_documents": 40,
+    "hsn_codes": 308,
+    "rate_entries": 292,
+    "rate_scopes": 316,
+    "classification_rules": 49,
+    "rulings": 1,
+    "data_coverage": 12
+  },
+  "test_pair_count": 10,
+  "test_pairs_seeded": false,
+  "legal_evals": "blocked: missing evidence; M2 not started",
+  "quarantine_policy": "Original bytes preserved in private reference; quarantined PDFs never legal evidence or parsed as PDF.",
+  "known_gaps": [
+    "Complete Indian tariff notes/items 15/17/19/21/30/33",
+    "Indian section notes",
+    "2023 historical CGST/Goa SGST reconciliation",
+    "Current Goa section 74A",
+    "McNROE local PDF",
+    "October 2026 currentness verification"
+  ]
+}

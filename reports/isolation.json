@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "runtime_role": "billshield_app",
+  "fixture_policy": "TEST FIXTURE labels; all writes rolled back",
+  "checks": [
+    "Actual login is billshield_app: nonowner, nonsuperuser, non-BYPASSRLS",
+    "Verified identity bootstrap required; identity tables inaccessible directly",
+    "Invitations are owner-only, verified-email-bound, one-use and expire in seven days",
+    "Owner manages membership; last owner protected; removal invalidates tenant access",
+    "Both orgs: read/insert/update isolation across every tenant data table plus org/member/invitation reads",
+    "Forged cross-org product/file/own-ruling/check foreign keys rejected",
+    "Org members may view files; only uploader may create/finalize their upload",
+    "Reports and audit append-only; issued rationale check cannot be mutated",
+    "Forged app.org_id without membership exposes no tenant rows",
+    "Transaction-local identity/org reset; all fixture identity/org/data writes rolled back"
+  ],
+  "table_count": 10,
+  "engine_or_legal_eval": "not run in M1"
+}

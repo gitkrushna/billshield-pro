@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-10-19T13:08:01.684186+00:00",
+  "project": "billshield-dev",
+  "checks": [
+    "Public JWKS exposes asymmetric verification keys; no private key retrieved",
+    "Bucket is private, 10 MiB, PDF/PNG/JPEG only; coverage remains uncertified",
+    "The one server-only S3 credential pair connects to the approved bucket",
+    "Actual presigned PUT, signature/type/size finalization and signed GET passed",
+    "Unsigned S3 read denied; cross-org file cannot obtain a signed URL",
+    "Original PUT cannot replace frozen inspected bytes; fake PNG signature rejected"
+  ],
+  "snapshots": [
+    {
+      "id": "m1-research-555b61ebe53000172e23",
+      "sha256": "555b61ebe53000172e235e41f036bd7e3639854140f6f3704a49cddcc0c11253"
+    }
+  ],
+  "fixture_policy": "All DB fixture identities/orgs/files rolled back; three tiny S3 fixture objects retained privately in quarantine; no deletion performed",
+  "status": "passed"
+}

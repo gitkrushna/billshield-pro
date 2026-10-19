@@ -1,0 +1,3 @@
+nodeLinker: hoisted
+allowBuilds:
+  unrs-resolver: false

@@ -1,0 +1,136 @@
+name: billshield-pro
+
+services:
+  db:
+    image: postgres:17.6-alpine
+    environment:
+      POSTGRES_DB: billshield
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${LOCAL_POSTGRES_PASSWORD:?Run node scripts/dev-init.mjs}
+      LOCAL_RUNTIME_DB_PASSWORD: ${LOCAL_RUNTIME_DB_PASSWORD:?Run node scripts/dev-init.mjs}
+      LOCAL_AUTH_DB_PASSWORD: ${LOCAL_AUTH_DB_PASSWORD:?Run node scripts/dev-init.mjs}
+    ports: ["127.0.0.1:54322:5432"]
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./scripts/dev-db-init.sh:/docker-entrypoint-initdb.d/01-billshield.sh:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d billshield"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  migrate:
+    image: ghcr.io/amacneil/dbmate:2.35.1
+    environment:
+      DATABASE_URL: postgresql://postgres:${LOCAL_POSTGRES_PASSWORD}@db:5432/billshield?sslmode=disable
+      DBMATE_NO_DUMP_SCHEMA: "true"
+    volumes: ["./db/migrations:/db/migrations:ro"]
+    command: ["--wait", "up"]
+    depends_on:
+      db: { condition: service_healthy }
+
+  minio:
+    image: minio/minio:RELEASE.2025-09-07T16-13-09Z
+    command: server /data --console-address :9001
+    environment:
+      MINIO_ROOT_USER: ${LOCAL_S3_ACCESS_KEY_ID:?Run node scripts/dev-init.mjs}
+      MINIO_ROOT_PASSWORD: ${LOCAL_S3_SECRET_ACCESS_KEY:?Run node scripts/dev-init.mjs}
+    ports: ["127.0.0.1:9000:9000", "127.0.0.1:9001:9001"]
+    volumes: ["minio-data:/data"]
+
+  storage-init:
+    image: minio/mc:RELEASE.2025-08-13T08-35-41Z
+    environment:
+      MINIO_ROOT_USER: ${LOCAL_S3_ACCESS_KEY_ID}
+      MINIO_ROOT_PASSWORD: ${LOCAL_S3_SECRET_ACCESS_KEY}
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - >-
+        until mc alias set local http://minio:9000 "$$MINIO_ROOT_USER" "$$MINIO_ROOT_PASSWORD" >/dev/null 2>&1; do sleep 2; done;
+        mc mb --ignore-existing local/billshield-uploads >/dev/null
+    depends_on: [minio]
+
+  mailpit:
+    image: axllent/mailpit:v1.27.8
+    ports: ["127.0.0.1:8025:8025"]
+
+  auth:
+    image: supabase/gotrue:v2.197.0
+    environment:
+      GOTRUE_API_HOST: 0.0.0.0
+      GOTRUE_API_PORT: "9999"
+      API_EXTERNAL_URL: http://localhost:9999
+      GOTRUE_SITE_URL: http://localhost:3000
+      GOTRUE_URI_ALLOW_LIST: http://localhost:3000
+      GOTRUE_DB_DRIVER: postgres
+      GOTRUE_DB_DATABASE_URL: postgresql://billshield_auth:${LOCAL_AUTH_DB_PASSWORD}@db:5432/billshield_auth
+      GOTRUE_JWT_SECRET: ${LOCAL_AUTH_JWT_SECRET:?Run node scripts/dev-init.mjs}
+      GOTRUE_JWT_KEYS: ${LOCAL_AUTH_JWT_KEYS:?Run node scripts/dev-init.mjs}
+      GOTRUE_JWT_ISSUER: http://localhost:9999
+      GOTRUE_JWT_AUD: authenticated
+      GOTRUE_JWT_EXP: "3600"
+      GOTRUE_EXTERNAL_EMAIL_ENABLED: "true"
+      GOTRUE_DISABLE_SIGNUP: "false"
+      GOTRUE_MAILER_AUTOCONFIRM: "false"
+      GOTRUE_EXTERNAL_ANONYMOUS_USERS_ENABLED: "false"
+      GOTRUE_EXTERNAL_PHONE_ENABLED: "false"
+      GOTRUE_SMTP_HOST: mailpit
+      GOTRUE_SMTP_PORT: "1025"
+      GOTRUE_SMTP_ADMIN_EMAIL: dev@example.test
+      GOTRUE_SMTP_SENDER_NAME: BillShield local development
+      GOTRUE_MAILER_URLPATHS_CONFIRMATION: /verify
+      GOTRUE_MAILER_URLPATHS_INVITE: /verify
+      GOTRUE_MAILER_URLPATHS_RECOVERY: /verify
+      GOTRUE_MAILER_URLPATHS_EMAIL_CHANGE: /verify
+    ports: ["127.0.0.1:9999:9999"]
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "--quiet", "http://localhost:9999/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    depends_on:
+      db: { condition: service_healthy }
+      mailpit: { condition: service_started }
+
+  api:
+    build: ./api
+    environment:
+      DATABASE_URL: postgresql://billshield_app:${LOCAL_RUNTIME_DB_PASSWORD}@db:5432/billshield
+      AUTH_ISSUER: http://localhost:9999
+      AUTH_JWKS_URL: http://auth:9999/.well-known/jwks.json
+      AUTH_USERINFO_URL: http://auth:9999/user
+      AUTH_AUDIENCE: authenticated
+      S3_ENDPOINT_URL: http://minio:9000
+      S3_REGION: us-east-1
+      S3_ACCESS_KEY_ID: ${LOCAL_S3_ACCESS_KEY_ID}
+      S3_SECRET_ACCESS_KEY: ${LOCAL_S3_SECRET_ACCESS_KEY}
+      S3_BUCKET: billshield-uploads
+      UPLOAD_TTL_SECONDS: "120"
+      SMTP_HOST: mailpit
+      SMTP_PORT: "1025"
+      SMTP_FROM: dev@example.test
+      SMTP_STARTTLS: "false"
+    ports: ["127.0.0.1:8000:8000"]
+    depends_on:
+      provision: { condition: service_completed_successfully }
+      storage-init: { condition: service_completed_successfully }
+      auth: { condition: service_healthy }
+
+  provision:
+    build: ./api
+    environment:
+      MIGRATION_DATABASE_URL: postgresql://postgres:${LOCAL_POSTGRES_PASSWORD}@db:5432/billshield?sslmode=disable
+      DATABASE_URL: postgresql://billshield_app:${LOCAL_RUNTIME_DB_PASSWORD}@db:5432/billshield
+    volumes: ["./scripts:/scripts:ro"]
+    command: ["uv", "run", "--no-sync", "python", "/scripts/provision_runtime.py"]
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+
+  web:
+    build: ./web
+    ports: ["127.0.0.1:3000:3000"]
+    depends_on: [api]
+
+volumes:
+  postgres-data:
+  minio-data:

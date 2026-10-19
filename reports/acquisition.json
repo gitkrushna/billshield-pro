@@ -1,0 +1,383 @@
+{
+  "purpose": "M1 bounded acquisition, originals private; unreviewed and not production legal evidence",
+  "sources": [
+    {
+      "id": "wco_2022_0315",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0315_2022e.pdf?la=en",
+      "publisher": "World Customs Organization",
+      "scope": "Chapter 15",
+      "retrieved_at": "2026-10-19T11:43:09.608314+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status_code": 200,
+      "final_url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0315_2022e.pdf?la=en",
+      "content_type": "application/pdf",
+      "bytes": 161904,
+      "sha256": "122be301e637d679e2e23b9f700bef698e5bbb685ccf95a077d831d75862122d",
+      "magic_hex": "255044462d312e35",
+      "status": "validated_pdf",
+      "pages": 7,
+      "local_file": "reference/acquired/122be301e637d679e2e23b9f700bef698e5bbb685ccf95a077d831d75862122d/original.bin",
+      "page_index": [
+        {
+          "page": 1,
+          "text_sha256": "069a4fedc8a2e9c6fd340d8142aa1c6709c687aab684b02c6e425aa3110d070a",
+          "characters": 1818
+        },
+        {
+          "page": 2,
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "characters": 0
+        },
+        {
+          "page": 3,
+          "text_sha256": "69965605accf83886c50094b0ea2c83f42b5b05f305f641396a886cb48291000",
+          "characters": 1327
+        },
+        {
+          "page": 4,
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "characters": 0
+        },
+        {
+          "page": 5,
+          "text_sha256": "cacd13706bf8398c45f2a7074be409730e5830d3e20b9ddbc0af67d95d32273c",
+          "characters": 1379
+        },
+        {
+          "page": 6,
+          "text_sha256": "f77948a3b2341e75a9a74724c3c6e420fe6a7af798ccd9c27576f1a54693f39a",
+          "characters": 1704
+        },
+        {
+          "page": 7,
+          "text_sha256": "0dfda3e5f8294a4e529bd7242b1b2a31d07d73dd083c81d0167f04a6802c7370",
+          "characters": 342
+        }
+      ]
+    },
+    {
+      "id": "wco_2022_0417",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0417_2022e.pdf?la=en",
+      "publisher": "World Customs Organization",
+      "scope": "Chapter 17",
+      "retrieved_at": "2026-10-19T11:43:16.136343+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status_code": 200,
+      "final_url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0417_2022e.pdf?la=en",
+      "content_type": "application/pdf",
+      "bytes": 138945,
+      "sha256": "70a0ca8d3653025e6226af80ed6d5c5866205229fdb5dbd03b2a082c7067ef82",
+      "magic_hex": "255044462d312e35",
+      "status": "validated_pdf",
+      "pages": 2,
+      "local_file": "reference/acquired/70a0ca8d3653025e6226af80ed6d5c5866205229fdb5dbd03b2a082c7067ef82/original.bin",
+      "page_index": [
+        {
+          "page": 1,
+          "text_sha256": "07b907c97f81bb4c77fcca851875f6d2b9d910c53547907b5363fa31b054bd8e",
+          "characters": 2131
+        },
+        {
+          "page": 2,
+          "text_sha256": "70eb10c06c7b94bd8fbf4f7e9f9123d0c5e60bd4f260d5162b2bc0dac159b3ee",
+          "characters": 591
+        }
+      ]
+    },
+    {
+      "id": "wco_2022_0419",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0419_2022e.pdf?la=en",
+      "publisher": "World Customs Organization",
+      "scope": "Chapter 19",
+      "retrieved_at": "2026-10-19T11:43:19.092274+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status_code": 200,
+      "final_url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0419_2022e.pdf?la=en",
+      "content_type": "application/pdf",
+      "bytes": 130873,
+      "sha256": "507f11de9b772ff18efcc2f3a078a5fda2862eafb271d181908cc8d744b539db",
+      "magic_hex": "255044462d312e35",
+      "status": "validated_pdf",
+      "pages": 2,
+      "local_file": "reference/acquired/507f11de9b772ff18efcc2f3a078a5fda2862eafb271d181908cc8d744b539db/original.bin",
+      "page_index": [
+        {
+          "page": 1,
+          "text_sha256": "f39d9d9a8f32a1455e8963e8bcd788f975f719723b0a8222fd5f120c1a12cb86",
+          "characters": 2434
+        },
+        {
+          "page": 2,
+          "text_sha256": "8fc2ef5e29a8c5a286be8add682dba5cd99c93992fe61e573d32c4be86d1b9d0",
+          "characters": 1400
+        }
+      ]
+    },
+    {
+      "id": "wco_2022_0421",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0421_2022e.pdf?la=en",
+      "publisher": "World Customs Organization",
+      "scope": "Chapter 21",
+      "retrieved_at": "2026-10-19T11:43:25.667486+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status_code": 200,
+      "final_url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0421_2022e.pdf?la=en",
+      "content_type": "application/pdf",
+      "bytes": 128487,
+      "sha256": "4c63973778dfd4f282653dd0b83d78f1586c9e847f027bb950d782e2caa82603",
+      "magic_hex": "255044462d312e35",
+      "status": "validated_pdf",
+      "pages": 2,
+      "local_file": "reference/acquired/4c63973778dfd4f282653dd0b83d78f1586c9e847f027bb950d782e2caa82603/original.bin",
+      "page_index": [
+        {
+          "page": 1,
+          "text_sha256": "f7a8609d94989f580875e58734fb9751d87fff27be91c291776913d199fe6d7a",
+          "characters": 2725
+        },
+        {
+          "page": 2,
+          "text_sha256": "649cdacb4f7319a483f4bd484d0314423dee37cfc2b72d019f9ba037e3dba08f",
+          "characters": 760
+        }
+      ]
+    },
+    {
+      "id": "wco_2022_0630",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0630_2022e.pdf?la=en",
+      "publisher": "World Customs Organization",
+      "scope": "Chapter 30",
+      "retrieved_at": "2026-10-19T11:43:35.608338+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status_code": 200,
+      "final_url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0630_2022e.pdf?la=en",
+      "content_type": "application/pdf",
+      "bytes": 161048,
+      "sha256": "7ad8d2b476a97e2326fee5fbf6af0947d5213cc9a7f5e337667a7cbaa07af11d",
+      "magic_hex": "255044462d312e35",
+      "status": "validated_pdf",
+      "pages": 4,
+      "local_file": "reference/acquired/7ad8d2b476a97e2326fee5fbf6af0947d5213cc9a7f5e337667a7cbaa07af11d/original.bin",
+      "page_index": [
+        {
+          "page": 1,
+          "text_sha256": "f80a091f90ad422e15759ab14078e79921e93685ec4650dab62c4919b19471eb",
+          "characters": 3251
+        },
+        {
+          "page": 2,
+          "text_sha256": "2545a9346a391227fdec6262161b7db7abe9f72a1b30456fca5f6a03f92d6479",
+          "characters": 3117
+        },
+        {
+          "page": 3,
+          "text_sha256": "360c6e302fd187bcefdf89e69abf918fa4f08510faccbcb953afd2ef571e0d08",
+          "characters": 1950
+        },
+        {
+          "page": 4,
+          "text_sha256": "80d5616502e633563d6f298469684e06c825968f78227bd4839ea288abb2b41e",
+          "characters": 2121
+        }
+      ]
+    },
+    {
+      "id": "wco_2022_0633",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0633_2022e.pdf?la=en",
+      "publisher": "World Customs Organization",
+      "scope": "Chapter 33",
+      "retrieved_at": "2026-10-19T11:43:44.593030+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status_code": 200,
+      "final_url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0633_2022e.pdf?la=en",
+      "content_type": "application/pdf",
+      "bytes": 135992,
+      "sha256": "3036879a259d994f565739b962f0135c9b6c506a483873377ba92a9e5816bd8c",
+      "magic_hex": "255044462d312e35",
+      "status": "validated_pdf",
+      "pages": 2,
+      "local_file": "reference/acquired/3036879a259d994f565739b962f0135c9b6c506a483873377ba92a9e5816bd8c/original.bin",
+      "page_index": [
+        {
+          "page": 1,
+          "text_sha256": "42123249edcc21748f83a138c720bca91470a6087b6ee2d350d1236e16576095",
+          "characters": 2283
+        },
+        {
+          "page": 2,
+          "text_sha256": "56d0a4d8f8c2f38b68c15aaff61eeb3be85a5bbd0795820ac50c3b194e6a1512",
+          "characters": 1660
+        }
+      ]
+    },
+    {
+      "id": "wco_2022_0400",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0400_2022e.pdf?la=en",
+      "publisher": "World Customs Organization",
+      "scope": "Section IV",
+      "retrieved_at": "2026-10-19T11:43:50.897967+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status_code": 200,
+      "final_url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0400_2022e.pdf?la=en",
+      "content_type": "application/pdf",
+      "bytes": 98590,
+      "sha256": "ea555a738f0ce8315d79d254c9837adff2c91271f5bd50dc743324467ae14596",
+      "magic_hex": "255044462d312e35",
+      "status": "validated_pdf",
+      "pages": 1,
+      "local_file": "reference/acquired/ea555a738f0ce8315d79d254c9837adff2c91271f5bd50dc743324467ae14596/original.bin",
+      "page_index": [
+        {
+          "page": 1,
+          "text_sha256": "b37c8277ba0175d59ef122393ba2c52f0b6a1e47955664cba5c93893a6e51b0a",
+          "characters": 520
+        }
+      ]
+    },
+    {
+      "id": "wco_2022_0600",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0600_2022e.pdf?la=en",
+      "publisher": "World Customs Organization",
+      "scope": "Section VI",
+      "retrieved_at": "2026-10-19T11:43:52.800205+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status_code": 200,
+      "final_url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0600_2022e.pdf?la=en",
+      "content_type": "application/pdf",
+      "bytes": 6711,
+      "sha256": "62385a45bdbce5148f027ce721bc0d9cbcad49fbb970ffbf515d23f24215cf91",
+      "magic_hex": "255044462d312e35",
+      "status": "validated_pdf",
+      "pages": 1,
+      "local_file": "reference/acquired/62385a45bdbce5148f027ce721bc0d9cbcad49fbb970ffbf515d23f24215cf91/original.bin",
+      "page_index": [
+        {
+          "page": 1,
+          "text_sha256": "99053ccc3c57f0813f6926f1b69a1f88ed4bae71380e180b12fafa18cfed7153",
+          "characters": 1666
+        }
+      ]
+    },
+    {
+      "id": "cbic_ct1_2017",
+      "url": "https://cbic-gst.gov.in/hindi/pdf/central-tax-rate/Notification-for-CGST-rate-Schedule.pdf",
+      "publisher": "CBIC / Government of India",
+      "scope": "Notification 1/2017-CT(Rate) base schedules",
+      "retrieved_at": "2026-10-19T11:43:54.949565+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status": "blocked_download_failed",
+      "error_type": "RemoteDisconnected"
+    },
+    {
+      "id": "cbic_ct12_2022",
+      "url": "https://cbic-gst.gov.in/pdf/central-tax-rate/12_2022-ctr-eng.pdf",
+      "publisher": "CBIC / Government of India",
+      "scope": "Notification 12/2022-CT(Rate); amendment candidate for 2023 review",
+      "retrieved_at": "2026-10-19T11:43:56.336304+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status_code": 200,
+      "final_url": "https://cbic-gst.gov.in/pdf/central-tax-rate/12_2022-ctr-eng.pdf",
+      "content_type": "application/pdf",
+      "bytes": 263348,
+      "sha256": "246a7b7929c19438c5e70f35409b23fd646cc124edf1ec8f0082c144b040521b",
+      "magic_hex": "255044462d312e37",
+      "status": "validated_pdf",
+      "pages": 2,
+      "local_file": "reference/acquired/246a7b7929c19438c5e70f35409b23fd646cc124edf1ec8f0082c144b040521b/original.bin",
+      "page_index": [
+        {
+          "page": 1,
+          "text_sha256": "546bb57e24a6f4dd9d320966e87227cfc1dc7c524d99cd655528a9feb262f06d",
+          "characters": 2112
+        },
+        {
+          "page": 2,
+          "text_sha256": "cf48568bfd602b0c8261de469bf3eba2a8578b8afcfb32d1fb5237d6c0084837",
+          "characters": 994
+        }
+      ]
+    },
+    {
+      "id": "cbic_tariff_2025_ch15",
+      "url": "https://www.cbic.gov.in/resources//htdocs-cbec/customs/cst2025-26/cst15-2025.pdf",
+      "publisher": "CBIC / Government of India",
+      "scope": "Indian Chapter 15; candidate endpoint requires authentication of edition",
+      "retrieved_at": "2026-10-19T11:43:57.470083+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status": "blocked_download_failed",
+      "error_type": "URLError"
+    },
+    {
+      "id": "cbic_tariff_2025_ch17",
+      "url": "https://www.cbic.gov.in/resources//htdocs-cbec/customs/cst2025-26/cst17-2025.pdf",
+      "publisher": "CBIC / Government of India",
+      "scope": "Indian Chapter 17; candidate endpoint requires authentication of edition",
+      "retrieved_at": "2026-10-19T11:43:58.157753+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status": "blocked_download_failed",
+      "error_type": "URLError"
+    },
+    {
+      "id": "cbic_tariff_2025_ch19",
+      "url": "https://www.cbic.gov.in/resources//htdocs-cbec/customs/cst2025-26/cst19-2025.pdf",
+      "publisher": "CBIC / Government of India",
+      "scope": "Indian Chapter 19; candidate endpoint requires authentication of edition",
+      "retrieved_at": "2026-10-19T11:43:59.089385+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status": "blocked_download_failed",
+      "error_type": "URLError"
+    },
+    {
+      "id": "cbic_tariff_2025_ch21",
+      "url": "https://www.cbic.gov.in/resources//htdocs-cbec/customs/cst2025-26/cst21-2025.pdf",
+      "publisher": "CBIC / Government of India",
+      "scope": "Indian Chapter 21; candidate endpoint requires authentication of edition",
+      "retrieved_at": "2026-10-19T11:44:00.014074+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status": "blocked_download_failed",
+      "error_type": "URLError"
+    },
+    {
+      "id": "cbic_tariff_2025_ch30",
+      "url": "https://www.cbic.gov.in/resources//htdocs-cbec/customs/cst2025-26/cst30-2025.pdf",
+      "publisher": "CBIC / Government of India",
+      "scope": "Indian Chapter 30; candidate endpoint requires authentication of edition",
+      "retrieved_at": "2026-10-19T11:44:00.396691+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status": "blocked_download_failed",
+      "error_type": "URLError"
+    },
+    {
+      "id": "cbic_tariff_2025_ch33",
+      "url": "https://www.cbic.gov.in/resources//htdocs-cbec/customs/cst2025-26/cst33-2025.pdf",
+      "publisher": "CBIC / Government of India",
+      "scope": "Indian Chapter 33; candidate endpoint requires authentication of edition",
+      "retrieved_at": "2026-10-19T11:44:00.716338+00:00",
+      "review_status": "unreviewed_not_seeded",
+      "coverage_changed": false,
+      "status": "blocked_download_failed",
+      "error_type": "URLError"
+    }
+  ],
+  "remaining_gaps": [
+    "No standalone section notes in WCO 2022 index for Sections III and V; Indian applicability still needs verification",
+    "Complete authenticated Indian tariff chapter PDFs",
+    "Complete 2017-2023 amendment chain and historical Goa SGST pairing; candidate documents are not replay certification"
+  ],
+  "coverage_complete": false
+}
