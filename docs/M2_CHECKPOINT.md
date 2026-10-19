@@ -22,6 +22,7 @@ Verification:
 | Python, including recorded pipeline and restricted DB | 120 cases passed in the full suite, plus 3 subsequently added recorded injection fixtures passed; 0 failed / 0 skipped. No production code changed between runs. Fixtures rolled back; no live model calls or S3 writes. See `../reports/m2_tests.json`. |
 | Recorded injection boundaries | Label text, bill text and user insistence preserve baseline facts/verdict; raw injected text and invoice fields stay outside blind classification. Live-provider resilience is untested. |
 | Lint | Ruff passed for API, scripts and tests |
+| Pushed code CI | Commit `35499e6`: secrets, web and adapters jobs all passed. [GitHub Actions run](https://github.com/gitkrushna/billshield-pro/actions/runs/39301411490); `../reports/m2_ci.json` records scope. Private legal accuracy and restricted DB evidence remain separate local gates. |
 | Secret checks | Source, tests, scripts and report scans passed; browser secret scan passed on 18 existing assets. Web code unchanged. The complete staged M2 diff also passed gitleaks with zero findings; see `../reports/m2_secrets.json`. |
 | Live model quality and completed-check cost | Blocked: provider key absent and required evidence incomplete; zero live calls |
 

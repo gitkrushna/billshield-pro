@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-10-19T18:20:05.729129+00:00",
+  "status": "passed",
+  "tested_commit": "35499e6ec07d3814a340d2a793ce360602b5d48e",
+  "run_id": 39301411490,
+  "url": "https://github.com/gitkrushna/billshield-pro/actions/runs/39301411490",
+  "jobs": {
+    "secrets": "success",
+    "web": "success",
+    "adapters": "success"
+  },
+  "scope": "Public CI recorded tests, lint, web typing/build/browser-secret scan and git-history secrets. Private legal and restricted-DB evidence is recorded separately; missing reference data is not certified by CI."
+}
