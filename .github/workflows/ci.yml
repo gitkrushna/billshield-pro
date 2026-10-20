@@ -32,7 +32,7 @@ jobs:
         run: >-
           uv run --project api pytest tests/test_auth.py tests/test_storage.py
           tests/test_jobs.py tests/test_seed.py tests/test_engine.py tests/test_pipeline.py
-          tests/test_llm.py tests/test_corpus.py tests/test_ingest_m2.py tests/test_eval_m2.py tests/test_execution.py
+          tests/test_llm.py tests/test_corpus.py tests/test_ingest_m2.py tests/test_eval_m2.py tests/test_execution.py tests/test_finish_api.py
           -k "not reconciliation_and_no_certification"
       - name: Private corpus acceptance boundary
         run: echo "::notice::Private reference research is deliberately excluded from Git. Actual seed-twice reconciliation and restricted-role isolation evidence must be reviewed at the M1 checkpoint; this job does not certify them."

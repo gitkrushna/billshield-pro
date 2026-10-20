@@ -26,4 +26,6 @@ reports/*.png
 .uv-cache/
 .uv-python/
 .cache/
+/public/
+/web/out/
 *.tsbuildinfo

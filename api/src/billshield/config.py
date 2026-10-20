@@ -30,3 +30,5 @@ class Settings(BaseSettings):
     smtp_from: str = ""
     smtp_starttls: bool = True
     deepseek_api_key: SecretStr | None = None
+    law_snapshot_id: str = "m2-auto-ddbfa11807a805fb94ae"
+    checks_per_hour: int = Field(default=30, ge=1, le=10000)

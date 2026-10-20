@@ -7,13 +7,13 @@ invoice HSN. Binary uploads remain closed until a safe local processor exists.
 import asyncio
 import json
 import re
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, field
 from datetime import UTC, datetime
 from decimal import Decimal
 from time import monotonic
 from typing import Any, Protocol
 
-from pydantic import ValidationError
+from pydantic import Field, ValidationError
 
 from billshield.engine import (
     MVP_START,
@@ -34,7 +34,7 @@ from billshield.engine import (
 )
 from billshield.ports import ModelResult
 
-PROMPT_VERSION = "m2-blind-v6"
+PROMPT_VERSION = "finish-blind-v7"
 POLICY_VERSION = "m2-gst2-auto-verified-v2"
 MAX_ENGINE_SECONDS = 240
 
@@ -174,6 +174,7 @@ class IssuedCheck:
     calls: tuple[CallAudit, ...]
     cost_usd: str | None
     cost_status: str
+    source_links: dict[str, dict[str, str]] = field(default_factory=dict)
 
     def snapshot(self) -> dict[str, Any]:
         """JSON-compatible issuance data, with no raw source upload or user query."""
@@ -272,6 +273,18 @@ class ExecutionInput(StrictInput):
     facts: ProductFacts
     bill: BillFields | None = None
     review: bool = False
+    bill_text: str | None = Field(default=None, max_length=20000)
+    bill_text_reviewed: bool = False
+
+
+def candidate_scope(corpus: Corpus, candidates: tuple[str, ...]) -> tuple[str, ...]:
+    """A retrieved rival is an eligible candidate, with its own source gates."""
+    scope = list(dict.fromkeys(candidates))
+    for chapter in scope:
+        for rival in corpus.rival_chapters.get(chapter, ()):
+            if rival not in scope:
+                scope.append(rival)
+    return tuple(scope)
 
 
 def preflight(
@@ -291,13 +304,7 @@ def preflight(
         return stopped("jurisdiction_not_covered")
     if not candidate_chapters or any(not re.fullmatch(r"\d{2}", ch) for ch in candidate_chapters):
         return stopped("chapter_not_loaded")
-    all_chapters = tuple(
-        dict.fromkeys(
-            ch
-            for candidate in candidate_chapters
-            for ch in (candidate,) + corpus.rival_chapters.get(candidate, ())
-        )
-    )
+    all_chapters = candidate_scope(corpus, candidate_chapters)
     missing = []
     for chapter in all_chapters:
         required = corpus.required_source_ids.get(chapter, ())
@@ -353,9 +360,8 @@ def _legal_packet(
 ) -> dict[str, Any]:
     ids = set()
     required_sources = set()
-    chapters = set(candidate_chapters)
-    for chapter in candidate_chapters:
-        chapters.update(corpus.rival_chapters.get(chapter, ()))
+    chapters = set(candidate_scope(corpus, candidate_chapters))
+    for chapter in chapters:
         ids.update(rule.rule_id for rule in mandatory_retrieval(corpus, chapter, context))
     rules = [
         rule
@@ -440,7 +446,7 @@ def _legal_packet(
         "supply": context.supply,
         "citation_encoding": (
             "quote_start/quote_end are half-open Unicode character spans in the canonical "
-            "source page. Copy the actual exact quotation text into output Citation.quote."
+            "source page. Return existing evidence IDs only; Python copies exact quotations."
         ),
         "rules": [packet_item(rule) for rule in rules],
         "sources": sources,
@@ -467,11 +473,17 @@ class EnginePipeline:
         """Validate a frozen inline request without accepting query arguments."""
         parsed = ExecutionInput.model_validate(request)
         validate_fact_boundary(parsed.facts)
-        return await self.run(
+        prepared = (
+            prepare_text(parsed.bill_text, privacy_reviewed=parsed.bill_text_reviewed)
+            if parsed.bill_text
+            else None
+        )
+        return await self.run_form(
             parsed.facts,
             corpus,
             context,
             bill=parsed.bill,
+            bill_text=prepared,
             review=parsed.review,
             candidate_chapters=candidate_chapters,
             deadline_monotonic=deadline_monotonic,
@@ -603,7 +615,7 @@ class EnginePipeline:
                 bill = BillFields.model_validate(bill.model_dump(mode="json"))
         except (UnsafeInput, ValidationError):
             return stopped("input_not_validated")
-        chapters = candidate_chapters or tuple(corpus.required_source_ids)
+        chapters = candidate_scope(corpus, candidate_chapters or tuple(corpus.required_source_ids))
         gate = preflight(corpus, context, chapters)
         if gate:
             return self._issued(gate, facts, bill, context, corpus, calls)
@@ -737,6 +749,63 @@ class EnginePipeline:
         self, prepared: PreparedText, *, deadline_monotonic: float
     ) -> BillFields:
         return await self._extract(prepared, BillFields, "bill", deadline_monotonic)
+
+    async def run_form(
+        self,
+        facts: ProductFacts,
+        corpus: Corpus,
+        context: CheckContext,
+        *,
+        bill: BillFields | None = None,
+        bill_text: PreparedText | None = None,
+        candidate_chapters: tuple[str, ...] | None = None,
+        review: bool = False,
+        deadline_monotonic: float | None = None,
+    ) -> IssuedCheck:
+        """Structured product facts and optional separate, reviewed invoice text."""
+        if bill_text is None:
+            return await self.run(
+                facts,
+                corpus,
+                context,
+                bill=bill,
+                candidate_chapters=candidate_chapters,
+                review=review,
+                deadline_monotonic=deadline_monotonic,
+            )
+        if not isinstance(bill_text, PreparedText) or not bill_text.privacy_reviewed:
+            raise UnsafeInput("Reviewed invoice text required")
+        deadline = min(monotonic() + MAX_ENGINE_SECONDS, deadline_monotonic or float("inf"))
+        chapters = candidate_scope(corpus, candidate_chapters or tuple(corpus.required_source_ids))
+        gate = preflight(corpus, context, chapters)
+        if gate:
+            return self._issued(gate, facts, bill, context, corpus, [])
+        calls: list[CallAudit] = []
+        try:
+            extracted = await self._extract(bill_text, BillFields, "bill", deadline, calls)
+        except Exception:
+            reason = "engine_deadline_exceeded" if monotonic() >= deadline else "extraction_failed"
+            return self._issued(
+                EngineResult("Need more info", reason, law_snapshot_id=corpus.snapshot_id),
+                facts,
+                bill,
+                context,
+                corpus,
+                calls,
+            )
+        values = extracted.model_dump()
+        if bill is not None:
+            values.update({k: v for k, v in bill.model_dump().items() if v is not None})
+        return await self.run(
+            facts,
+            corpus,
+            context,
+            bill=BillFields.model_validate(values),
+            candidate_chapters=chapters,
+            review=review,
+            deadline_monotonic=deadline,
+            _prior_calls=tuple(calls),
+        )
 
     async def run_text(
         self,

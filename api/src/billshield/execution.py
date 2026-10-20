@@ -240,7 +240,17 @@ class InlineCheckRunner:
                 # The engine may not issue a different product or invoice from
                 # the authenticated, idempotently leased structured request.
                 parsed = ExecutionInput.model_validate(request)
-                if parsed.facts != result.facts or parsed.bill != result.bill:
+                invoice_matches = parsed.bill == result.bill
+                if parsed.bill_text and parsed.bill_text_reviewed:
+                    explicit = parsed.bill.model_dump() if parsed.bill is not None else {}
+                    invoice_matches = invoice_matches or (
+                        result.bill is not None
+                        and all(
+                            value is None or getattr(result.bill, key) == value
+                            for key, value in explicit.items()
+                        )
+                    )
+                if parsed.facts != result.facts or not invoice_matches:
                     raise ValueError("Issued facts differ from the execution request")
             if check is not None and (
                 result.as_of != check["as_of_date"].isoformat()

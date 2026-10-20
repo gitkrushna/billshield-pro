@@ -1,0 +1,48 @@
+{
+  "source": "accepted M2 reports/eval.json",
+  "false_accusations": 0,
+  "issues": [
+    {
+      "id": "G3",
+      "m2_status": "blocked",
+      "expected": "Rate right, HSN wrong",
+      "actual": "Need more info",
+      "reason": "reasoning_not_verified",
+      "false_accusation": false
+    },
+    {
+      "id": "G5",
+      "m2_status": "fail",
+      "expected": "Rate right, HSN wrong",
+      "actual": "Need more info",
+      "reason": "inconsistent_classification",
+      "false_accusation": false
+    },
+    {
+      "id": "C2",
+      "m2_status": "fail",
+      "expected": "Wrong",
+      "actual": "Need more info",
+      "reason": "inconsistent_rate_selection",
+      "false_accusation": false
+    },
+    {
+      "id": "CF_cream_to_foam",
+      "m2_status": "fail",
+      "expected": "Rate right, HSN wrong",
+      "actual": "Supported",
+      "reason": "validated",
+      "false_accusation": false
+    },
+    {
+      "id": "CF_caramel_to_plain",
+      "m2_status": "fail",
+      "expected": "Supported",
+      "actual": "Need more info",
+      "reason": "retrieval_scope_changed",
+      "false_accusation": false
+    }
+  ],
+  "counterfactual_correction": "Eligible classification candidates now include the entire retrieved rival closure, each subject to the same source/coverage gates. Eight-digit distinctions remain unverified; no forced HSN accusation.",
+  "circular_247_ocr": "deferred"
+}

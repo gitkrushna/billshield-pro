@@ -556,3 +556,85 @@ def test_recorded_injection_boundary_fixtures(evidence, surface):
             "25010010",
         ):
             assert forbidden not in text
+
+
+def test_retrieved_rival_can_be_classified_only_after_its_source_gates(evidence):
+    facts, corpus, proposals, context = evidence
+    rules = {
+        key: replace(rule, chapters=("30", "33")) for key, rule in corpus.rules.items()
+    }
+    corpus = replace(
+        corpus,
+        rules=rules,
+        coverage=corpus.coverage + (replace(corpus.coverage[0], chapter="30"),),
+        required_source_ids={
+            **corpus.required_source_ids,
+            "30": corpus.required_source_ids["33"],
+        },
+        mandatory_rule_ids={
+            **corpus.mandatory_rule_ids,
+            "30": corpus.mandatory_rule_ids["33"],
+        },
+        rival_chapters={"30": ("33",), "33": ("30",)},
+    )
+    model = RecordedModel(facts, proposals[0])
+    issued = asyncio.run(
+        EnginePipeline(model).run(facts, corpus, context, candidate_chapters=("30",))
+    )
+    assert issued.result.category == "Supported" and issued.result.code.startswith("33")
+    missing = replace(
+        corpus, required_source_ids={"30": corpus.required_source_ids["30"]}
+    )
+    fresh = RecordedModel(facts, proposals[0])
+    stopped = asyncio.run(
+        EnginePipeline(fresh).run(facts, missing, context, candidate_chapters=("30",))
+    )
+    assert stopped.result.reason == "source_missing" and not fresh.messages
+
+
+def test_optional_bill_text_is_separate_audited_and_explicit_fields_win(evidence):
+    runner, model, facts, corpus, context = pipeline(evidence)
+    issued = asyncio.run(
+        runner.run_form(
+            facts,
+            corpus,
+            context,
+            bill=BillFields(
+                claimed_code="33071010", billed_rate_pct="5", taxable_value="2000"
+            ),
+            bill_text=prepare_text(
+                "Invoice says HSN 33071090, rate 83.57, value 1000",
+                privacy_reviewed=True,
+            ),
+            candidate_chapters=("33",),
+        )
+    )
+    assert issued.result.category == "Supported"
+    assert str(issued.bill.taxable_value) == "2000"
+    assert issued.bill.claimed_code == "33071010"
+    assert [call.purpose for call in issued.calls] == [
+        "extract_bill",
+        "blind",
+        "blind",
+        "blind",
+    ]
+    assert issued.cost_usd == "0.004"
+    for messages in model.messages[1:]:
+        assert set(json.loads(messages[1]["content"])) == {"facts", "law"}
+        assert "83.57" not in messages[1]["content"]
+    leased = {
+        "facts": facts.model_dump(mode="json"),
+        "bill": {
+            "claimed_code": "33071010",
+            "billed_rate_pct": "5",
+            "taxable_value": "2000",
+        },
+        "bill_text": "Reviewed invoice text",
+        "bill_text_reviewed": True,
+    }
+    assert InlineCheckRunner._snapshot(issued, leased)["result"] == "Supported"
+    tampered = replace(
+        issued, bill=issued.bill.model_copy(update={"claimed_code": "2501"})
+    )
+    with pytest.raises(ValueError):
+        InlineCheckRunner._snapshot(tampered, leased)

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "BillShield Pro — M1 foundation",
-  description: "Development foundation. Classification is not available at M1.",
+  title: "BillShield Pro — GST bill checks",
+  description: "Check product classification and GST bill details against cited evidence.",
   robots: { index: false, follow: false },
 };
 
