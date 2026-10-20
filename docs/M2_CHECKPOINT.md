@@ -9,7 +9,7 @@
 | Live injection safety | 3 | 0 | 0 |
 | Python implementation/safety tests | 167 | 0 | 0 |
 
-The original-seven pass count includes one correct facts abstention. **Safety failures: zero.** Ruff and the 18-asset browser secret check passed. [Evaluation details](../reports/eval.json), [test evidence](../reports/m2_tests.json).
+The original-seven pass count includes one correct facts abstention. **Safety failures: zero.** Ruff, the 18-asset browser secret check and all three [code CI jobs](https://github.com/gitkrushna/billshield-pro/actions/runs/39351298326) passed. [Evaluation details](../reports/eval.json), [test evidence](../reports/m2_tests.json).
 
 Changed: retried official downloads; ingested 20 originals/273 pages; activated 424 exact-source rules, 335 verified heading/HS6 codes and 20 CGST/Goa rate branches. Model selections resolve to canonical quotations. Legal note numbers are distinct from page numbers. Three-run agreement, source gates, rate predicates and Decimal exposure remain enforced. Results say **auto-verified, not professionally reviewed**; eight-digit items remain **not verified**. [Activation](../reports/m2_activation_details.json), [restricted-runtime verification](../reports/corpus_runtime.json).
 
