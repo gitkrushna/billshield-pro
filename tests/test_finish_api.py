@@ -121,14 +121,13 @@ def test_routes_require_auth_and_errors_do_not_echo_private_input(boundary):
         "auth_url": "https://fixture.invalid",
         "auth_publishable_key": "sb_publishable_fixture",
     }
-    schema = client.get("/openapi.json").json()
-    assert set(schema["paths"]) == {
+    assert client.get("/openapi.json").status_code == 404
+    assert {route.path for route in client.app.routes if route.path.startswith("/api/")} == {
         "/api/config",
         "/api/session",
         "/api/checks",
         "/api/checks/{check_id}",
     }
-    assert "security" in schema["paths"]["/api/checks"]["post"]
 
 
 def test_own_session_replay_and_immutable_report_isolation(boundary):
