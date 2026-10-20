@@ -1,6 +1,6 @@
 # BillShield Pro
 
-M2 engine/evaluation checkpoint: evidence-first Python classification validators, separate facts/bill inputs, bounded DeepSeek orchestration, inline Postgres leases and immutable issuance. The current corpus has no activated reviewed rules, codes or rate predicates: required evidence gaps return `Need more info / source_missing`. The Next.js page remains a development marker; product API/UI and deployment are later milestones.
+M2 engine/evaluation checkpoint: evidence-first Python classification validators, separate facts/bill inputs, bounded DeepSeek orchestration, inline Postgres leases and immutable issuance. Exact source quotations now activate rules, heading/HS6 codes and rate predicates, labelled **auto-verified, not professionally reviewed**. Missing required evidence still returns `Need more info / source_missing`; Indian eight-digit items remain unverified where no national source exists. The Next.js page remains a development marker; product API/UI and deployment are later milestones.
 
 Current results: [M2 checkpoint](docs/M2_CHECKPOINT.md), [legal evaluation](reports/eval.md), [source acquisition](reports/acquisition.md). Stop for founder review before M3. Historical foundation evidence remains in the [M1 checkpoint](docs/M1_CHECKPOINT.md).
 
@@ -66,6 +66,6 @@ M1 has no browser uploads. Compose's internal MinIO endpoint supports API-side a
 
 ## Checks and portability
 
-GitHub Actions runs adapter and recorded engine tests, lint, strict web typing, a production build, a fail-closed browser secret scan and gitleaks. The browser scan fails if a build is absent, scans actual JS/assets and checks secret environment values when supplied without printing them. CI's public source cannot include private research, so corpus/legal evaluation remains an explicit local acceptance gate. No live model call has been made at this checkpoint; completed-check cost is unmeasured.
+GitHub Actions runs adapter and recorded engine tests, lint, strict web typing, a production build, a fail-closed browser secret scan and gitleaks. The browser scan fails if a build is absent, scans actual JS/assets and checks secret environment values when supplied without printing them. CI's public source cannot include private research, so corpus/legal evaluation remains an explicit local acceptance gate. The linked M2 evaluation records whether live model calls actually ran and their measured cost; recorded safety tests do not count as live-provider validation.
 
 See `docs/VENDOR_SWITCH.md` for changing Postgres/auth/S3/SMTP hosts and the documented second container target. No second host or production deployment is claimed. Stop at the M2 checkpoint before product API/UI work.

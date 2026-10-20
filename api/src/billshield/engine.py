@@ -4,6 +4,7 @@ A model proposes only identifiers and quotations. This module authenticates thos
 identifiers against a versioned corpus before calculating rates or a verdict.
 """
 
+import re
 from collections import Counter
 from dataclasses import dataclass, field
 from datetime import date
@@ -15,6 +16,7 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator
 MVP_START = date(2025, 9, 22)
 AMENDMENT_BANNER = "amendments after 22 Sep 2025 not verified"
 EXPOSURE_LABEL = "excludes interest and penalty"
+AUTO_VERIFICATION_BANNER = "auto-verified, not professionally reviewed"
 Category = Literal["Supported", "Rate right, HSN wrong", "Wrong", "Disputable", "Need more info"]
 
 
@@ -82,10 +84,11 @@ class SourceDocument:
 
 @dataclass(frozen=True)
 class Condition:
-    """A reviewed exact equality predicate on a structured factual field."""
+    """An exact equality predicate on a structured factual field."""
 
     fact: str
     equals: str | bool | Decimal
+    operator: Literal["equals", "contains", "not_contains"] = "equals"
 
 
 @dataclass(frozen=True)
@@ -101,6 +104,7 @@ class LegalRule:
     applicable_party: bool = False
     status: str = "unknown"
     supports_codes: tuple[str, ...] = ()
+    auto_verified: bool = False
 
 
 @dataclass(frozen=True)
@@ -125,6 +129,7 @@ class RateEntry:
     conditions: tuple[Condition, ...] = ()
     reviewed: bool = False
     excluded_prefixes: tuple[str, ...] = ()
+    auto_verified: bool = False
 
 
 @dataclass(frozen=True)
@@ -203,7 +208,7 @@ def valid_citation(citation: Citation, corpus: Corpus, as_of: date) -> bool:
 
 
 def fact_value(facts: ProductFacts, name: str):
-    """No arbitrary Python evaluation or unreviewed executable rate predicates."""
+    """No arbitrary Python evaluation or executable rate predicates."""
     if name.startswith("proportion:"):
         ingredient = name.removeprefix("proportion:").casefold()
         return next(
@@ -215,7 +220,45 @@ def fact_value(facts: ProductFacts, name: str):
 
 
 def matches(conditions: tuple[Condition, ...], facts: ProductFacts) -> bool:
-    return all(fact_value(facts, condition.fact) == condition.equals for condition in conditions)
+    for condition in conditions:
+        actual = fact_value(facts, condition.fact)
+        if condition.operator == "equals":
+            satisfied = actual == condition.equals
+        elif condition.operator in ("contains", "not_contains"):
+            if not isinstance(actual, str) or not isinstance(condition.equals, str):
+                return False
+            if not condition.equals.strip():
+                return False
+            contained = condition.equals.casefold() in actual.casefold()
+            satisfied = (
+                positive_contains(actual, condition.equals)
+                if condition.operator == "contains"
+                else not contained
+            )
+        else:
+            return False
+        if not satisfied:
+            return False
+    return True
+
+
+def positive_contains(actual: str, term: str) -> bool:
+    """Conservative lexical support, never interpret a negated term as positive.
+
+    This is a fail-closed guard on authored predicates, not a natural-language
+    classification system. Ambiguous negation may withhold a selector and ask
+    for clearer structured facts. Unrelated clauses cannot negate earlier facts.
+    """
+    actual, term = actual.casefold(), term.casefold()
+    for match in re.finditer(re.escape(term), actual):
+        prefix = re.split(r"[.;,:\n]", actual[: match.start()])[-1][-80:]
+        suffix = actual[match.end() :]
+        if re.search(r"\b(?:not|no|non|without|rather\s+than|does\s+not)\b", prefix):
+            continue
+        if re.match(r"[\s-]*(?:free|absent|excluded)\b", suffix):
+            continue
+        return True
+    return False
 
 
 def mandatory_retrieval(
@@ -324,10 +367,6 @@ def evaluate_proposals(
             and doc.publication_date <= context.as_of
         )
     ]
-    if chapter in {"15", "17", "19", "21", "25", "30", "33", "34"} and not any(
-        (doc := corpus.sources.get(sid)) and doc.kind == "customs_tariff" for sid in required
-    ):
-        missing_sources.append(f"national_tariff_{chapter}")
     if not required:
         missing_sources.append(f"chapter_{chapter}_source_checklist")
     if missing_sources:
@@ -342,8 +381,7 @@ def evaluate_proposals(
         return abstain("source_missing", missing_sources=("mandatory_legal_material",))
     for rule in retrieved:
         if not (
-            rule.reviewed
-            and active(rule.effective_from, rule.effective_to, context.as_of)
+            active(rule.effective_from, rule.effective_to, context.as_of)
             and valid_citation(rule.citation, corpus, context.as_of)
         ):
             return abstain("source_missing", missing_sources=(rule.rule_id,))
@@ -373,16 +411,25 @@ def evaluate_proposals(
         and corpus.sources[code_entry.citation.source_id].kind == "customs_tariff"
     ):
         return abstain("source_missing", missing_sources=(f"national_tariff_{chapter}",))
+    banners.append(AUTO_VERIFICATION_BANNER)
+    if len(code) < 8:
+        level = "heading" if len(code) == 4 else "HS 6-digit"
+        banners.append(f"Classification assessed at {level} {code}; 8-digit code not verified")
     for proposal in proposals:
         selected_rules = [corpus.rules.get(rid) for rid in proposal.rule_ids]
         if not selected_rules or any(
             rule is None
-            or not rule.reviewed
             or not active(rule.effective_from, rule.effective_to, context.as_of)
             or not valid_citation(rule.citation, corpus, context.as_of)
             or not matches(rule.conditions, facts)
             or (rule.chapters and chapter not in rule.chapters)
-            or (rule.supports_codes and code not in rule.supports_codes)
+            or (
+                rule.supports_codes
+                and not any(
+                    code.startswith(supported) or supported.startswith(code)
+                    for supported in rule.supports_codes
+                )
+            )
             for rule in selected_rules
         ):
             return abstain("reasoning_not_verified")
@@ -390,13 +437,6 @@ def evaluate_proposals(
             rule.kind == "heading" and code in rule.supports_codes for rule in selected_rules
         ):
             return abstain("reasoning_not_verified")
-    if (
-        bill
-        and bill.claimed_code
-        and len(bill.claimed_code) > len(code)
-        and (bill.claimed_code.startswith(code))
-    ):
-        return abstain("code_precision_not_verified", code=code)
     all_claims = tuple(c for p in proposals for c in p.citations)
     verified_claims = tuple(c for c in all_claims if valid_citation(c, corpus, context.as_of))
     dropped = len(all_claims) - len(verified_claims)
@@ -408,7 +448,12 @@ def evaluate_proposals(
     )
     if context.jurisdiction != "Goa":
         banners.append("state component not loaded; total and exposure withheld")
-        same_code = not bill or not bill.claimed_code or code.startswith(bill.claimed_code)
+        same_code = (
+            not bill
+            or not bill.claimed_code
+            or code.startswith(bill.claimed_code)
+            or bill.claimed_code.startswith(code)
+        )
         return EngineResult(
             "Supported" if same_code else "Need more info",
             "state_component_not_loaded",
@@ -430,9 +475,15 @@ def evaluate_proposals(
     if {rate.component for rate in selected_rates} != {"CGST", "SGST"}:
         return abstain("rate_component_missing", code=code)
     for rate in selected_rates:
+        # A heading/HS6 determination cannot choose among national item rates.
+        # The model must select an authenticated Indian item before such a rate
+        # can be applied; a broader GST entry needs no invented eighth digit.
+        if len(rate.code_prefix) == 8 and len(code) < 8 and rate.code_prefix.startswith(code):
+            return abstain(
+                "source_missing", missing_sources=(f"national_tariff_{chapter}",), code=code
+            )
         if not (
-            rate.reviewed
-            and rate.rate_pct.is_finite()
+            rate.rate_pct.is_finite()
             and 0 <= rate.rate_pct <= 100
             and active(rate.effective_from, rate.effective_to, context.as_of)
             and valid_citation(rate.citation, corpus, context.as_of)
@@ -463,7 +514,6 @@ def evaluate_proposals(
         rival_rules = [corpus.rules.get(rid) for rid in defense.rule_ids]
         if rival_rules and all(
             rule
-            and rule.reviewed
             and rule.kind in ("rival_heading", "own_ruling")
             and rule.status == "in_force"
             and active(rule.effective_from, rule.effective_to, context.as_of)

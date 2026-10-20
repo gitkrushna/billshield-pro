@@ -1,0 +1,399 @@
+{
+  "snapshot_id": "m2-auto-ddbfa11807a805fb94ae",
+  "content_sha256": "ddbfa11807a805fb94ae7506d83c17d0c9d0a01146a2e78b3728466af0667824",
+  "parent_snapshot_id": "m1-research-555b61ebe53000172e23",
+  "parent_unchanged": true,
+  "idempotent_import": true,
+  "runtime_recomputed_activation_hashes": true,
+  "source_count": 20,
+  "canonical_pages": 273,
+  "activated_rules": 424,
+  "activated_codes": 335,
+  "activated_rates": 20,
+  "national_eight_digit_codes": 0,
+  "label": "auto-verified, not professionally reviewed",
+  "rates": [
+    {
+      "entry_id": "cgst_09_2025:I:90:1513",
+      "component": "CGST",
+      "rate_pct": "2.5",
+      "code_prefix": "1513",
+      "source_id": "m2:cgst_09_2025:0362838d241f2e6752de",
+      "page": 5,
+      "exact_quote": "90.  1513  Coconut (copra), palm kernel or babassu oil and fractions \nthereof, whether or not refined, but not chemically modified \n",
+      "conditions": []
+    },
+    {
+      "entry_id": "cgst_09_2025:I:110:1704",
+      "component": "CGST",
+      "rate_pct": "2.5",
+      "code_prefix": "1704",
+      "source_id": "m2:cgst_09_2025:0362838d241f2e6752de",
+      "page": 6,
+      "exact_quote": "110.  1704 Sugar confectionary (including white chocolate), not containing \ncocoa, sugar boiled confectionary \n",
+      "conditions": []
+    },
+    {
+      "entry_id": "cgst_09_2025:I:123:1905",
+      "component": "CGST",
+      "rate_pct": "2.5",
+      "code_prefix": "1905",
+      "source_id": "m2:cgst_09_2025:0362838d241f2e6752de",
+      "page": 6,
+      "exact_quote": "123.  1905 Pastry, cakes, biscuits and other bakers\u00e2\u20ac\u2122 wares, whether or not \ncontaining cocoa; communion wafers, empty cachets of a kind \nsuitable for pharmaceutical use, sealing wafers, rice paper and \nsimilar products; Un-fried or un-cooked snack pellets, by \nwhatever name called, manufactured through process of \nextrusion; Extruded or expanded products, savoury or salted \n",
+      "conditions": []
+    },
+    {
+      "entry_id": "cgst_09_2025:I:234:3004",
+      "component": "CGST",
+      "rate_pct": "2.5",
+      "code_prefix": "3004",
+      "source_id": "m2:cgst_09_2025:0362838d241f2e6752de",
+      "page": 11,
+      "exact_quote": "234.  3004 Medicaments (excluding goods of heading 3002, 3005 or 3006) \nconsisting of mixed or unmixed products for therapeutic or \nprophylactic uses, put up in measured doses (including those in \nthe form of transdermal administ ration systems) or in forms or \npackings for retail sale, including Ayurvedic, Unani, \nhomoeopathic siddha or Bio-chemic systems medicaments, put \nup for retail sale \n",
+      "conditions": [
+        {
+          "fact": "medicinal_licence",
+          "operator": "equals",
+          "equals": true
+        },
+        {
+          "fact": "use",
+          "operator": "contains",
+          "equals": "therapeut"
+        },
+        {
+          "fact": "form",
+          "operator": "contains",
+          "equals": "retail"
+        }
+      ]
+    },
+    {
+      "entry_id": "cgst_09_2025:I:249:3307",
+      "component": "CGST",
+      "rate_pct": "2.5",
+      "code_prefix": "3307",
+      "source_id": "m2:cgst_09_2025:0362838d241f2e6752de",
+      "page": 11,
+      "exact_quote": "249.  3307 Shaving cream, shaving lotion, aftershave lotion ",
+      "conditions": [
+        {
+          "fact": "use",
+          "operator": "contains",
+          "equals": "shav"
+        },
+        {
+          "fact": "form",
+          "operator": "contains",
+          "equals": "cream"
+        }
+      ]
+    },
+    {
+      "entry_id": "cgst_09_2025:I:251:3401",
+      "component": "CGST",
+      "rate_pct": "2.5",
+      "code_prefix": "3401",
+      "source_id": "m2:cgst_09_2025:0362838d241f2e6752de",
+      "page": 12,
+      "exact_quote": " \n \n251.  3401 Toilet Soap (other than industrial soap) in the form of bars, cakes, \nmoulded pieces or shapes \n",
+      "conditions": [
+        {
+          "fact": "use",
+          "operator": "contains",
+          "equals": "toilet"
+        },
+        {
+          "fact": "form",
+          "operator": "contains",
+          "equals": "bar"
+        }
+      ]
+    },
+    {
+      "entry_id": "cgst_09_2025:II:64:3307",
+      "component": "CGST",
+      "rate_pct": "9",
+      "code_prefix": "3307",
+      "source_id": "m2:cgst_09_2025:0362838d241f2e6752de",
+      "page": 25,
+      "exact_quote": "64.  3307  Pre-shave, shaving or after-shave preparations, personal deodorants, \nbath preparations, depilatories and other perfumery, cosmetic or \ntoilet preparations, not elsewhere specified or included; prepared \nroom deodorisers, whether or not perfumed or having disinfectant \nproperties [other than shaving cream, shaving lotion and aftershave \nlotion] \n",
+      "conditions": [
+        {
+          "fact": "use",
+          "operator": "contains",
+          "equals": "shav"
+        },
+        {
+          "fact": "form",
+          "operator": "contains",
+          "equals": "foam"
+        },
+        {
+          "fact": "form",
+          "operator": "not_contains",
+          "equals": "cream"
+        },
+        {
+          "fact": "form",
+          "operator": "not_contains",
+          "equals": "lotion"
+        }
+      ]
+    },
+    {
+      "entry_id": "cgst_09_2025:II:66:3401:laundry",
+      "component": "CGST",
+      "rate_pct": "9",
+      "code_prefix": "3401",
+      "source_id": "m2:cgst_09_2025:0362838d241f2e6752de",
+      "page": 25,
+      "exact_quote": "66.  3401 Soap; organic surface-active products and preparations for use as \nsoap, in the form of cakes, moulded pieces or shapes, whether or not \ncontaining soap[other than toilet soap in the form of bars, cakes, \nmoulded pieces or shapes]; organic surface active products and \npreparations for washing the skin, in the form of liquid or cream and \nput up for retail sale, whether or not containing soap; paper, \nwadding, felt and nonwovens, impregnated, coated or covered with \nsoap or detergent   \n",
+      "conditions": [
+        {
+          "fact": "form",
+          "operator": "contains",
+          "equals": "soap"
+        },
+        {
+          "fact": "use",
+          "operator": "contains",
+          "equals": "washing clothes"
+        }
+      ]
+    },
+    {
+      "entry_id": "cgst_09_2025:II:66:3401:liquid_skin",
+      "component": "CGST",
+      "rate_pct": "9",
+      "code_prefix": "3401",
+      "source_id": "m2:cgst_09_2025:0362838d241f2e6752de",
+      "page": 25,
+      "exact_quote": "66.  3401 Soap; organic surface-active products and preparations for use as \nsoap, in the form of cakes, moulded pieces or shapes, whether or not \ncontaining soap[other than toilet soap in the form of bars, cakes, \nmoulded pieces or shapes]; organic surface active products and \npreparations for washing the skin, in the form of liquid or cream and \nput up for retail sale, whether or not containing soap; paper, \nwadding, felt and nonwovens, impregnated, coated or covered with \nsoap or detergent   \n",
+      "conditions": [
+        {
+          "fact": "form",
+          "operator": "contains",
+          "equals": "liquid"
+        },
+        {
+          "fact": "use",
+          "operator": "contains",
+          "equals": "washing skin"
+        }
+      ]
+    },
+    {
+      "entry_id": "cgst_10_2025:exempt:109:2501",
+      "component": "CGST",
+      "rate_pct": "0",
+      "code_prefix": "2501",
+      "source_id": "m2:cgst_10_2025:e2b0514786aafd3c4012",
+      "page": 5,
+      "exact_quote": "109.  2501 Salt (including table salt and denatured salt) and pure \nsodium chloride, whether or not in aqueous solutions or \ncontaining added anti -caking or free flowing agents; sea \nwater \n",
+      "conditions": []
+    },
+    {
+      "entry_id": "goa_09_2025:I:90:1513",
+      "component": "SGST",
+      "rate_pct": "2.5",
+      "code_prefix": "1513",
+      "source_id": "m2:goa_09_2025:56d104ed800a06424818",
+      "page": 6,
+      "exact_quote": "90. 1513 Coconut (copra), palm kernel or babassu oil and fractions thereof,\nwhether or not refined, but not chemically modified\n",
+      "conditions": []
+    },
+    {
+      "entry_id": "goa_09_2025:I:110:1704",
+      "component": "SGST",
+      "rate_pct": "2.5",
+      "code_prefix": "1704",
+      "source_id": "m2:goa_09_2025:56d104ed800a06424818",
+      "page": 7,
+      "exact_quote": "110. 1704 Sugar confectionary (including white chocolate), not containing cocoa,\nsugar boiled confectionary\n",
+      "conditions": []
+    },
+    {
+      "entry_id": "goa_09_2025:I:123:1905",
+      "component": "SGST",
+      "rate_pct": "2.5",
+      "code_prefix": "1905",
+      "source_id": "m2:goa_09_2025:56d104ed800a06424818",
+      "page": 8,
+      "exact_quote": "123. 1905 Pastry, cakes, biscuits and other bakers\u00e2\u20ac\u2122 wares, whether or not\ncontaining cocoa; communion wafers, empty cachets of a kind suitable\nfor pharmaceutical use, sealing wafers, rice paper and similar\nproducts; Un-fried or un-cooked snack pellets, by whatever name\ncalled, manufactured through process of extrusion; Extruded or\nexpanded products, savoury or salted\n",
+      "conditions": []
+    },
+    {
+      "entry_id": "goa_09_2025:I:234:3004",
+      "component": "SGST",
+      "rate_pct": "2.5",
+      "code_prefix": "3004",
+      "source_id": "m2:goa_09_2025:56d104ed800a06424818",
+      "page": 13,
+      "exact_quote": "234. 3004 Medicaments (excluding goods of heading 3002, 3005 or 3006)\nconsisting of mixed or unmixed products for therapeutic or\nprophylactic uses, put up in measured doses (including those in the\nform of transdermal administration systems) or in forms or packings\nfor retail sale, including Ayurvedic, Unani, homoeopathic siddha or\nBio-chemic systems medicaments, put up for retail sale\n",
+      "conditions": [
+        {
+          "fact": "medicinal_licence",
+          "operator": "equals",
+          "equals": true
+        },
+        {
+          "fact": "use",
+          "operator": "contains",
+          "equals": "therapeut"
+        },
+        {
+          "fact": "form",
+          "operator": "contains",
+          "equals": "retail"
+        }
+      ]
+    },
+    {
+      "entry_id": "goa_09_2025:I:249:3307",
+      "component": "SGST",
+      "rate_pct": "2.5",
+      "code_prefix": "3307",
+      "source_id": "m2:goa_09_2025:56d104ed800a06424818",
+      "page": 13,
+      "exact_quote": "249. 3307 Shaving cream, shaving lotion, aftershave lotion\n",
+      "conditions": [
+        {
+          "fact": "use",
+          "operator": "contains",
+          "equals": "shav"
+        },
+        {
+          "fact": "form",
+          "operator": "contains",
+          "equals": "cream"
+        }
+      ]
+    },
+    {
+      "entry_id": "goa_09_2025:I:251:3401",
+      "component": "SGST",
+      "rate_pct": "2.5",
+      "code_prefix": "3401",
+      "source_id": "m2:goa_09_2025:56d104ed800a06424818",
+      "page": 14,
+      "exact_quote": "251. 3401 Toilet Soap (other than industrial soap) in the form of bars, cakes,\nmoulded pieces or shapes\n",
+      "conditions": [
+        {
+          "fact": "use",
+          "operator": "contains",
+          "equals": "toilet"
+        },
+        {
+          "fact": "form",
+          "operator": "contains",
+          "equals": "bar"
+        }
+      ]
+    },
+    {
+      "entry_id": "goa_09_2025:II:64:3307",
+      "component": "SGST",
+      "rate_pct": "9",
+      "code_prefix": "3307",
+      "source_id": "m2:goa_09_2025:56d104ed800a06424818",
+      "page": 29,
+      "exact_quote": "64. 3307 Pre-shave, shaving or after-shave preparations, personal deodorants, bath\npreparations, depilatories and other perfumery, cosmetic or toilet\npreparations, not elsewhere specified or included; prepared room\ndeodorisers, whether or not perfumed or having disinfectant properties\n[other than shaving cream, shaving lotion and aftershave lotion]\n",
+      "conditions": [
+        {
+          "fact": "use",
+          "operator": "contains",
+          "equals": "shav"
+        },
+        {
+          "fact": "form",
+          "operator": "contains",
+          "equals": "foam"
+        },
+        {
+          "fact": "form",
+          "operator": "not_contains",
+          "equals": "cream"
+        },
+        {
+          "fact": "form",
+          "operator": "not_contains",
+          "equals": "lotion"
+        }
+      ]
+    },
+    {
+      "entry_id": "goa_09_2025:II:66:3401:laundry",
+      "component": "SGST",
+      "rate_pct": "9",
+      "code_prefix": "3401",
+      "source_id": "m2:goa_09_2025:56d104ed800a06424818",
+      "page": 29,
+      "exact_quote": "66. 3401 Soap; organic surface-active products and preparations for use as soap, in\nthe form of cakes, moulded pieces or shapes, whether or not containing\nsoap[other than toilet soap in the form of bars, cakes, moulded pieces or\nshapes]; organic surface active products and preparations for washing the\nskin, in the form of liquid or cream and put up for retail sale, whether or not\ncontaining soap; paper, wadding, felt and nonwovens, impregnated, coated\nor covered with soap or detergent\n",
+      "conditions": [
+        {
+          "fact": "form",
+          "operator": "contains",
+          "equals": "soap"
+        },
+        {
+          "fact": "use",
+          "operator": "contains",
+          "equals": "washing clothes"
+        }
+      ]
+    },
+    {
+      "entry_id": "goa_09_2025:II:66:3401:liquid_skin",
+      "component": "SGST",
+      "rate_pct": "9",
+      "code_prefix": "3401",
+      "source_id": "m2:goa_09_2025:56d104ed800a06424818",
+      "page": 29,
+      "exact_quote": "66. 3401 Soap; organic surface-active products and preparations for use as soap, in\nthe form of cakes, moulded pieces or shapes, whether or not containing\nsoap[other than toilet soap in the form of bars, cakes, moulded pieces or\nshapes]; organic surface active products and preparations for washing the\nskin, in the form of liquid or cream and put up for retail sale, whether or not\ncontaining soap; paper, wadding, felt and nonwovens, impregnated, coated\nor covered with soap or detergent\n",
+      "conditions": [
+        {
+          "fact": "form",
+          "operator": "contains",
+          "equals": "liquid"
+        },
+        {
+          "fact": "use",
+          "operator": "contains",
+          "equals": "washing skin"
+        }
+      ]
+    },
+    {
+      "entry_id": "goa_10_2025:exempt:109:2501",
+      "component": "SGST",
+      "rate_pct": "0",
+      "code_prefix": "2501",
+      "source_id": "m2:goa_10_2025:ada23c9e1219819fff3a",
+      "page": 5,
+      "exact_quote": "109. 2501 Salt (including table salt and denatured salt) and pure sodium\nchloride, whether or not in aqueous solutions or containing added\nanti-caking or free flowing agents; sea water\n",
+      "conditions": []
+    }
+  ],
+  "legal_activation_rejections": [
+    {
+      "id": "igst_10_2025_corr",
+      "reason": "Official file corrects Integrated Tax10, unrelated to CGST10; original retained, not activated."
+    }
+  ],
+  "notes": [
+    "All eight chapters mandatory HS notes, GRI1-6, heading and crosschapter rival material complete at HS4/6 depth.",
+    "No national eight-digit code activated or invented.",
+    "CGST9 correction changes annexure lettering only.",
+    "McNroe operative reasoning included as persuasive, party-specific authority.",
+    "SectionsIII/V actual official contents blocks show no separate section notes.",
+    "Currentness unverified after22Sep2025.",
+    "Medicament activated subset: licence, positive therapeutic use, explicit retail form; other branches abstain.",
+    "Shaving activated subset: positive cream concession or positive foam residual; other forms abstain.",
+    "Soap residual branches: positive laundry-use soap or liquid skin washing; absence of toilet word proves nothing."
+  ],
+  "importer_version": "m2-auto-pages-v3",
+  "numbered_note_rules": 34,
+  "page_note_identity": "Full chapter_page/section_page IDs retain mandatory complete pages. Numbered chapter_note/section_note IDs quote actual legal note numbers and canonical source pages. Potentially continued final notes are not split."
+}

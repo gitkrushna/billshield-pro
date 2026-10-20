@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-19T18:08:48.697471+00:00",
+  "checked_at": "2026-10-20T00:58:18.583722+00:00",
   "status": "passed",
   "runtime_role": {
     "name": "billshield_app",
@@ -7,11 +7,11 @@
     "rolbypassrls": false
   },
   "runtime_owns_tables": false,
-  "snapshot_id": "m2-browser-1f4bd452b096b16c06ea",
-  "sources_loaded": 2,
-  "canonical_pages_loaded": 76,
-  "activated_rates": 0,
-  "activated_rules": 0,
+  "snapshot_id": "m2-auto-ddbfa11807a805fb94ae",
+  "sources_loaded": 20,
+  "canonical_pages_loaded": 273,
+  "activated_rates": 20,
+  "activated_rules": 424,
   "authenticated_national_codes": 0,
   "complete_coverage_count": 0,
   "verified_through": null,
@@ -28,5 +28,13 @@
   "amendment_notice": "amendments after 22 Sep 2025 not verified",
   "parent_unchanged": true,
   "read_only_verification": true,
-  "secret_values_recorded": false
+  "secret_values_recorded": false,
+  "activated_codes": 335,
+  "activation_notice": "auto-verified, not professionally reviewed",
+  "activation_hashes_recomputed": true,
+  "original_bytes_verified": true,
+  "content_sha256": "ddbfa11807a805fb94ae7506d83c17d0c9d0a01146a2e78b3728466af0667824",
+  "importer_version": "m2-auto-pages-v3",
+  "activation_hashes_verified": true,
+  "idempotence_verified": true
 }

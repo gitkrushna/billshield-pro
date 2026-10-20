@@ -17,6 +17,7 @@ from billshield.pipeline import (
 from billshield.ports import ModelResult
 from pydantic import ValidationError
 from test_engine import evidence as evidence  # noqa: PLC0414 (pytest fixture re-export)
+from test_engine import hs6_evidence
 
 
 class RecordedModel:
@@ -42,6 +43,7 @@ class RecordedModel:
             system = messages[0]["content"]
             if "Classify blind" in system:
                 value = self.proposal.model_dump(mode="json")
+                value.pop("citations")
                 if self.numeric_rate:
                     value["rate_pct"] = "5"
             elif "claimed code" in system:
@@ -119,6 +121,23 @@ def test_preflight_missing_evidence_makes_no_model_call(evidence):
     )
 
 
+def test_required_deciding_facts_abstain_before_model_after_source_gate(evidence):
+    runner, model, facts, corpus, context = pipeline(evidence)
+    facts = facts.model_copy(update={"composition": ()})
+    context = replace(context, required_facts=("composition",))
+    issued = asyncio.run(runner.run(facts, corpus, context, candidate_chapters=("33",)))
+    assert issued.result.reason == "facts_missing"
+    assert issued.result.missing_facts == ("composition",)
+    assert not model.messages and not issued.calls
+    # Evidence acquisition remains the first gate even when facts are absent.
+    issued = asyncio.run(
+        runner.run(
+            facts, replace(corpus, sources={}), context, candidate_chapters=("33",)
+        )
+    )
+    assert issued.result.reason == "source_missing" and not model.messages
+
+
 def test_execution_projection_preserves_full_snapshot_and_validates_request(evidence):
     runner, _model, facts, corpus, context = pipeline(evidence)
     request = {"facts": facts.model_dump(mode="json")}
@@ -168,12 +187,69 @@ def test_full_mandatory_material_is_sent_without_top_k(evidence):
         corpus.sources["synthetic"],
         pages={1: "SYNTHETIC legal fixture", 200: "COMPLETE LAST SECTION NOTE"},
     )
+    final_note = replace(
+        corpus.rules["section_note"],
+        rule_id="section_note_last",
+        citation=corpus.rules["section_note"].citation.model_copy(
+            update={"page": 200, "quote": "COMPLETE LAST SECTION NOTE"}
+        ),
+    )
+    corpus = replace(
+        corpus,
+        sources={"synthetic": source},
+        rules={**corpus.rules, final_note.rule_id: final_note},
+        mandatory_rule_ids={
+            "33": (*corpus.mandatory_rule_ids["33"], final_note.rule_id)
+        },
+    )
+    asyncio.run(runner.run(facts, corpus, context, candidate_chapters=("33",)))
+    law = json.loads(model.messages[0][1]["content"])["law"]
+    assert len(law["rules"]) == 10
+    assert law["sources"][0]["pages"]["200"] == "COMPLETE LAST SECTION NOTE"
+    original_items = [
+        *corpus.rules.values(),
+        *corpus.codes.values(),
+        *corpus.rates.values(),
+    ]
+    original_quotes = {item.citation.quote for item in original_items}
+    for item in [*law["rules"], *law["codes"], *law["rate_entry_selectors"]]:
+        citation = item["citation"]
+        source = next(
+            row for row in law["sources"] if row["source_id"] == citation["source_id"]
+        )
+        page = source["pages"][str(citation["page"])]
+        reconstructed = page[citation["quote_start"] : citation["quote_end"]]
+        assert reconstructed in original_quotes
+        assert "quote" not in citation
+    assert all("rate_pct" not in rate for rate in law["rate_entry_selectors"])
+
+
+def test_prompt_omits_uncited_pages_but_preserves_canonical_evidence(evidence):
+    runner, model, facts, corpus, context = pipeline(evidence)
+    original = corpus.sources["synthetic"]
+    source = replace(
+        original,
+        sha256="a" * 64,
+        pages={
+            **original.pages,
+            2: "UNRELATED RATE CHAPTER",
+            99: "UNRELATED GAZETTE CONTENT",
+        },
+    )
     corpus = replace(corpus, sources={"synthetic": source})
     asyncio.run(runner.run(facts, corpus, context, candidate_chapters=("33",)))
     law = json.loads(model.messages[0][1]["content"])["law"]
-    assert len(law["rules"]) == 9
-    assert law["sources"][0]["pages"]["200"] == "COMPLETE LAST SECTION NOTE"
-    assert all("rate_pct" not in rate for rate in law["rate_entry_selectors"])
+    projected = law["sources"][0]
+    assert (
+        projected["source_id"] == source.source_id
+        and projected["sha256"] == source.sha256
+    )
+    assert projected["pages"] == {"1": source.pages[1]}
+    assert corpus.sources["synthetic"].pages == source.pages
+    assert len(law["rules"]) == 9 and len(law["rate_entry_selectors"]) == 2
+    # Canonical text appears once despite many selectors citing the same page.
+    encoded = json.dumps(law)
+    assert encoded.count("SYNTHETIC legal fixture") == 1
 
 
 def test_unverified_national_code_is_not_sent_as_model_evidence(evidence):
@@ -187,6 +263,36 @@ def test_unverified_national_code_is_not_sent_as_model_evidence(evidence):
         code["code"]
         for code in json.loads(model.messages[0][1]["content"])["law"]["codes"]
     ] == ["33071010"]
+
+
+def test_hs6_preflight_and_packet_have_no_human_review_gate(evidence):
+    facts, corpus, proposals, context = hs6_evidence(evidence)
+    corpus = replace(
+        corpus,
+        rules={
+            key: replace(rule, reviewed=False) for key, rule in corpus.rules.items()
+        },
+        rates={
+            key: replace(rate, reviewed=False) for key, rate in corpus.rates.items()
+        },
+    )
+    model = RecordedModel(facts, proposals[0])
+    issued = asyncio.run(
+        EnginePipeline(model).run(
+            facts,
+            corpus,
+            context,
+            candidate_chapters=("33",),
+            bill=BillFields(claimed_code="33071099", billed_rate_pct="5"),
+        )
+    )
+    assert issued.result.category == "Supported" and issued.result.code == "330710"
+    assert any(
+        "8-digit code not verified" in banner for banner in issued.result.banners
+    )
+    law = json.loads(model.messages[0][1]["content"])["law"]
+    assert len(law["rules"]) == 9 and len(law["rate_entry_selectors"]) == 2
+    assert [row["code"] for row in law["codes"]] == ["330710"]
 
 
 def test_rival_chapter_cannot_borrow_main_chapter_notes(evidence):
@@ -227,6 +333,68 @@ def test_numeric_model_rate_is_rejected(evidence):
     assert issued.result.rate_pct is None
 
 
+@pytest.mark.parametrize(
+    "field,value",
+    (
+        ("code", "33071099"),
+        ("rule_ids", ("invented",)),
+        ("rate_entry_ids", ("invented",)),
+    ),
+)
+def test_unknown_model_evidence_ids_fail_closed(evidence, field, value):
+    runner, model, facts, corpus, context = pipeline(evidence)
+    model.proposal = model.proposal.model_copy(update={field: value})
+    issued = asyncio.run(runner.run(facts, corpus, context, candidate_chapters=("33",)))
+    assert issued.result.category == "Need more info"
+    assert issued.result.reason == "model_output_invalid"
+    assert issued.result.rate_pct is None and issued.result.tax_difference is None
+
+
+def test_id_selected_quotes_are_copied_from_verified_canonical_pages(evidence):
+    runner, model, facts, corpus, context = pipeline(evidence)
+    issued = asyncio.run(runner.run(facts, corpus, context, candidate_chapters=("33",)))
+    assert issued.result.category == "Supported"
+    assert issued.result.citations
+    for citation in issued.result.citations:
+        assert citation.quote in corpus.sources[citation.source_id].pages[citation.page]
+    schema = model.messages[0][0]["content"].split(
+        "Output JSON matching this schema: ", 1
+    )[1]
+    assert "citations" not in json.loads(schema)["properties"]
+    law = json.loads(model.messages[0][1]["content"])["law"]
+    assert (
+        law["jurisdiction"] == context.jurisdiction and law["supply"] == context.supply
+    )
+
+
+def test_repeated_selected_rate_reference_is_one_authenticated_citation(evidence):
+    from billshield.pipeline import _BlindResponse, _materialize_proposal
+
+    _facts, corpus, proposals, context = evidence
+    original = proposals[0]
+    rate_id = original.rate_entry_ids[0]
+    response = _BlindResponse(
+        code=original.code,
+        rule_ids=original.rule_ids + (rate_id,),
+        rate_entry_ids=original.rate_entry_ids,
+    )
+    actual = _materialize_proposal(response, corpus, context)
+    assert actual.rule_ids == original.rule_ids
+    assert actual.rate_entry_ids == original.rate_entry_ids
+    # A rate in the wrong field cannot activate a rate by itself, and an
+    # invented reference is never dropped as a harmless duplicate.
+    with pytest.raises(ValueError):
+        _materialize_proposal(
+            response.model_copy(update={"rate_entry_ids": ()}), corpus, context
+        )
+    with pytest.raises(ValueError):
+        _materialize_proposal(
+            response.model_copy(update={"rule_ids": ("invented", rate_id)}),
+            corpus,
+            context,
+        )
+
+
 def test_instruction_arguments_are_not_fact_updates(evidence):
     runner, model, facts, corpus, context = pipeline(evidence)
     for update in (
@@ -249,7 +417,10 @@ def test_instruction_arguments_are_not_fact_updates(evidence):
 
 def test_single_global_deadline_and_unknown_failed_cost(evidence):
     runner, model, facts, corpus, context = pipeline(evidence)
-    model.delay = 0.3
+    # Leave enough startup budget for validation/packet encoding on a busy
+    # Windows runner, then ensure every started model call exceeds that budget.
+    # This test covers in-flight timeout accounting rather than pre-call expiry.
+    model.delay = 2
 
     async def bounded_run():
         return await runner.run(
@@ -257,7 +428,7 @@ def test_single_global_deadline_and_unknown_failed_cost(evidence):
             corpus,
             context,
             candidate_chapters=("33",),
-            deadline_monotonic=monotonic() + 0.1,
+            deadline_monotonic=monotonic() + 1,
         )
 
     issued = asyncio.run(bounded_run())

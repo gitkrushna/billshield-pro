@@ -1,16 +1,16 @@
 {
-  "checked_at": "2026-10-19T18:08:48.697471+00:00",
+  "checked_at": "2026-10-20T00:58:18.583722+00:00",
   "status": "passed",
-  "snapshot_id": "m2-browser-1f4bd452b096b16c06ea",
-  "content_sha256": "1f4bd452b096b16c06eac6c790eea237bd3311d2b9ddacaff504b7750f4a12c1",
+  "snapshot_id": "m2-auto-ddbfa11807a805fb94ae",
+  "content_sha256": "ddbfa11807a805fb94ae7506d83c17d0c9d0a01146a2e78b3728466af0667824",
   "sources_ingested": [
     {
       "source_key": "m2:goa_09_2025:56d104ed800a06424818",
       "url": "https://statetax.goa.gov.in/PDF/state_notif/Rate/09_(09_2025)_2025(rate).pdf",
       "sha256": "56d104ed800a064248181119ec513f3111b3bce5e30d59852cb04508d91728c5",
-      "retrieved_at": "2026-10-19T15:03:45.826000+00:00",
+      "retrieved_at": "2026-10-19T15:03:45.826Z",
       "pages": 63,
-      "text_complete": true
+      "original_bytes_verified": true
     },
     {
       "source_key": "m2:goa_10_2025:ada23c9e1219819fff3a",
@@ -18,10 +18,154 @@
       "sha256": "ada23c9e1219819fff3a0fcd12ae298daab13249d00c01b03764712fcc2aeb33",
       "retrieved_at": "2026-10-19T15:05:56.359374+00:00",
       "pages": 13,
-      "text_complete": true
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:mcnroe:320b602828ba585b220e",
+      "url": "https://comtax.wb.gov.in/GST/GST_Advance_Ruling/29WBAAR2025-26_20260216.pdf",
+      "sha256": "320b602828ba585b220ea11fba7a8433afc4a31a7559d4713ed2926a67c355c5",
+      "retrieved_at": "2026-10-19T18:25:22.021303+00:00",
+      "pages": 12,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:wco_2022_0315:122be301e637d679e2e2",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0315_2022e.pdf?la=en",
+      "sha256": "122be301e637d679e2e23b9f700bef698e5bbb685ccf95a077d831d75862122d",
+      "retrieved_at": "2026-10-19T11:43:09.608314+00:00",
+      "pages": 7,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:wco_2022_0417:70a0ca8d3653025e6226",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0417_2022e.pdf?la=en",
+      "sha256": "70a0ca8d3653025e6226af80ed6d5c5866205229fdb5dbd03b2a082c7067ef82",
+      "retrieved_at": "2026-10-19T11:43:16.136343+00:00",
+      "pages": 2,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:wco_2022_0419:507f11de9b772ff18efc",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0419_2022e.pdf?la=en",
+      "sha256": "507f11de9b772ff18efcc2f3a078a5fda2862eafb271d181908cc8d744b539db",
+      "retrieved_at": "2026-10-19T11:43:19.092274+00:00",
+      "pages": 2,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:wco_2022_0421:4c63973778dfd4f28265",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0421_2022e.pdf?la=en",
+      "sha256": "4c63973778dfd4f282653dd0b83d78f1586c9e847f027bb950d782e2caa82603",
+      "retrieved_at": "2026-10-19T11:43:25.667486+00:00",
+      "pages": 2,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:wco_2022_0630:7ad8d2b476a97e2326fe",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0630_2022e.pdf?la=en",
+      "sha256": "7ad8d2b476a97e2326fee5fbf6af0947d5213cc9a7f5e337667a7cbaa07af11d",
+      "retrieved_at": "2026-10-19T11:43:35.608338+00:00",
+      "pages": 4,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:wco_2022_0633:3036879a259d994f5657",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0633_2022e.pdf?la=en",
+      "sha256": "3036879a259d994f565739b962f0135c9b6c506a483873377ba92a9e5816bd8c",
+      "retrieved_at": "2026-10-19T11:43:44.593030+00:00",
+      "pages": 2,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:wco_2022_0400:ea555a738f0ce8315d79",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0400_2022e.pdf?la=en",
+      "sha256": "ea555a738f0ce8315d79d254c9837adff2c91271f5bd50dc743324467ae14596",
+      "retrieved_at": "2026-10-19T11:43:50.897967+00:00",
+      "pages": 1,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:wco_2022_0600:62385a45bdbce5148f02",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0600_2022e.pdf?la=en",
+      "sha256": "62385a45bdbce5148f027ce721bc0d9cbcad49fbb970ffbf515d23f24215cf91",
+      "retrieved_at": "2026-10-19T11:43:52.800205+00:00",
+      "pages": 1,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:cgst_09_2025:0362838d241f2e6752de",
+      "url": "https://gst.karnataka.gov.in/Documents/NOTIFICATIONS/CTR0918925.pdf",
+      "sha256": "0362838d241f2e6752deb1ef93e0418e55418da3a67a4cf1f4294e7b7cf8b4f5",
+      "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+      "pages": 56,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:cgst_10_2025:e2b0514786aafd3c4012",
+      "url": "https://gst.karnataka.gov.in/Documents/NOTIFICATIONS/CTR1018925.pdf",
+      "sha256": "e2b0514786aafd3c4012d7218c736fb763d4b719a6bb88ba16ff1784a4e3bf97",
+      "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+      "pages": 15,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:cgst_10_2025_gazette:2e205f8a16358bda6460",
+      "url": "https://egazette.gov.in/WriteReadData/2025/266210.pdf",
+      "sha256": "2e205f8a16358bda64609f54bb60376e23b83dd9c14a98ca9d283db19c5994d3",
+      "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+      "pages": 77,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:cgst_09_2025_corr:bc9a248acd177694652f",
+      "url": "https://gst.karnataka.gov.in/Documents/NOTIFICATIONS/CTRcorr091992025.pdf",
+      "sha256": "bc9a248acd177694652f835ba719b96d2dad9cc13a976d4c122dde6b6e1a4e78",
+      "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+      "pages": 1,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:igst_10_2025_corr:4adee976853587ab6cb4",
+      "url": "https://gst.karnataka.gov.in/Documents/NOTIFICATIONS/CTRcorr101992025.pdf",
+      "sha256": "4adee976853587ab6cb4f94243c87ce76aa7b98ff0b6f24abd4e7b220b83d168",
+      "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+      "pages": 1,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:wco_gri_2022:a15ad1e08fa165e509a3",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0001_2022e-gir.pdf",
+      "sha256": "a15ad1e08fa165e509a34d4bf07299b57c68554d98149217c284c24fe2d49d5a",
+      "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+      "pages": 1,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:wco_2022_0525:2500835595231d825322",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0525_2022e.pdf?la=en",
+      "sha256": "2500835595231d825322c1c80f2930ad390ed617978e9d880a08ea2e80c71e07",
+      "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+      "pages": 5,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:wco_2022_0634:8196a0f7df557f2f87dd",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0634_2022e.pdf?la=en",
+      "sha256": "8196a0f7df557f2f87dd248fe87815475253678d433e3065e0addff813863bdb",
+      "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+      "pages": 3,
+      "original_bytes_verified": true
+    },
+    {
+      "source_key": "m2:wco_contents_2022:84c08b4b37240417e6ee",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/table-of-contents_2022e_rev.pdf?la=en",
+      "sha256": "84c08b4b37240417e6eed19c900a1a1e3887f6bf589e120670482fb0ae777143",
+      "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+      "pages": 5,
+      "original_bytes_verified": true
     }
   ],
-  "canonical_pages_verified": 76,
+  "canonical_pages_verified": 273,
   "parent_snapshot_id": "m1-research-555b61ebe53000172e23",
   "parent_content_sha256": "555b61ebe53000172e235e41f036bd7e3639854140f6f3704a49cddcc0c11253",
   "parent_unchanged": true,
@@ -36,9 +180,22 @@
     "data_coverage": 12
   },
   "parent_members_preserved": 1018,
-  "snapshot_members": 1096,
-  "rates_activated": 0,
+  "snapshot_members": 1311,
+  "rates_activated": 20,
   "currentness_certified": false,
   "coverage_flags_changed": false,
-  "rejected": []
+  "rejected": [],
+  "parent_source_records_proof_checked_at": "2026-10-19T18:08:48.697471+00:00",
+  "parent_source_records_proof": "Retained prior full M1 reconciliation; current import performed insert-only operations on distinct M2 source keys and verified M1 snapshot manifest unchanged.",
+  "rules_activated": 424,
+  "codes_activated": 335,
+  "activation_hashes_verified": true,
+  "idempotence_verified": true,
+  "rejected_legal_activations": [
+    {
+      "id": "igst_10_2025_corr",
+      "reason": "Official file corrects Integrated Tax10, unrelated to CGST10; original retained, not activated."
+    }
+  ],
+  "importer_version": "m2-auto-pages-v3"
 }

@@ -446,5 +446,371 @@
       }
     ],
     "additional_attempt_evidence": "reports/acquisition.md, current M2 section; historical source array preserved"
+  },
+  "m2_rework_acquisition": {
+    "generated_at": "2026-10-19T18:36:10.842816+00:00",
+    "method": "Laptop Chrome observed official links, then founder-authorized laptop PowerShell Invoke-WebRequest retries with normal browser User-Agent and 120/180-second timeouts; preserved prior verified WCO originals",
+    "originals": [
+      {
+        "id": "goa_09_2025",
+        "url": "https://statetax.goa.gov.in/PDF/state_notif/Rate/09_(09_2025)_2025(rate).pdf",
+        "file": "rates/goa_09_2025_rate.pdf",
+        "retrieved_at": "2026-10-19T15:03:45.826Z",
+        "sha256": "56d104ed800a064248181119ec513f3111b3bce5e30d59852cb04508d91728c5",
+        "title": "Goa 09/2025 Rate",
+        "publisher": "Goa Department of State Tax",
+        "document_type": "sgst_notification",
+        "issued_on": "2025-09-17",
+        "bytes": 3445977,
+        "byte_verified": true
+      },
+      {
+        "id": "goa_10_2025",
+        "url": "https://statetax.goa.gov.in/PDF/state_notif/Rate/10_(10_2025)_2025(rate).pdf",
+        "file": "rates/goa_10_2025_rate.pdf",
+        "retrieved_at": "2026-10-19T15:05:56.359374+00:00",
+        "sha256": "ada23c9e1219819fff3a0fcd12ae298daab13249d00c01b03764712fcc2aeb33",
+        "title": "Goa 10/2025 Rate",
+        "publisher": "Goa Department of State Tax",
+        "document_type": "sgst_notification",
+        "issued_on": "2025-09-17",
+        "bytes": 889277,
+        "byte_verified": true
+      },
+      {
+        "id": "mcnroe",
+        "url": "https://comtax.wb.gov.in/GST/GST_Advance_Ruling/29WBAAR2025-26_20260216.pdf",
+        "file": "rulings/mcnroe_29_2025_26.pdf",
+        "retrieved_at": "2026-10-19T18:25:22.021303+00:00",
+        "sha256": "320b602828ba585b220ea11fba7a8433afc4a31a7559d4713ed2926a67c355c5",
+        "title": "McNROE Consumer Products Private Limited 29/WBAAR/2025-26",
+        "publisher": "West Bengal Authority for Advance Ruling",
+        "document_type": "aar",
+        "issued_on": "2026-02-13",
+        "bytes": 691228,
+        "byte_verified": true
+      },
+      {
+        "id": "wco_2022_0315",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0315_2022e.pdf?la=en",
+        "file": "tariff/wco_2022_0315.pdf",
+        "sha256": "122be301e637d679e2e23b9f700bef698e5bbb685ccf95a077d831d75862122d",
+        "retrieved_at": "2026-10-19T11:43:09.608314+00:00",
+        "title": "Chapter 15",
+        "publisher": "World Customs Organization",
+        "document_type": "hs_chapter",
+        "edition": "HS2022",
+        "issued_on": "2022-01-01",
+        "chapter": "15",
+        "bytes": 161904,
+        "byte_verified": true
+      },
+      {
+        "id": "wco_2022_0417",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0417_2022e.pdf?la=en",
+        "file": "tariff/wco_2022_0417.pdf",
+        "sha256": "70a0ca8d3653025e6226af80ed6d5c5866205229fdb5dbd03b2a082c7067ef82",
+        "retrieved_at": "2026-10-19T11:43:16.136343+00:00",
+        "title": "Chapter 17",
+        "publisher": "World Customs Organization",
+        "document_type": "hs_chapter",
+        "edition": "HS2022",
+        "issued_on": "2022-01-01",
+        "chapter": "17",
+        "bytes": 138945,
+        "byte_verified": true
+      },
+      {
+        "id": "wco_2022_0419",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0419_2022e.pdf?la=en",
+        "file": "tariff/wco_2022_0419.pdf",
+        "sha256": "507f11de9b772ff18efcc2f3a078a5fda2862eafb271d181908cc8d744b539db",
+        "retrieved_at": "2026-10-19T11:43:19.092274+00:00",
+        "title": "Chapter 19",
+        "publisher": "World Customs Organization",
+        "document_type": "hs_chapter",
+        "edition": "HS2022",
+        "issued_on": "2022-01-01",
+        "chapter": "19",
+        "bytes": 130873,
+        "byte_verified": true
+      },
+      {
+        "id": "wco_2022_0421",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0421_2022e.pdf?la=en",
+        "file": "tariff/wco_2022_0421.pdf",
+        "sha256": "4c63973778dfd4f282653dd0b83d78f1586c9e847f027bb950d782e2caa82603",
+        "retrieved_at": "2026-10-19T11:43:25.667486+00:00",
+        "title": "Chapter 21",
+        "publisher": "World Customs Organization",
+        "document_type": "hs_chapter",
+        "edition": "HS2022",
+        "issued_on": "2022-01-01",
+        "chapter": "21",
+        "bytes": 128487,
+        "byte_verified": true
+      },
+      {
+        "id": "wco_2022_0630",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0630_2022e.pdf?la=en",
+        "file": "tariff/wco_2022_0630.pdf",
+        "sha256": "7ad8d2b476a97e2326fee5fbf6af0947d5213cc9a7f5e337667a7cbaa07af11d",
+        "retrieved_at": "2026-10-19T11:43:35.608338+00:00",
+        "title": "Chapter 30",
+        "publisher": "World Customs Organization",
+        "document_type": "hs_chapter",
+        "edition": "HS2022",
+        "issued_on": "2022-01-01",
+        "chapter": "30",
+        "bytes": 161048,
+        "byte_verified": true
+      },
+      {
+        "id": "wco_2022_0633",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0633_2022e.pdf?la=en",
+        "file": "tariff/wco_2022_0633.pdf",
+        "sha256": "3036879a259d994f565739b962f0135c9b6c506a483873377ba92a9e5816bd8c",
+        "retrieved_at": "2026-10-19T11:43:44.593030+00:00",
+        "title": "Chapter 33",
+        "publisher": "World Customs Organization",
+        "document_type": "hs_chapter",
+        "edition": "HS2022",
+        "issued_on": "2022-01-01",
+        "chapter": "33",
+        "bytes": 135992,
+        "byte_verified": true
+      },
+      {
+        "id": "wco_2022_0400",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0400_2022e.pdf?la=en",
+        "file": "tariff/wco_2022_0400.pdf",
+        "sha256": "ea555a738f0ce8315d79d254c9837adff2c91271f5bd50dc743324467ae14596",
+        "retrieved_at": "2026-10-19T11:43:50.897967+00:00",
+        "title": "Section IV",
+        "publisher": "World Customs Organization",
+        "document_type": "section_notes",
+        "edition": "HS2022",
+        "issued_on": "2022-01-01",
+        "section": "IV",
+        "bytes": 98590,
+        "byte_verified": true
+      },
+      {
+        "id": "wco_2022_0600",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0600_2022e.pdf?la=en",
+        "file": "tariff/wco_2022_0600.pdf",
+        "sha256": "62385a45bdbce5148f027ce721bc0d9cbcad49fbb970ffbf515d23f24215cf91",
+        "retrieved_at": "2026-10-19T11:43:52.800205+00:00",
+        "title": "Section VI",
+        "publisher": "World Customs Organization",
+        "document_type": "section_notes",
+        "edition": "HS2022",
+        "issued_on": "2022-01-01",
+        "section": "VI",
+        "bytes": 6711,
+        "byte_verified": true
+      },
+      {
+        "id": "cgst_09_2025",
+        "file": "rates/cgst_09_2025_karnataka.pdf",
+        "url": "https://gst.karnataka.gov.in/Documents/NOTIFICATIONS/CTR0918925.pdf",
+        "document_type": "cgst_notification",
+        "issued_on": "2025-09-17",
+        "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+        "sha256": "0362838d241f2e6752deb1ef93e0418e55418da3a67a4cf1f4294e7b7cf8b4f5",
+        "title": "cgst_09_2025",
+        "publisher": "Government of India Ministry of Finance",
+        "bytes": 552779,
+        "byte_verified": true
+      },
+      {
+        "id": "cgst_10_2025",
+        "file": "rates/cgst_10_2025_karnataka.pdf",
+        "url": "https://gst.karnataka.gov.in/Documents/NOTIFICATIONS/CTR1018925.pdf",
+        "document_type": "cgst_notification",
+        "issued_on": "2025-09-17",
+        "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+        "sha256": "e2b0514786aafd3c4012d7218c736fb763d4b719a6bb88ba16ff1784a4e3bf97",
+        "title": "cgst_10_2025",
+        "publisher": "Government of India Ministry of Finance",
+        "bytes": 284729,
+        "byte_verified": true
+      },
+      {
+        "id": "cgst_10_2025_gazette",
+        "file": "rates/cgst_10_2025_gazette.pdf",
+        "url": "https://egazette.gov.in/WriteReadData/2025/266210.pdf",
+        "document_type": "cgst_notification",
+        "issued_on": "2025-09-17",
+        "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+        "sha256": "2e205f8a16358bda64609f54bb60376e23b83dd9c14a98ca9d283db19c5994d3",
+        "title": "cgst_10_2025_gazette",
+        "publisher": "Government of India Ministry of Finance",
+        "bytes": 1460162,
+        "byte_verified": true
+      },
+      {
+        "id": "cgst_09_2025_corr",
+        "file": "rates/cgst_09_2025_corrigendum.pdf",
+        "url": "https://gst.karnataka.gov.in/Documents/NOTIFICATIONS/CTRcorr091992025.pdf",
+        "document_type": "corrigendum",
+        "issued_on": "2025-09-18",
+        "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+        "sha256": "bc9a248acd177694652f835ba719b96d2dad9cc13a976d4c122dde6b6e1a4e78",
+        "title": "cgst_09_2025_corr",
+        "publisher": "Government of India Ministry of Finance",
+        "bytes": 124667,
+        "byte_verified": true
+      },
+      {
+        "id": "igst_10_2025_corr",
+        "file": "rates/cgst_10_2025_corrigendum.pdf",
+        "url": "https://gst.karnataka.gov.in/Documents/NOTIFICATIONS/CTRcorr101992025.pdf",
+        "document_type": "unrelated_igst_corrigendum",
+        "issued_on": "2025-09-18",
+        "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+        "sha256": "4adee976853587ab6cb4f94243c87ce76aa7b98ff0b6f24abd4e7b220b83d168",
+        "title": "Corrigendum to 10/2025 Integrated Tax (Rate), GSR 661(E), unrelated to CGST10",
+        "publisher": "Government of India Ministry of Finance",
+        "bytes": 136659,
+        "byte_verified": true,
+        "disposition": "retained official IGST original; rejected as CGST corrigendum evidence"
+      },
+      {
+        "id": "wco_gri_2022",
+        "file": "national/wco_gri_2022.pdf",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0001_2022e-gir.pdf",
+        "document_type": "gri",
+        "issued_on": "2022-01-01",
+        "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+        "sha256": "a15ad1e08fa165e509a34d4bf07299b57c68554d98149217c284c24fe2d49d5a",
+        "title": "wco_gri_2022",
+        "publisher": "World Customs Organization",
+        "bytes": 9223,
+        "byte_verified": true
+      },
+      {
+        "id": "wco_2022_0525",
+        "file": "tariff/wco_2022_0525.pdf",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0525_2022e.pdf?la=en",
+        "document_type": "hs_chapter",
+        "issued_on": "2022-01-01",
+        "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+        "sha256": "2500835595231d825322c1c80f2930ad390ed617978e9d880a08ea2e80c71e07",
+        "title": "wco_2022_0525",
+        "publisher": "World Customs Organization",
+        "chapter": "25",
+        "bytes": 69189,
+        "byte_verified": true
+      },
+      {
+        "id": "wco_2022_0634",
+        "file": "tariff/wco_2022_0634.pdf",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0634_2022e.pdf?la=en",
+        "document_type": "hs_chapter",
+        "issued_on": "2022-01-01",
+        "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+        "sha256": "8196a0f7df557f2f87dd248fe87815475253678d433e3065e0addff813863bdb",
+        "title": "wco_2022_0634",
+        "publisher": "World Customs Organization",
+        "chapter": "34",
+        "bytes": 248229,
+        "byte_verified": true
+      },
+      {
+        "id": "wco_contents_2022",
+        "file": "national/wco_contents_2022.pdf",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/table-of-contents_2022e_rev.pdf?la=en",
+        "document_type": "hs_contents",
+        "issued_on": "2022-01-01",
+        "retrieved_at": "2026-10-19T18:28:15.927507+00:00",
+        "sha256": "84c08b4b37240417e6eed19c900a1a1e3887f6bf589e120670482fb0ae777143",
+        "title": "wco_contents_2022",
+        "publisher": "World Customs Organization",
+        "bytes": 142788,
+        "byte_verified": true
+      },
+      {
+        "id": "circular247",
+        "url": "https://gstcouncil.gov.in/sites/default/files/2025-04/circular-no-247-04-2025.pdf",
+        "file": "rates/circular_247_2025.pdf",
+        "retrieved_at": "2026-10-19T18:34:43.970971+00:00",
+        "sha256": "afa6642cc372c037d206af3fd23ee486861ca05ab613d8d7a4da508376d859ff",
+        "bytes": 1067938,
+        "byte_verified": true,
+        "disposition": "acquired; scanned original has no extractable canonical text; not activated"
+      }
+    ],
+    "failed_or_rejected_attempts": [
+      {
+        "id": "indian_chapter_15",
+        "url": "https://www.cbic.gov.in/CONTENTREPO/Customs/Tariff/Tariff(ason30.06.2024)/CUSTOMS_TARIFF_VOL-I/chap-15.pdf",
+        "result": "HTTP 404 on laptop Invoke-WebRequest retry with browser User-Agent and 120-second timeout; no original saved"
+      },
+      {
+        "id": "indian_chapter_30",
+        "url": "https://www.cbic.gov.in/CONTENTREPO/Customs/Tariff/Tariff(ason30.06.2025)/CUSTOMS_TARIFF_VOL-I/chap-30.pdf",
+        "result": "HTTP 404 on laptop Invoke-WebRequest retry with browser User-Agent and 120-second timeout; no original saved"
+      },
+      {
+        "id": "indian_chapter_33",
+        "url": "https://www.cbic.gov.in/CONTENTREPO/Customs/Tariff/Tariff(ason30.06.2024)/CUSTOMS_TARIFF_VOL-I/chap-33.pdf",
+        "result": "HTTP 404 on laptop Invoke-WebRequest retry with browser User-Agent and 120-second timeout; no original saved"
+      },
+      {
+        "id": "indian_chapter_34",
+        "url": "https://www.cbic.gov.in/CONTENTREPO/Customs/Tariff/Tariff(ason30.06.2024)/CUSTOMS_TARIFF_VOL-I/chap-34.pdf",
+        "result": "HTTP 404 on laptop Invoke-WebRequest retry with browser User-Agent and 120-second timeout; no original saved"
+      },
+      {
+        "id": "indian_general_notes",
+        "url": "https://www.cbic.gov.in/CONTENTREPO/Customs/Tariff/Tariff(ason30.06.2025)/CUSTOMS_TARIFF_VOL-I/General-Notes.pdf",
+        "result": "HTTP 404 on laptop retry; no original saved"
+      },
+      {
+        "id": "taxinformation_cgst_09",
+        "url": "https://taxinformation.cbic.gov.in/view-pdf/1010436/ENG/Notifications",
+        "result": "HTML Tax Portal shell, not a PDF; rejected",
+        "response_file": "reference/manual_sources/rates/cgst_09_2025_official.pdf",
+        "response_sha256": "1f11e8eb3d92c867bafc05a347d381e6d6ad27d7a5d42a3531a90bcdcaafbacd"
+      },
+      {
+        "id": "taxinformation_cgst_10",
+        "url": "https://taxinformation.cbic.gov.in/view-pdf/1010437/ENG/Notifications",
+        "result": "HTML Tax Portal shell, not a PDF; rejected",
+        "response_file": "reference/manual_sources/rates/cgst_10_2025_official.pdf",
+        "response_sha256": "1f11e8eb3d92c867bafc05a347d381e6d6ad27d7a5d42a3531a90bcdcaafbacd"
+      },
+      {
+        "id": "india_code_edition",
+        "url": "https://indiacode.gov.in/pdf-viewer/087d3280-1ba9-4db1-9316-ccac69e5e81d/81945b1f-a032-4a3c-8253-1a37b4543ab7",
+        "result": "764-page official viewer states Last Updated 08-05-2023; rejected as 2025 national tariff authentication; earlier Chrome save timed out"
+      }
+    ],
+    "national_eight_digit_status": {
+      "chapters": [
+        "15",
+        "17",
+        "19",
+        "21",
+        "25",
+        "30",
+        "33",
+        "34"
+      ],
+      "status": "not verified; blocked: missing evidence when an applicable GST entry requires eight digits",
+      "note": "Under latest founder decision WCO heading/HS6 legal text is sufficient where the actual GST rate entry does not require eight-digit depth. No invented eight-digit codes."
+    },
+    "corrigendum_note": "Karnataka CTRcorr101992025.pdf contains IGST 10/2025, despite index label; retained as unrelated original and rejected as CGST10 corrigendum. CGST9 corrigendum was acquired. No claim of CGST10 corrigendum verification.",
+    "deferred": [
+      "January 2023 replay",
+      "74A/interest/penalty evidence",
+      "full amendment register",
+      "other party-specific rulings"
+    ],
+    "paid_or_third_party_sources_used": false,
+    "wco_explanatory_notes_acquired": false,
+    "captcha_encountered": false,
+    "currentness_certified": false
   }
 }

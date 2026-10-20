@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-10-20T01:01:49.936236+00:00",
+  "final_completed_legal_checks": 10,
+  "final_completed_legal_mean_cost_usd": "0.0158833116",
+  "original_completed_checks": 6,
+  "original_completed_mean_cost_usd": "0.025751321",
+  "final_legal_run_total_cost_usd": "0.276055308",
+  "final_safety_total_cost_usd": "0.121948644",
+  "final_entire_run_total_cost_usd": "0.398003952",
+  "all_live_trials": [
+    {
+      "artifact": "m2_diagnostic_c1.json",
+      "total_cost_usd": "0.023403216",
+      "model_calls": 4
+    },
+    {
+      "artifact": "m2_diagnostic_c1_audited.json",
+      "total_cost_usd": "0.016102968",
+      "model_calls": 4
+    },
+    {
+      "artifact": "m2_live_v4.json",
+      "total_cost_usd": "0.392538270",
+      "model_calls": 77
+    },
+    {
+      "artifact": "m2_live_v5.json",
+      "total_cost_usd": "0.248753544",
+      "model_calls": 65
+    },
+    {
+      "artifact": "eval_final_v6.json",
+      "total_cost_usd": "0.398003952",
+      "model_calls": 70
+    }
+  ],
+  "all_live_trials_known_total_usd": "1.078801950",
+  "basis": "Actual provider token counts multiplied by documented UTC-tier prices. Peak-window rates are conservative estimates because Chinese holiday exceptions were not independently verified. This is token-priced usage, not an invoice or a currency conversion. Aborted transport cost would remain unknown.",
+  "requested_model": "deepseek-flash",
+  "documented_expected_version": "DeepSeek-V4.1-Flash-1017",
+  "resolved_version": "not attested: provider returned alias only",
+  "official_model_reference": "https://api-docs.deepseek.com/quick_start/pricing/"
+}

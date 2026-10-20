@@ -1,7 +1,7 @@
-"""Verify browser-acquired official originals and ingest unreviewed page evidence.
+"""Verify official originals and ingest exact-quote automatic MVP activation.
 
-No downloading, OCR, model calls, rate activation or current-law certification.
-The importer preserves original files and the parent law snapshot unchanged.
+No downloading, OCR, model calls or current-law certification. The importer
+preserves original files and the parent law snapshot unchanged.
 """
 
 from __future__ import annotations
@@ -21,7 +21,7 @@ from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_ROOT = ROOT / "reference/manual_sources"
-VERSION = "m2-browser-pages-v1"
+VERSION = "m2-auto-pages-v3"
 
 
 def canonical(value) -> bytes:
@@ -48,7 +48,16 @@ def official_url(url: str) -> bool:
             and not parts.username
             and not parts.password
             and parts.port in (None, 443)
-            and host.endswith((".gov.in", ".nic.in"))
+            and (
+                host.endswith((".gov.in", ".nic.in"))
+                or (
+                    host == "www.wcoomd.org"
+                    and parts.path.startswith(
+                        "/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/"
+                    )
+                    and "/explanatory" not in parts.path.lower()
+                )
+            )
         )
     except (TypeError, ValueError):
         return False
@@ -182,13 +191,17 @@ def verify_manifest(path: Path, root: Path = SOURCE_ROOT) -> dict:
 def snapshot_manifest(
     verification: dict, parent_id: str, parent_sha: str
 ) -> tuple[dict, str, str]:
+    from billshield.corpus import activation_manifest, corpus_from_verified_pages
+
+    activated = corpus_from_verified_pages(verification, "pending-content-hash")
     manifest = {
         "importer_version": VERSION,
         "parent_snapshot_id": parent_id,
         "parent_sha256": parent_sha,
         "coverage_status": "incomplete_unverified_currentness",
         "amendment_notice": "amendments after 22 Sep 2025 not verified",
-        "activated_rates": 0,
+        "activated_rates": len(activated.rates),
+        "activation": activation_manifest(activated),
         "currentness_certified": False,
         "sources": [
             {
@@ -205,7 +218,7 @@ def snapshot_manifest(
         ],
     }
     sha = digest(manifest)
-    return manifest, "m2-browser-" + sha[:20], sha
+    return manifest, "m2-auto-" + sha[:20], sha
 
 
 def ingest(connection, verification: dict, parent_id: str) -> dict:
@@ -220,25 +233,19 @@ def ingest(connection, verification: dict, parent_id: str) -> dict:
         with connection.cursor(row_factory=dict_row) as cursor:
             return cursor.execute(query, params).fetchone()
 
+    caches = {}
+
     def insert_immutable(table, record, keys):
         columns = list(record)
-        where = sql.SQL(" AND ").join(
-            sql.SQL("{}=%s").format(sql.Identifier(k)) for k in keys
-        )
-        existing = one(
-            sql.SQL("SELECT {} FROM billshield.{} WHERE {}").format(
-                sql.SQL(",").join(map(sql.Identifier, columns)),
-                sql.Identifier(table),
-                where,
-            ),
-            tuple(record[k] for k in keys),
-        )
+        record_key = tuple(record[k] for k in keys)
+        existing = caches[table].get(record_key)
         if existing is not None:
             # Date/timestamp adapters return Python objects; normalize only these
             # transport types, never alter source text or source hashes.
             normalized = {
                 k: v.isoformat() if hasattr(v, "isoformat") else v
                 for k, v in existing.items()
+                if k in record
             }
             expected = dict(record)
             if table == "source_documents":
@@ -259,6 +266,24 @@ def ingest(connection, verification: dict, parent_id: str) -> dict:
 
     with connection.transaction():
         connection.execute("SELECT pg_advisory_xact_lock(1940181020)")
+        source_keys = [
+            item["source"]["source_key"] for item in verification["accepted"]
+        ]
+        with connection.cursor(row_factory=dict_row) as cursor:
+            caches["source_documents"] = {
+                (row["source_key"],): row
+                for row in cursor.execute(
+                    "SELECT * FROM billshield.source_documents WHERE source_key=ANY(%s)",
+                    (source_keys,),
+                ).fetchall()
+            }
+            caches["source_pages"] = {
+                (row["source_key"], row["source_page"]): row
+                for row in cursor.execute(
+                    "SELECT source_key,source_page,text_original,text_sha256 FROM billshield.source_pages WHERE source_key=ANY(%s)",
+                    (source_keys,),
+                ).fetchall()
+            }
         parent = one(
             "SELECT content_sha256,source_keys FROM billshield.law_snapshots WHERE id=%s",
             (parent_id,),
@@ -291,7 +316,7 @@ def ingest(connection, verification: dict, parent_id: str) -> dict:
                         | {x["source"]["source_key"] for x in verification["accepted"]}
                     ),
                     "incomplete_unverified_currentness",
-                    "Official originals and unreviewed page text; amendments after 22 Sep 2025 not verified",
+                    "Auto-verified exact source quotations, not professionally reviewed; amendments after 22 Sep 2025 not verified",
                     sha,
                     Jsonb(manifest),
                 ),
@@ -302,6 +327,7 @@ def ingest(connection, verification: dict, parent_id: str) -> dict:
                 "WHERE snapshot_id=%s",
                 (snapshot_id, parent_id),
             )
+            memberships = []
             for item in verification["accepted"]:
                 records = [
                     ("source_documents", item["source"]["source_key"], item["source"])
@@ -310,12 +336,21 @@ def ingest(connection, verification: dict, parent_id: str) -> dict:
                     ("source_pages", f"{p['source_key']}|{p['source_page']}", p)
                     for p in item["pages"]
                 )
-                for kind, record_id, record in records:
-                    connection.execute(
-                        "INSERT INTO billshield.law_snapshot_members"
-                        "(snapshot_id,kind,record_id,record_sha256) VALUES(%s,%s,%s,%s)",
-                        (snapshot_id, kind, record_id, digest(record)),
-                    )
+                memberships.extend(
+                    (snapshot_id, kind, record_id, digest(record))
+                    for kind, record_id, record in records
+                )
+            for offset in range(0, len(memberships), 500):
+                chunk = memberships[offset : offset + 500]
+                connection.execute(
+                    sql.SQL(
+                        "INSERT INTO billshield.law_snapshot_members(snapshot_id,kind,record_id,record_sha256) VALUES {} "
+                    ).format(
+                        sql.SQL(",").join(sql.SQL("(%s,%s,%s,%s)") for _ in chunk)
+                    ),
+                    tuple(value for row in chunk for value in row),
+                )
+
     return {"snapshot_id": snapshot_id, "content_sha256": sha, "manifest": manifest}
 
 
@@ -328,13 +363,17 @@ def main():
     parser.add_argument("--parent-snapshot")
     args = parser.parse_args()
     try:
+        from billshield.corpus import corpus_from_verified_pages
+
         verification = verify_manifest(args.manifest)
         result = {
             "mode": "verified",
             "accepted": len(verification["accepted"]),
             "page_count": sum(len(x["pages"]) for x in verification["accepted"]),
             "rejected": verification["rejected"],
-            "activated_rates": 0,
+            "activated_rates": len(
+                corpus_from_verified_pages(verification, "inspection").rates
+            ),
         }
         if not args.inspect_only:
             import psycopg

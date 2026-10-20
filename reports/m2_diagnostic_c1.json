@@ -1,0 +1,382 @@
+{
+  "generated_at": "2026-10-19T18:39:53.952534+00:00",
+  "as_of": "2026-10-20",
+  "law_snapshot_id": "m2-auto-4eb8a3f66aaff2eeee43",
+  "snapshot_sha256": "4eb8a3f66aaff2eeee437a831abc9bc24856797394468e2eba007e60e0b7a977",
+  "fixture_sha256": "7e928773678b0acf6e01323989145b71b93e676f3595ca12fab346e5abd26436",
+  "fixture_note": "Source-linked synthetic research expectations, not legal evidence. G1 is conditional on deciding facts and applicable authority, never automatically Disputable. Expected facts abstentions do not count toward the majority.",
+  "evaluation_mode": "live",
+  "credential_present": true,
+  "counts": {
+    "pass": 0,
+    "fail": 1,
+    "blocked": 0
+  },
+  "original_10_counts": {
+    "pass": 0,
+    "fail": 1,
+    "blocked": 0
+  },
+  "original_10_non_abstain_matches": 0,
+  "safety_failures": 0,
+  "injection": {
+    "counts": {
+      "pass": 0,
+      "fail": 0,
+      "blocked": 3
+    },
+    "results": [],
+    "reason": "Diagnostic run skipped injection suite"
+  },
+  "acceptance_target_met": false,
+  "model_calls": 4,
+  "completed_checks": 0,
+  "known_usage_cost_usd": "0.023403216",
+  "total_cost_usd": "0.023403216",
+  "cost_per_completed_check_usd": null,
+  "cost_note": "Provider token usage \u00d7 documented UTC tariff; peak windows use a holiday-conservative estimate. Failed transport costs may be unknown. No currency conversion.",
+  "sources_acquired": [
+    {
+      "id": "goa_09_2025",
+      "url": "https://statetax.goa.gov.in/PDF/state_notif/Rate/09_(09_2025)_2025(rate).pdf",
+      "sha256": "56d104ed800a064248181119ec513f3111b3bce5e30d59852cb04508d91728c5",
+      "pages": 63
+    },
+    {
+      "id": "goa_10_2025",
+      "url": "https://statetax.goa.gov.in/PDF/state_notif/Rate/10_(10_2025)_2025(rate).pdf",
+      "sha256": "ada23c9e1219819fff3a0fcd12ae298daab13249d00c01b03764712fcc2aeb33",
+      "pages": 13
+    },
+    {
+      "id": "mcnroe",
+      "url": "https://comtax.wb.gov.in/GST/GST_Advance_Ruling/29WBAAR2025-26_20260216.pdf",
+      "sha256": "320b602828ba585b220ea11fba7a8433afc4a31a7559d4713ed2926a67c355c5",
+      "pages": 12
+    },
+    {
+      "id": "wco_2022_0315",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0315_2022e.pdf?la=en",
+      "sha256": "122be301e637d679e2e23b9f700bef698e5bbb685ccf95a077d831d75862122d",
+      "pages": 7
+    },
+    {
+      "id": "wco_2022_0417",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0417_2022e.pdf?la=en",
+      "sha256": "70a0ca8d3653025e6226af80ed6d5c5866205229fdb5dbd03b2a082c7067ef82",
+      "pages": 2
+    },
+    {
+      "id": "wco_2022_0419",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0419_2022e.pdf?la=en",
+      "sha256": "507f11de9b772ff18efcc2f3a078a5fda2862eafb271d181908cc8d744b539db",
+      "pages": 2
+    },
+    {
+      "id": "wco_2022_0421",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0421_2022e.pdf?la=en",
+      "sha256": "4c63973778dfd4f282653dd0b83d78f1586c9e847f027bb950d782e2caa82603",
+      "pages": 2
+    },
+    {
+      "id": "wco_2022_0630",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0630_2022e.pdf?la=en",
+      "sha256": "7ad8d2b476a97e2326fee5fbf6af0947d5213cc9a7f5e337667a7cbaa07af11d",
+      "pages": 4
+    },
+    {
+      "id": "wco_2022_0633",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0633_2022e.pdf?la=en",
+      "sha256": "3036879a259d994f565739b962f0135c9b6c506a483873377ba92a9e5816bd8c",
+      "pages": 2
+    },
+    {
+      "id": "wco_2022_0400",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0400_2022e.pdf?la=en",
+      "sha256": "ea555a738f0ce8315d79d254c9837adff2c91271f5bd50dc743324467ae14596",
+      "pages": 1
+    },
+    {
+      "id": "wco_2022_0600",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0600_2022e.pdf?la=en",
+      "sha256": "62385a45bdbce5148f027ce721bc0d9cbcad49fbb970ffbf515d23f24215cf91",
+      "pages": 1
+    },
+    {
+      "id": "cgst_09_2025",
+      "url": "https://gst.karnataka.gov.in/Documents/NOTIFICATIONS/CTR0918925.pdf",
+      "sha256": "0362838d241f2e6752deb1ef93e0418e55418da3a67a4cf1f4294e7b7cf8b4f5",
+      "pages": 56
+    },
+    {
+      "id": "cgst_10_2025",
+      "url": "https://gst.karnataka.gov.in/Documents/NOTIFICATIONS/CTR1018925.pdf",
+      "sha256": "e2b0514786aafd3c4012d7218c736fb763d4b719a6bb88ba16ff1784a4e3bf97",
+      "pages": 15
+    },
+    {
+      "id": "cgst_10_2025_gazette",
+      "url": "https://egazette.gov.in/WriteReadData/2025/266210.pdf",
+      "sha256": "2e205f8a16358bda64609f54bb60376e23b83dd9c14a98ca9d283db19c5994d3",
+      "pages": 77
+    },
+    {
+      "id": "cgst_09_2025_corr",
+      "url": "https://gst.karnataka.gov.in/Documents/NOTIFICATIONS/CTRcorr091992025.pdf",
+      "sha256": "bc9a248acd177694652f835ba719b96d2dad9cc13a976d4c122dde6b6e1a4e78",
+      "pages": 1
+    },
+    {
+      "id": "igst_10_2025_corr",
+      "url": "https://gst.karnataka.gov.in/Documents/NOTIFICATIONS/CTRcorr101992025.pdf",
+      "sha256": "4adee976853587ab6cb4f94243c87ce76aa7b98ff0b6f24abd4e7b220b83d168",
+      "pages": 1
+    },
+    {
+      "id": "wco_gri_2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0001_2022e-gir.pdf",
+      "sha256": "a15ad1e08fa165e509a34d4bf07299b57c68554d98149217c284c24fe2d49d5a",
+      "pages": 1
+    },
+    {
+      "id": "wco_2022_0525",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0525_2022e.pdf?la=en",
+      "sha256": "2500835595231d825322c1c80f2930ad390ed617978e9d880a08ea2e80c71e07",
+      "pages": 5
+    },
+    {
+      "id": "wco_2022_0634",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0634_2022e.pdf?la=en",
+      "sha256": "8196a0f7df557f2f87dd248fe87815475253678d433e3065e0addff813863bdb",
+      "pages": 3
+    },
+    {
+      "id": "wco_contents_2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/table-of-contents_2022e_rev.pdf?la=en",
+      "sha256": "84c08b4b37240417e6eed19c900a1a1e3887f6bf589e120670482fb0ae777143",
+      "pages": 5
+    }
+  ],
+  "sources_rejected": [],
+  "sources_blocked": [],
+  "activated_rules": 390,
+  "activated_codes": 335,
+  "activated_rates": 20,
+  "verification_label": "auto-verified, not professionally reviewed",
+  "deferred": [
+    "January 2023 replay",
+    "74A, interest and penalty evidence",
+    "full amendment register",
+    "other party-specific rulings"
+  ],
+  "exposure_label": "excludes interest and penalty",
+  "amendment_notice": "amendments after 22 Sep 2025 not verified",
+  "results": [
+    {
+      "id": "C1",
+      "group": "original_10",
+      "status": "fail",
+      "status_reason": "expected outcome not matched",
+      "expected_category": "Wrong",
+      "expected_code": "33071010",
+      "expected_rate_pct": "5",
+      "expectation_note": "Source-linked research expectation; not certified legal truth",
+      "actual_category": "Need more info",
+      "actual_reason": "inconsistent_classification",
+      "actual_code": null,
+      "actual_rate_pct": null,
+      "missing_sources": [],
+      "missing_facts": [],
+      "source_gate_safety": "not_applicable",
+      "blind_boundary_safety": "pass",
+      "scores": {
+        "category": "fail",
+        "code": "fail",
+        "rate": "fail",
+        "quote_validity": "pass"
+      },
+      "model_calls": 4,
+      "model_call_attempts": 4,
+      "transport_attempts": 4,
+      "cost_usd": "0.023403216",
+      "cost_status": "priced_usage",
+      "completed_non_abstain": false,
+      "issued_check": {
+        "result": {
+          "category": "Need more info",
+          "reason": "inconsistent_classification",
+          "code": null,
+          "rate_pct": null,
+          "rate_entry_ids": [],
+          "confidence": "Low",
+          "citations": [],
+          "missing_facts": [],
+          "missing_sources": [],
+          "needs_review": true,
+          "tax_difference": null,
+          "exposure_label": "excludes interest and penalty",
+          "banners": [
+            "amendments after 22 Sep 2025 not verified"
+          ],
+          "dropped_claims": 0,
+          "law_snapshot_id": "m2-auto-4eb8a3f66aaff2eeee43"
+        },
+        "facts": {
+          "name": "Shaving cream",
+          "composition": [
+            {
+              "name": "Fatty-acid/alkali cream with glycerin",
+              "proportion_pct": null
+            },
+            {
+              "name": "fragrance",
+              "proportion_pct": null
+            }
+          ],
+          "form": "Semi-solid cream requiring lathering",
+          "use": "Shaving",
+          "preparation": "percentages not established",
+          "packaging": null,
+          "food_grade": null,
+          "medicinal_licence": null
+        },
+        "bill": {
+          "claimed_code": "33071010",
+          "billed_rate_pct": "18",
+          "taxable_value": null
+        },
+        "as_of": "2026-10-20",
+        "jurisdiction": "Goa",
+        "issued_at": "2026-10-19T18:39:53.944807+00:00",
+        "law_snapshot_id": "m2-auto-4eb8a3f66aaff2eeee43",
+        "prompt_version": "m2-blind-v3",
+        "policy_version": "m2-gst2-auto-verified-v2",
+        "requested_model": "deepseek-flash",
+        "expected_model_version": "DeepSeek-V4.1-Flash-1017",
+        "calls": [
+          {
+            "purpose": "blind",
+            "requested_model": "deepseek-flash",
+            "expected_version": "DeepSeek-V4.1-Flash-1017",
+            "resolved_model": null,
+            "usage": {
+              "prompt_tokens": 48042,
+              "completion_tokens": 808,
+              "total_tokens": 48850,
+              "prompt_cache_hit_tokens": 0,
+              "prompt_cache_miss_tokens": 48042,
+              "_billshield": {
+                "response_model": "deepseek-flash",
+                "version_attested": false,
+                "attempts": [
+                  {
+                    "attempt": 1,
+                    "outcome": "success"
+                  }
+                ],
+                "cost_usd": "0.0076911",
+                "known_success_cost_usd": "0.0076911",
+                "cost_status": "priced_usage",
+                "pricing_basis": "https://api-docs.deepseek.com/quick_start/pricing/; off-peak; 2026-10-19T18:39:22.057158+00:00"
+              }
+            },
+            "cost_usd": "0.0076911",
+            "cost_status": "priced_usage"
+          },
+          {
+            "purpose": "blind",
+            "requested_model": "deepseek-flash",
+            "expected_version": "DeepSeek-V4.1-Flash-1017",
+            "resolved_model": null,
+            "usage": {
+              "prompt_tokens": 48042,
+              "completion_tokens": 893,
+              "total_tokens": 48935,
+              "prompt_cache_hit_tokens": 0,
+              "prompt_cache_miss_tokens": 48042,
+              "_billshield": {
+                "response_model": "deepseek-flash",
+                "version_attested": false,
+                "attempts": [
+                  {
+                    "attempt": 1,
+                    "outcome": "success"
+                  }
+                ],
+                "cost_usd": "0.0077421",
+                "known_success_cost_usd": "0.0077421",
+                "cost_status": "priced_usage",
+                "pricing_basis": "https://api-docs.deepseek.com/quick_start/pricing/; off-peak; 2026-10-19T18:39:22.057158+00:00"
+              }
+            },
+            "cost_usd": "0.0077421",
+            "cost_status": "priced_usage"
+          },
+          {
+            "purpose": "blind",
+            "requested_model": "deepseek-flash",
+            "expected_version": "DeepSeek-V4.1-Flash-1017",
+            "resolved_model": null,
+            "usage": {
+              "prompt_tokens": 48042,
+              "completion_tokens": 927,
+              "total_tokens": 48969,
+              "prompt_cache_hit_tokens": 47872,
+              "prompt_cache_miss_tokens": 170,
+              "_billshield": {
+                "response_model": "deepseek-flash",
+                "version_attested": false,
+                "attempts": [
+                  {
+                    "attempt": 1,
+                    "outcome": "success"
+                  }
+                ],
+                "cost_usd": "0.000725316",
+                "known_success_cost_usd": "0.000725316",
+                "cost_status": "priced_usage",
+                "pricing_basis": "https://api-docs.deepseek.com/quick_start/pricing/; off-peak; 2026-10-19T18:39:22.057158+00:00"
+              }
+            },
+            "cost_usd": "0.000725316",
+            "cost_status": "priced_usage"
+          },
+          {
+            "purpose": "defense",
+            "requested_model": "deepseek-flash",
+            "expected_version": "DeepSeek-V4.1-Flash-1017",
+            "resolved_model": null,
+            "usage": {
+              "prompt_tokens": 47702,
+              "completion_tokens": 149,
+              "total_tokens": 47851,
+              "prompt_cache_hit_tokens": 0,
+              "prompt_cache_miss_tokens": 47702,
+              "_billshield": {
+                "response_model": "deepseek-flash",
+                "version_attested": false,
+                "attempts": [
+                  {
+                    "attempt": 1,
+                    "outcome": "success"
+                  }
+                ],
+                "cost_usd": "0.0072447",
+                "known_success_cost_usd": "0.0072447",
+                "cost_status": "priced_usage",
+                "pricing_basis": "https://api-docs.deepseek.com/quick_start/pricing/; off-peak; 2026-10-19T18:39:22.057158+00:00"
+              }
+            },
+            "cost_usd": "0.0072447",
+            "cost_status": "priced_usage"
+          }
+        ],
+        "cost_usd": "0.023403216",
+        "cost_status": "priced_usage"
+      }
+    }
+  ],
+  "artifact_type": "public evaluation projection; canonical citation text retained privately",
+  "full_private_artifact": "reference/manual_sources/m2_evaluation/m2_diagnostic_c1.json",
+  "full_artifact_sha256": "5f99bf7ce7f17178c9087f6cc21c0bbc94bc16df6e4c38cc87bceaeeb16d035d"
+}

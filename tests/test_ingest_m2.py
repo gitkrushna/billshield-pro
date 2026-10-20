@@ -82,7 +82,7 @@ def test_original_pages_hashed_and_snapshot_remains_unreviewed(source):
     first = snapshot_manifest(verification, "m1-parent", "a" * 64)
     assert first == snapshot_manifest(verification, "m1-parent", "a" * 64)
     manifest, snapshot_id, sha = first
-    assert snapshot_id.startswith("m2-browser-") and len(sha) == 64
+    assert snapshot_id.startswith("m2-auto-") and len(sha) == 64
     assert manifest["activated_rates"] == 0 and not manifest["currentness_certified"]
     assert manifest["amendment_notice"] == "amendments after 22 Sep 2025 not verified"
     assert first != snapshot_manifest(verification, "another-parent", "b" * 64)
@@ -249,5 +249,10 @@ def test_database_import_idempotency_preserves_parent_and_rejects_rewrite(source
             == before_members + 2
         )
         verification["accepted"][0]["pages"][0]["text_original"] = "tampered extraction"
-        with pytest.raises(ValueError, match="immutable_record_conflict:source_pages"):
+        with pytest.raises(ValueError, match="Canonical source page hash mismatch"):
             ingest(conn, verification, parent[0])
+        stored_text = conn.execute(
+            "SELECT text_original FROM billshield.source_pages WHERE source_key=%s AND source_page=1",
+            (verification["accepted"][0]["source"]["source_key"],),
+        ).fetchone()[0]
+        assert stored_text == "Official fixture evidence"
